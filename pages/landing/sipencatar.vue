@@ -48,7 +48,7 @@ const closeModal = () => {
       <div class="form-registration">
         <div class="flex justify-center">
           <img
-            src="../public/images/logo-sipencatar.png"
+            src="/images/logo-sipencatar.png"
             alt="logo-sipencatar"
             class="logo-sipencatar"
           />
