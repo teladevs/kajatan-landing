@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  ssr: false,
   modules: ["@nuxtjs/tailwindcss","@formkit/nuxt",'nuxt-headlessui'],
   nitro: {
     preset: 'node-server',
@@ -17,7 +18,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: import.meta.env.NUXT_API_BASE_URL,
-      req: process.server ? require('http').IncomingMessage : undefined
     },
   }
 })

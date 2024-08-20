@@ -17,7 +17,13 @@ const loadData = async () => {
   eventDetail.value = response?.data?.value?.data;
 };
 
+const loadForm = async () => {
+  let responseForm = await useCustomFetch("api/event-content/detail/25/form_register", "get", {}, true);
+  console.log(responseForm);
+};
+
 loadData();
+loadForm();
 
 const submitHandler = async (formData) => {
   let payload = formData;
