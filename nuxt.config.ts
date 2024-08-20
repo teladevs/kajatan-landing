@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss","@formkit/nuxt",'nuxt-headlessui'],
+  nitro: {
+    preset: 'node-server',
+  },
   formkit: {
     autoImport: true,
     defaultConfig: false,
