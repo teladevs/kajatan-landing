@@ -23,5 +23,5 @@ console.log("Component to load:", componentName.value);
 <template>
   <p>URL is: {{ url }}</p>
   <p>Path is: {{ url.pathname }}</p>
-  <component :is="loadComponent" />
+  <!-- <component :is="loadComponent" /> -->
 </template>
