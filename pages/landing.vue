@@ -9,7 +9,7 @@ const componentName = computed(() => {
     case "pencatar.kajatan.telanusa.id":
       return "sipencatar";
     default:
-      return "defaultLanding";
+      return "default";
   }
 });
 
