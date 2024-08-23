@@ -53,6 +53,14 @@ const submitHandler = async () => {
 const closeModal = () => {
   openModal.value = false;
 };
+
+useHead({
+  title: "Sosialisasi Sipencatar",
+  meta: [{ name: "description", content: "Sipencatar" }],
+  bodyAttrs: {
+    class: "test",
+  },
+});
 </script>
 
 <template>
