@@ -5,16 +5,16 @@ const loadComponent = ref<any>(null);
 const componentName = computed(() => {
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
-      return "mmw24/index";
+      return "mmw24";
     case "pencatar.kajatan.telanusa.id":
-      return "sipencatar/index";
+      return "sipencatar";
     default:
       return "defaultLanding";
   }
 });
 
 loadComponent.value = defineAsyncComponent(
-  () => import(`@/components/${componentName.value}.vue`)
+  () => import(`@/components/${componentName.value}/index.vue`)
 );
 </script>
 
