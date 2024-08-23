@@ -19,5 +19,8 @@ export default defineNuxtConfig({
     public: {
       apiBase: import.meta.env.NUXT_API_BASE_URL,
     },
+  },
+  router: {
+    middleware: ['redirect']
   }
 })
