@@ -5,7 +5,7 @@ const loadComponent = ref<any>(null);
 const componentName = computed(() => {
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
-      return "mmw24/index";
+      return "mmw24/landing";
     case "pencatar.kajatan.telanusa.id":
       return "sipencatar/index";
     default:
