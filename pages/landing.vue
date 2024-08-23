@@ -3,6 +3,7 @@ const url = useRequestURL();
 const loadComponent = ref<any>(null);
 
 const componentName = computed(() => {
+  console.log(url.host);
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
       return "mmw24";
