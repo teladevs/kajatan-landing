@@ -6,7 +6,7 @@ const componentName = computed(() => {
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
       return "mmw24";
-    case "sipencatar.kajatan.telanusa.id":
+    case "pencatar.kajatan.telanusa.id":
       return "sipencatar";
     default:
       return "defaultLanding";
@@ -21,7 +21,7 @@ console.log("Component to load:", componentName.value);
 </script>
 
 <template>
-  <p>URL is: {{ url }}</p>
-  <p>Path is: {{ url.pathname }}</p>
-  <!-- <component :is="loadComponent" /> -->
+  <!-- <p>URL is: {{ url }}</p>
+  <p>Path is: {{ url.pathname }}</p> -->
+  <component :is="loadComponent" />
 </template>
