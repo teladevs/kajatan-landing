@@ -21,10 +21,10 @@ watch(
   async () => {
     loadComponent.value = defineAsyncComponent({
       loader: () => import(`@/components/${componentName.value}/landing.vue`),
-      loadingComponent: () => import("@/components/spinner.vue"), // optional loading component
-      errorComponent: () => import("@/components/Error.vue"), // optional error component
-      delay: 200, // optional delay before showing loading component
-      timeout: 30000, // optional timeout for loading the component
+      loadingComponent: () => import("@/components/spinner.vue"),
+      errorComponent: () => import("@/components/error.vue"),
+      delay: 200,
+      timeout: 30000,
     });
   },
   { immediate: true }
