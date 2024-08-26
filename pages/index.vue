@@ -6,7 +6,7 @@ const componentName = computed(() => {
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
       return "mmw24";
-    case "pencatar.kajatan.telanusa.id":
+    case "sipencatar.kajatan.telanusa.id":
       return "sipencatar";
     default:
       return "default";
