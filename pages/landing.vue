@@ -16,7 +16,7 @@ const componentName = computed(() => {
 const nameComponent = "mmw24";
 
 loadComponent.value = defineAsyncComponent(
-  () => import(`@/components/${nameComponent.value}/landing.vue`)
+  () => import(`@/components/${nameComponent}/landing.vue`)
 );
 </script>
 
