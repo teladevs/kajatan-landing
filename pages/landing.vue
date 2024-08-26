@@ -13,13 +13,12 @@ const componentName = computed(() => {
   }
 });
 
-const nameComponent = "mmw24";
-
 loadComponent.value = defineAsyncComponent(
-  () => import(`@/components/${nameComponent}/landing.vue`)
+  () => import(`@/components/${componentName.value}/landing.vue`)
 );
 </script>
 
 <template>
+  {{ url.host }}
   <component :is="loadComponent" />
 </template>
