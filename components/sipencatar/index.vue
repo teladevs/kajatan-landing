@@ -4,7 +4,7 @@ import Modal from "../components/modal";
 import { useRouter } from "vue-router";
 import "vue-select/dist/vue-select.css";
 import vSelect from "vue-select";
-import { school } from "../data/school";
+import { school } from "../../data/school";
 import { FormKitSchema } from "@formkit/vue";
 
 const submitted = ref(false);
