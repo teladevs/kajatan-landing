@@ -9,12 +9,16 @@ const doLoadComponent = async (componentName: string) => {
 };
 
 const loadData = async () => {
-  let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
-
-  if (response.data.value.status) {
-    doLoadComponent(response.data.value.data.config.value.name);
+  if (url.host === "kajatan.telanusa.id" || url.host === "localhost:3000") {
+    // doLoadComponent("default");
+    loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
   } else {
-    doLoadComponent("default");
+    // let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+    // if (response.data.value.status) {
+    //   doLoadComponent(response.data.value.data.config.value.name);
+    // } else {
+    //   loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
+    // }
   }
 };
 
