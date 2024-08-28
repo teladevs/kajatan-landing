@@ -124,14 +124,10 @@ const eventDetail = ref({});
 const phone_code = ref("");
 const instansi = ref("");
 const listPhoneCode = ref([]);
+const url = useRequestURL();
 
 const loadData = async () => {
-  let response = await useCustomFetch(
-    `https://api-dev-new.kajatan.telanusa.id/api/event/domain/mmw24.kajatan.telanusa.id`,
-    "get",
-    {},
-    true
-  );
+  let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
   eventDetail.value = response.data.value.data;
 };
 

@@ -9,12 +9,7 @@ const doLoadComponent = async (componentName: string) => {
 };
 
 const loadData = async () => {
-  let response = await useCustomFetch(
-    `https://api-dev-new.kajatan.telanusa.id/api/event/domain/${url.host}`,
-    "get",
-    {},
-    true
-  );
+  let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
 
   if (response.data.value.status) {
     doLoadComponent(response.data.value.data.config.value.name);
