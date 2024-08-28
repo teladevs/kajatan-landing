@@ -423,11 +423,7 @@
           <!-- Footer Widget -->
           <div class="flex flex-col gap-y-6">
             <a href="index.html" class="inline-block"
-              ><img
-                src="../../images/home/th-1/logo.png"
-                alt="logo"
-                width="96"
-                height="24"
+              ><img src="/images/home/th-1/logo.png" alt="logo" width="96" height="24"
             /></a>
             <p>
               Our mission is to harness the power of AI to solve complex business
