@@ -2,20 +2,28 @@
 const url = useRequestURL();
 const loadComponent = ref<any>(null);
 
-const componentName = computed(() => {
-  switch (url.host) {
-    case "mmw24.kajatan.telanusa.id":
-      return "mmw24";
-    case "sipencatar.kajatan.telanusa.id":
-      return "sipencatar";
-    default:
-      return "default";
-  }
-});
+const doLoadComponent = async (componentName: string) => {
+  loadComponent.value = defineAsyncComponent(
+    () => import(`@/components/${componentName}/index.vue`)
+  );
+};
 
-loadComponent.value = defineAsyncComponent(
-  () => import(`@/components/${componentName.value}/index.vue`)
-);
+const loadData = async () => {
+  let response = await useCustomFetch(
+    `https://api-dev-new.kajatan.telanusa.id/api/event/domain/${url.host}`,
+    "get",
+    {},
+    true
+  );
+
+  if (response.data.value.status) {
+    doLoadComponent(response.data.value.data.config.value.name);
+  } else {
+    doLoadComponent("default");
+  }
+};
+
+loadData();
 </script>
 
 <template>
