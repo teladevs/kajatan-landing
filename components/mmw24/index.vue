@@ -15,7 +15,7 @@
         class="logo-instansi"
       />
       <img
-        src="/images/logo/webasset-02-bpsdm_perhubungan.webp"
+        src="/images/logo/logo-perhubungan.webp"
         alt="image-kemenhub"
         class="logo-instansi"
       />
