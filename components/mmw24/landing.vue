@@ -24,7 +24,7 @@
         class="logo-instansi slide-transition-hide"
       />
       <img
-        src="/images/logo/webasset-06-poltekpel_sby.webp"
+        src="/images/logo/logo-sby"
         alt="image-kemenhub"
         class="logo-instansi slide-transition-hide"
       />
