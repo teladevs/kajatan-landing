@@ -10,15 +10,14 @@ const doLoadComponent = async (componentName: string) => {
 
 const loadData = async () => {
   if (url.host === "kajatan.telanusa.id" || url.host === "localhost:3000") {
-    // doLoadComponent("default");
-    loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
+    doLoadComponent("default");
   } else {
-    // let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
-    // if (response.data.value.status) {
-    //   doLoadComponent(response.data.value.data.config.value.name);
-    // } else {
-    //   loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
-    // }
+    let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+    if (response.data.value.status) {
+      doLoadComponent(response.data.value.data.config.value.name);
+    } else {
+      loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
+    }
   }
 };
 
