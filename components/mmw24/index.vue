@@ -24,7 +24,7 @@
         alt="image-kemenhub"
         class="logo-instansi"
       />
-      <img src="/images/logo/logo-sby" alt="image-kemenhub" class="logo-instansi" />
+      <img src="/images/logo/logo-sby.webp" alt="image-kemenhub" class="logo-instansi" />
     </div>
     <div class="flex justify-center items-center mt-3">
       <img

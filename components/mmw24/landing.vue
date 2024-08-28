@@ -24,7 +24,7 @@
         class="logo-instansi slide-transition-hide"
       />
       <img
-        src="/images/logo/logo-sby"
+        src="/images/logo/logo-sby.webp"
         alt="image-kemenhub"
         class="logo-instansi slide-transition-hide"
       />
