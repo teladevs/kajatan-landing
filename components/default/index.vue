@@ -555,7 +555,7 @@
         <div class="h-[1px] w-full bg-[#DBD6CF]"></div>
         <!-- Footer Bottom -->
         <div class="py-9 text-center">
-          <p>&copy; Copyright 2023, All Rights Reserved by Mthemeus</p>
+          <p>&copy; Copyright 2023, All Rights Reserved by Digital Invitation Team</p>
         </div>
         <!-- Footer Bottom -->
       </div>

@@ -127,7 +127,7 @@ const listPhoneCode = ref([]);
 
 const loadData = async () => {
   let response = await useCustomFetch(
-    `api/event/slug/ministry-of-transportation-of-the-republic-of-indonesia-malaysia-maritime-week-2024`,
+    `https://api-dev-new.kajatan.telanusa.id/api/event/domain/mmw24.kajatan.telanusa.id`,
     "get",
     {},
     true
