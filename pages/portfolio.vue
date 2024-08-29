@@ -75,7 +75,7 @@
           >
             <a
               href="portfolio-details.html"
-              class="block w-full overflow-hidden rounded-[10px] group-odd:h-80 group-even:h-96 lg:group-odd:h-[550px] lg:group-even:h-[750px]"
+              class="block w-full overflow-hidden rounded-[10px] group-odd:h-0 group-even:h-96 lg:group-odd:h-[850px] lg:group-even:h-[900px]"
             >
               <img
                 src="/images/portfolio/wisuda-sby.png"

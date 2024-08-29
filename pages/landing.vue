@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: "blank",
+});
+
 import { ref, computed, watch, defineAsyncComponent } from "vue";
 import { useRequestURL } from "#app";
 

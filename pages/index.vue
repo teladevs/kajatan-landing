@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: "blank",
+});
+
 const url = useRequestURL();
 const loadComponent = ref<any>(null);
 
