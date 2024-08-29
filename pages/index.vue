@@ -13,9 +13,9 @@ const loadData = async () => {
     console.log("arema");
     doLoadComponent("default");
   } else {
-    console.log("arimi");
     let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
     if (response.data.value.status) {
+      console.log("arimi");
       doLoadComponent(response.data.value.data.config.value.name);
     } else {
       console.log("areme");
