@@ -486,6 +486,7 @@
     <!-- Section Spacer -->
   </section>
   <!--...::: About Contact Section End :::... -->
+  </NuxtLayout>
 </template>
 <script setup>
 definePageMeta({
