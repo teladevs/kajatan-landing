@@ -61,6 +61,10 @@ useHead({
     class: "test",
   },
 });
+
+definePageMeta({
+  layout: "blank",
+});
 </script>
 
 <template>
