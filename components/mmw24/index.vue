@@ -1,111 +1,117 @@
 <template>
-  <div class="mx-auto px-7 py-5 mt-10">
-    <Spinner v-if="isLoading" />
-    <div class="flex items-center justify-center mb-5">
-      <img
-        src="/images/logo/webasset-00-garuda.webp"
-        alt="image-kemenhub"
-        class="logo-instansi"
-      />
-    </div>
-    <div class="flex items-center justify-center">
-      <img
-        src="/images/logo/webasset-01-kemenhub.webp"
-        alt="image-kemenhub"
-        class="logo-instansi"
-      />
-      <img
-        src="/images/logo/logo-perhubungan.webp"
-        alt="image-kemenhub"
-        class="logo-instansi"
-      />
-      <img
-        src="/images/logo/webasset-05-pip_semarang.webp"
-        alt="image-kemenhub"
-        class="logo-instansi"
-      />
-      <img src="/images/logo/logo-sby.webp" alt="image-kemenhub" class="logo-instansi" />
-    </div>
-    <div class="flex justify-center items-center mt-3">
-      <img
-        src="/images/logo/webasset-03-proprestasi.webp"
-        alt="image-kemenhub"
-        class="logo-prestasi"
-      />
-      <img
-        src="/images/logo/webasset-04-gold_gen3.webp"
-        alt="image-kemenhub"
-        class="logo-prestasi"
-      />
-    </div>
-    <div class="mt-5 text-slate-800 text-2xl font-bold text-center">
-      Ministry of Transportation of the Republic of Indonesia
-    </div>
-    <div class="container bg-slate-800 p-5 rounded-2xl mt-10">
-      <div class="text-2xl mt-5 mb-5 text-center font-bold">
-        Visitor Registration Form
+  <NuxtLayout name="blank">
+    <div class="mx-auto px-7 py-5 mt-10">
+      <Spinner v-if="isLoading" />
+      <div class="flex items-center justify-center mb-5">
+        <img
+          src="/images/logo/webasset-00-garuda.webp"
+          alt="image-kemenhub"
+          class="logo-instansi"
+        />
       </div>
-      <FormKit
-        type="form"
-        id="registration-example"
-        :form-class="submitted ? 'hide' : 'show'"
-        submit-label="Register"
-        @submit="submitHandler"
-        :actions="false"
-        #default="{ value }"
-      >
-        <FormKit
-          type="text"
-          name="name"
-          label="Full Name"
-          autocomplete="off"
-          placeholder="Input your full name"
-          validation="required"
+      <div class="flex items-center justify-center">
+        <img
+          src="/images/logo/webasset-01-kemenhub.webp"
+          alt="image-kemenhub"
+          class="logo-instansi"
         />
-        <FormKit
-          type="text"
-          name="instansi"
-          label="Company / Organization"
-          autocomplete="off"
-          placeholder="Input your company or organization"
-          validation="required"
+        <img
+          src="/images/logo/logo-perhubungan.webp"
+          alt="image-kemenhub"
+          class="logo-instansi"
         />
-        <FormKit
-          type="email"
-          label="E-mail"
-          name="email"
-          autocomplete="off"
-          placeholder="xxx@gmail.com"
+        <img
+          src="/images/logo/webasset-05-pip_semarang.webp"
+          alt="image-kemenhub"
+          class="logo-instansi"
         />
-        <div class="grid grid-cols-1">
-          <div
-            class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
-          >
-            Phone Number
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <v-select
-              value="phone_code"
-              label="phone_name"
-              name="phone_code"
-              v-model="phone_code"
-              placeholder="Phone Code"
-              :options="listPhoneCode"
-              class="rounded rounded-md mb-4 select-custom"
-            ></v-select>
-            <FormKit
-              type="tel"
-              name="phone"
-              autocomplete="off"
-              placeholder="Input your phone number"
-              validation-visibility="dirty"
-            />
-          </div>
+        <img
+          src="/images/logo/logo-sby.webp"
+          alt="image-kemenhub"
+          class="logo-instansi"
+        />
+      </div>
+      <div class="flex justify-center items-center mt-3">
+        <img
+          src="/images/logo/webasset-03-proprestasi.webp"
+          alt="image-kemenhub"
+          class="logo-prestasi"
+        />
+        <img
+          src="/images/logo/webasset-04-gold_gen3.webp"
+          alt="image-kemenhub"
+          class="logo-prestasi"
+        />
+      </div>
+      <div class="mt-5 text-slate-800 text-2xl font-bold text-center">
+        Ministry of Transportation of the Republic of Indonesia
+      </div>
+      <div class="container bg-slate-800 p-5 rounded-2xl mt-10">
+        <div class="text-2xl mt-5 mb-5 text-center font-bold">
+          Visitor Registration Form
         </div>
-        <FormKit type="submit" label="Register" />
-      </FormKit>
+        <FormKit
+          type="form"
+          id="registration-example"
+          :form-class="submitted ? 'hide' : 'show'"
+          submit-label="Register"
+          @submit="submitHandler"
+          :actions="false"
+          #default="{ value }"
+        >
+          <FormKit
+            type="text"
+            name="name"
+            label="Full Name"
+            autocomplete="off"
+            placeholder="Input your full name"
+            validation="required"
+          />
+          <FormKit
+            type="text"
+            name="instansi"
+            label="Company / Organization"
+            autocomplete="off"
+            placeholder="Input your company or organization"
+            validation="required"
+          />
+          <FormKit
+            type="email"
+            label="E-mail"
+            name="email"
+            autocomplete="off"
+            placeholder="xxx@gmail.com"
+          />
+          <div class="grid grid-cols-1">
+            <div
+              class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
+            >
+              Phone Number
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <v-select
+                value="phone_code"
+                label="phone_name"
+                name="phone_code"
+                v-model="phone_code"
+                placeholder="Phone Code"
+                :options="listPhoneCode"
+                class="rounded rounded-md mb-4 select-custom"
+              ></v-select>
+              <FormKit
+                type="tel"
+                name="phone"
+                autocomplete="off"
+                placeholder="Input your phone number"
+                validation-visibility="dirty"
+              />
+            </div>
+          </div>
+          <FormKit type="submit" label="Register" />
+        </FormKit>
+      </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
