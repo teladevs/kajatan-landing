@@ -10,12 +10,15 @@ const doLoadComponent = async (componentName: string) => {
 
 const loadData = async () => {
   if (url.host === "kajatan.telanusa.id" || url.host === "localhost:3000") {
+    console.log("arema");
     doLoadComponent("default");
   } else {
+    console.log("arimi");
     let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
     if (response.data.value.status) {
       doLoadComponent(response.data.value.data.config.value.name);
     } else {
+      console.log("areme");
       loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
     }
   }
