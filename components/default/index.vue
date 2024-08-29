@@ -125,7 +125,4 @@
 </template>
 <script setup>
 import Feature from "@/components/home/feature";
-definePageMeta({
-  layout: "default",
-});
 </script>
