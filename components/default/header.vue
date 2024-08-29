@@ -4,9 +4,9 @@
     <div class="global-container">
       <div class="flex items-center justify-between gap-x-8">
         <!-- Header Logo -->
-        <a href="index.html" class="">
+        <nuxt-link href="/" class="">
           <img src="/images/home/logo-dark.png" alt="AIMass" width="96" height="24" />
-        </a>
+        </nuxt-link>
         <!-- Header Logo -->
 
         <!-- Header Navigation -->
@@ -33,11 +33,11 @@
               <li class="nav-item">
                 <nuxt-link href="/about" class="nav-link-item">About</nuxt-link>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <nuxt-link href="/services" class="nav-link-item drop-trigger"
                   >Services</nuxt-link
                 >
-              </li>
+              </li> -->
               <li class="nav-item">
                 <nuxt-link href="/portfolio" class="nav-link-item drop-trigger"
                   >Portofolio
