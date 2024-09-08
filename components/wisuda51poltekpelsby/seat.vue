@@ -130,8 +130,12 @@
         DENAH KURSI KELUARGA PASIS DP-I
       </div>
       <div class="gate-active flex justify-center flex-col p-2">
-        <div class="grid grid-cols-10 gap-1">
-          <div class="seat-icon" :class="`seat-sector-active-${item}`" v-for="item in 60">
+        <div class="grid grid-cols-12 gap-1">
+          <div
+            class="seat-icon"
+            :class="`seat-sector-active-${item}`"
+            v-for="item in 200"
+          >
             <span class="text-center w-full">{{ item }}</span>
           </div>
         </div>
