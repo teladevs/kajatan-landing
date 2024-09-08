@@ -4,7 +4,7 @@ const loadComponent = ref<any>(null);
 
 const doLoadComponent = async (componentName: string) => {
   loadComponent.value = defineAsyncComponent(
-    () => import(`@/components/${componentName}/seat`)
+    () => import(`@/components/${componentName}/seat.vue`)
   );
 };
 
