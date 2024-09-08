@@ -29,6 +29,9 @@
 }
 </style>
 <script setup>
+import { useRouter } from "vue-router";
+const router = useRouter();
+console.log(router);
 const sectorAll = [
   { name: "Sector A", sector: "sca", total: 20 },
   { name: "Sector B", sector: "scb", total: 10 },
