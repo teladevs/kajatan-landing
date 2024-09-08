@@ -173,7 +173,7 @@
   width: 20px;
   height: 20px;
   background-color: white;
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
