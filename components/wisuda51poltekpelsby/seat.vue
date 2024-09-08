@@ -20,7 +20,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  Yogi Wirmanda
+                  {{ detailContact.name }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -28,7 +28,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  DP-I
+                  {{ detailContact.study }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -52,7 +52,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  BLOK II - KELUARGA PASIS DP-I
+                  BLOK II - {{ detailContact.study }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -60,7 +60,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  A1 & A2
+                  {{ detailContact?.seat?.join(" & ") }}
                 </dd>
               </div>
             </dl>
@@ -71,6 +71,12 @@
     <div
       class="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
+      <div class="w-full my-10">
+        <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
+          Layout Tempat Duduk Lapangan
+        </div>
+        <img :src="imageDenahLapangan" alt="" />
+      </div>
       <div class="seat-block pb-5">
         <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
           DENAH BLOK II
@@ -78,7 +84,7 @@
         <div class="grid grid-cols-2 gap-5">
           <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
             <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS DP-I
+              KELUARGA PASIS {{ detailContact.study }}
             </div>
             <!-- <div class="grid grid-cols-10 gap-1">
               <div class="seat-icon" :class="`seat-dp1-${item}`" v-for="item in 60"></div>
@@ -127,7 +133,7 @@
       class="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5"
     >
       <div class="text-center my-5 font-bold text-slate-100">
-        DENAH KURSI KELUARGA PASIS DP-I
+        DENAH KURSI KELUARGA PASIS {{ detailContact.study }}
       </div>
       <div class="gate-active flex justify-center flex-col p-2">
         <div class="grid grid-cols-12 gap-1">
@@ -143,6 +149,27 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useRouter } from "vue-router";
+import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout_lapangan_upacara110x130.png";
+
+const router = useRouter();
+const detailContact = ref({});
+
+const loadData = async () => {
+  let response = await useCustomFetch(
+    `api/event-seat/detail-contact-seat/28/${router.currentRoute.value.query.id}`,
+    "get",
+    {},
+    true
+  );
+  detailContact.value = response?.data?.value?.data;
+};
+
+setTimeout(() => {
+  loadData();
+}, 1000);
+</script>
 <style scoped>
 .block-sector {
   display: flex;
