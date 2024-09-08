@@ -1,63 +1,165 @@
 <template>
-  <div class="seat-container">
-    <div class="grid grid-cols-3 gap-5 text-center">
-      <div v-for="(valSec, idxSec) in sectorAll">
-        <div class="text-center my-10">{{ valSec.name }}</div>
-        <div class="grid grid-cols-4 gap-2">
-          <div
-            class="seat flex items-center justify-center"
-            :id="`sector-${valSec.sector}-${idxSeat + 1}`"
-            v-for="(valSeat, idxSeat) in valSec.total"
-          >
-            {{ idxSeat + 1 }}
+  <div class="container p-2">
+    <div class="detail-info mt-5 mb-10">
+      <div
+        class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div>
+          <div class="px-4 sm:px-0">
+            <h3 class="text-lg text-center font-semibold leading-7 text-slate-100">
+              Informasi Keluarga <br />
+              Wisudawan / Pasis
+            </h3>
+          </div>
+          <div class="mt-6 border-gray-300">
+            <dl class="divide-y divide-gray-100">
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">
+                  Nama Wisudawan / Pasis
+                </dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  Yogi Wirmanda
+                </dd>
+              </div>
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">Jurusan</dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  DP-I
+                </dd>
+              </div>
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">Zona Parkir</dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  ZONA 2 & 3
+                </dd>
+              </div>
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">Pintu Masuk</dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  PINTU A
+                </dd>
+              </div>
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">Tempat Duduk</dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  BLOK KELUARGA PASIS DP-I
+                </dd>
+              </div>
+              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-slate-400">Nomor Kursi</dt>
+                <dd
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                >
+                  A1 & A2
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
     </div>
+    <div
+      class="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <div class="seat-block pb-5">
+        <div class="text-lg w-full text-center mb-2 text-slate-100">
+          DENAH KURSI BLOK II
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+            <div class="text-base font-bold w-full text-center mb-2">
+              KELUARGA PASIS DP-I
+            </div>
+            <div class="grid grid-cols-12 gap-1">
+              <div class="seat-icon" :class="`seat-dp1-${item}`" v-for="item in 60"></div>
+            </div>
+          </div>
+          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+            <div class="text-base font-bold w-full text-center mb-2">
+              KELUARGA PASIS DP-III
+            </div>
+            <div class="grid grid-cols-12 gap-1">
+              <div class="seat-icon" :class="`seat-dp3-${item}`" v-for="item in 60"></div>
+            </div>
+          </div>
+          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+            <div class="text-base font-bold w-full text-center mb-2">
+              KELUARGA PASIS DP-V
+            </div>
+            <div class="grid grid-cols-12 gap-1">
+              <div class="seat-icon" :class="`seat-dpv-${item}`" v-for="item in 60"></div>
+            </div>
+          </div>
+          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+            <div class="text-base font-bold w-full text-center mb-2">
+              KELUARGA PASIS ETO
+            </div>
+            <div class="grid grid-cols-12 gap-1">
+              <div class="seat-icon" :class="`seat-eto-${item}`" v-for="item in 60"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="grid grid-cols-2 gap-5">
+        <div class="gateb block-sector">KELUARGA PASIS DP-I</div>
+        <div class="gateb block-sector">KELUARGA PASIS DP-III</div>
+        <div class="gateb block-sector">KELUARGA PASIS DP-V</div>
+        <div class="gateb block-sector">KELUARGA PASIS ETO</div>
+      </div>
+      <div class="grid grid-cols-2 gap-5">
+        <div class="gatec block-sector">KELUARGA PASIS DP-I</div>
+        <div class="gatec block-sector">KELUARGA PASIS DP-III</div>
+        <div class="gatec block-sector">KELUARGA PASIS DP-V</div>
+        <div class="gatec block-sector">KELUARGA PASIS ETO</div>
+      </div> -->
+    </div>
   </div>
 </template>
 <style scoped>
-.seat {
-  width: 50px;
-  height: 50px;
-  background-color: gray;
+.block-sector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
-.seat.booked {
-  width: 50px;
-  height: 50px;
+.gatea {
+  width: 100%;
+  background-color: cyan;
+  height: 100%;
+}
+.gateb {
+  width: 100%;
   background-color: red;
+  height: 100%;
+}
+.gatec {
+  width: 100%;
+  background-color: pink;
+  height: 100%;
+}
+.dp1 {
+  background-color: red;
+  color: white;
+}
+.seat-icon {
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+}
+.seat-dp1-10 {
+  background-color: blue;
+}
+.seat-dp1-11 {
+  background-color: blue;
 }
 </style>
-<script setup>
-import { useRouter } from "vue-router";
-const router = useRouter();
-console.log(router);
-const sectorAll = [
-  { name: "Sector A", sector: "sca", total: 20 },
-  { name: "Sector B", sector: "scb", total: 10 },
-  { name: "Sector C", sector: "scc", total: 30 },
-];
-
-const seatBooked = [
-  "sector-sca-5",
-  "sector-sca-2",
-  "sector-sca-10",
-  "sector-scb-9",
-  "sector-scc-29",
-  "sector-scc-25",
-  "sector-scc-20",
-];
-
-const setSeatBooked = () => {
-  seatBooked.forEach((val, idx) => {
-    const element = document.querySelector(`#${val}`);
-    if (element) {
-      element.classList.add("booked");
-    }
-  });
-};
-
-setTimeout(() => {
-  setSeatBooked();
-}, 1500);
-</script>
