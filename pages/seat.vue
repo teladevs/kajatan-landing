@@ -1,8 +1,8 @@
 <template>
   <div class="seat-container">
-    <div class="grid grid-cols-3 gap-5">
+    <div class="grid grid-cols-3 gap-5 text-center">
       <div v-for="(valSec, idxSec) in sectorAll">
-        <div>{{ valSec.name }}</div>
+        <div class="text-center my-10">{{ valSec.name }}</div>
         <div class="grid grid-cols-4 gap-2">
           <div
             class="seat flex items-center justify-center"
