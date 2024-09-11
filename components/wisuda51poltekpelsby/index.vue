@@ -285,7 +285,7 @@ html {
 .page-welcome {
   background-image: url("../../public/wisuda51poltekpelsby/background-web.png");
   background-position: center;
-  height: 100vh;
+  height: 770px;
 }
 .section-bottom-welcome {
   position: relative;
