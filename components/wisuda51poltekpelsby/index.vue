@@ -40,16 +40,23 @@
           PERWIRA TRANSPORTASI LAUT POLITEKNIK PELAYARAN SURABAYA TAHUN 2024
         </div>
         <div class="text-headline-3">
-          "To Support Inclusive And Sustainable Maritime Safety"
+          "Sustainable Transportation Technology For Advanced Maritime"
         </div>
         <button
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+          v-if="buttonInvitation"
           @click="openInvitation()"
         >
           Buka Undangan
         </button>
-        <div class="text-date">Surabaya, 19 September 2024</div>
-        <div class="text-headline-4">"Together To Give The Best"</div>
+        <div class="section-bottom-welcome">
+          <div class="text-date">Surabaya, 19 September 2024</div>
+          <div class="text-headline-4">"Together To Give The Best"</div>
+          <img :src="rightYellow" alt="right-yellow" class="right-yellow" />
+          <img :src="rightBlue" alt="right-blue" class="right-blue" />
+          <img :src="leftYellow" alt="right-blue" class="left-yellow" />
+          <img :src="leftBlue" alt="right-blue" class="left-blue" />
+        </div>
       </div>
     </div>
     <div class="container-fluid d-none" id="content-page" v-if="showContent">
@@ -181,13 +188,18 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda51poltekpelsby/mars-perhubungan.mp3";
-import bpsdmWebp from "@/public/wisuda51poltekpelsby/poltekpel_x_perhubungan_bpsdm.webp";
+import bpsdmWebp from "@/public/wisuda51poltekpelsby/logo-web.png";
 import proprestasiWebp from "@/public/wisuda51poltekpelsby/proprestasi_gen2.webp";
 import goldgenerationWebp from "@/public/wisuda51poltekpelsby/goldgeneration_gen2.webp";
 import layoutUpacara from "@/public/wisuda51poltekpelsby/wisuda50pelepasan_p2s-denah_layout_upcara-web-01.webp";
 import denahParkir from "@/public/wisuda51poltekpelsby/wisuda50pelepasan-p2b-denah_parkir-rev3-01.webp";
+import rightYellow from "@/public/wisuda51poltekpelsby/right-yellow.png";
+import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";
+import leftYellow from "@/public/wisuda51poltekpelsby/left-yellow.png";
+import leftBlue from "@/public/wisuda51poltekpelsby/left-blue.png";
 
 const showContent = ref(false);
+const buttonInvitation = ref(true);
 
 const currentUrl = window.location.origin;
 var x = document.getElementById("myAudio");
@@ -195,6 +207,7 @@ var x = document.getElementById("myAudio");
 const openInvitation = () => {
   // playAudio();
   showContent.value = true;
+  buttonInvitation.value = false;
 };
 
 function playAudio() {
@@ -269,26 +282,37 @@ html {
 .section-social-media a {
   color: #fff !important;
 }
-.bg-welcome {
-  display: none;
-}
 .page-welcome {
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #ffffff,
-    #f2f1f8,
-    #e4e3f1,
-    #d6d5ea,
-    #b5b7db,
-    #929acc,
-    #6b7fbd,
-    #3b65af
-  );
+  background-image: url("../../public/wisuda51poltekpelsby/background-web.png");
+  background-position: center;
   height: 100vh;
+}
+.section-bottom-welcome {
+  position: relative;
+}
+.right-yellow {
+  position: absolute;
+  width: 100px;
+  right: -15%;
+  bottom: -40%;
+}
+.right-blue {
+  position: absolute;
+  width: 100px;
+  right: -15%;
+  bottom: -70%;
+}
+.left-yellow {
+  position: absolute;
+  width: 100px;
+  left: -15%;
+  bottom: -40%;
+}
+.left-blue {
+  position: absolute;
+  width: 100px;
+  left: -15%;
+  bottom: -70%;
 }
 @media (max-width: 576px) {
   .section-layout-welcome {
@@ -316,7 +340,7 @@ html {
   font-weight: 800;
   font-style: italic;
   color: #29abe0;
-  font-size: 45px;
+  font-size: 30px;
   line-height: 1;
   text-shadow: 1px 1px 4px rgba(69, 69, 69, 0.38);
 }
@@ -326,7 +350,7 @@ html {
   font-weight: 700;
   font-style: normal;
   color: #29abe0;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1;
   text-shadow: 1px 1px 2px rgba(69, 69, 69, 0.38);
 }
@@ -344,7 +368,7 @@ html {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: italic;
-  font-size: 30px;
+  font-size: 20px;
 }
 .text-date {
   background-color: #ffc608;
@@ -355,7 +379,7 @@ html {
   font-weight: 800;
   font-style: italic;
   line-height: 1;
-  font-size: 25px;
+  font-size: 18px;
   color: #29abe0;
   margin-top: 40px;
   margin-bottom: 15px;

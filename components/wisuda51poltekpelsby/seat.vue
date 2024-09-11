@@ -20,7 +20,8 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  {{ detailContact.name }}
+                  <!-- {{ detailContact.name }} -->
+                  Yogi Wirmanda
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -28,7 +29,8 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  {{ detailContact.study }}
+                  <!-- {{ detailContact.study }} -->
+                  DP-I NAUTIKA
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -36,7 +38,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  ZONA 2 & 3
+                  ZONA 2
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -52,15 +54,8 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  BLOK II - {{ detailContact.study }}
-                </dd>
-              </div>
-              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">Nomor Kursi</dt>
-                <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
-                >
-                  {{ detailContact?.seat?.join(" & ") }}
+                  <!-- BLOK II - {{ detailContact.study }} -->
+                  BLOK II - KELUARGA PASIS DP-I
                 </dd>
               </div>
             </dl>
@@ -86,63 +81,21 @@
             <div class="text-base font-bold w-full text-center mb-2">
               KELUARGA PASIS {{ detailContact.study }}
             </div>
-            <!-- <div class="grid grid-cols-10 gap-1">
-              <div class="seat-icon" :class="`seat-dp1-${item}`" v-for="item in 60"></div>
-            </div> -->
           </div>
           <div class="gatea block-sector dp3 flex justify-center flex-col p-2">
             <div class="text-base font-bold w-full text-center mb-2">
               KELUARGA PASIS DP-III
             </div>
-            <!-- <div class="grid grid-cols-10 gap-1">
-              <div class="seat-icon" :class="`seat-dp3-${item}`" v-for="item in 60"></div>
-            </div> -->
           </div>
           <div class="gatea block-sector dp5 flex justify-center flex-col p-2">
             <div class="text-base font-bold w-full text-center mb-2">
               KELUARGA PASIS DP-V
             </div>
-            <!-- <div class="grid grid-cols-10 gap-1">
-              <div class="seat-icon" :class="`seat-dpv-${item}`" v-for="item in 60"></div>
-            </div> -->
           </div>
           <div class="gatea block-sector eto flex justify-center flex-col p-2">
             <div class="text-base font-bold w-full text-center mb-2">
               KELUARGA PASIS ETO
             </div>
-            <!-- <div class="grid grid-cols-10 gap-1">
-              <div class="seat-icon" :class="`seat-eto-${item}`" v-for="item in 60"></div>
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <!-- <div class="grid grid-cols-2 gap-5">
-        <div class="gateb block-sector">KELUARGA PASIS DP-I</div>
-        <div class="gateb block-sector">KELUARGA PASIS DP-III</div>
-        <div class="gateb block-sector">KELUARGA PASIS DP-V</div>
-        <div class="gateb block-sector">KELUARGA PASIS ETO</div>
-      </div>
-      <div class="grid grid-cols-2 gap-5">
-        <div class="gatec block-sector">KELUARGA PASIS DP-I</div>
-        <div class="gatec block-sector">KELUARGA PASIS DP-III</div>
-        <div class="gatec block-sector">KELUARGA PASIS DP-V</div>
-        <div class="gatec block-sector">KELUARGA PASIS ETO</div>
-      </div> -->
-    </div>
-    <div
-      class="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-5"
-    >
-      <div class="text-center my-5 font-bold text-slate-100">
-        DENAH KURSI KELUARGA PASIS {{ detailContact.study }}
-      </div>
-      <div class="gate-active flex justify-center flex-col p-2">
-        <div class="grid grid-cols-12 gap-1">
-          <div
-            class="seat-icon"
-            :class="`seat-sector-active-${item}`"
-            v-for="item in 200"
-          >
-            <span class="text-center w-full">{{ item }}</span>
           </div>
         </div>
       </div>
@@ -193,7 +146,7 @@ setTimeout(() => {
   height: 100%;
 }
 .dp1 {
-  background-color: yellow;
+  background-color: cyan;
   color: black;
 }
 .seat-icon {
