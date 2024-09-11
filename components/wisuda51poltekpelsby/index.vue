@@ -52,10 +52,14 @@
         <div class="section-bottom-welcome">
           <div class="text-date">Surabaya, 19 September 2024</div>
           <div class="text-headline-4">"Together To Give The Best"</div>
-          <img :src="rightYellow" alt="right-yellow" class="right-yellow fade-out-hide" />
-          <img :src="rightBlue" alt="right-blue" class="right-blue fade-out-hide" />
-          <img :src="leftYellow" alt="right-blue" class="left-yellow fade-out-hide" />
-          <img :src="leftBlue" alt="right-blue" class="left-blue fade-out-hide" />
+          <img
+            :src="rightYellow"
+            alt="right-yellow"
+            class="right-yellow fade-in-element"
+          />
+          <img :src="rightBlue" alt="right-blue" class="right-blue fade-in-element" />
+          <img :src="leftYellow" alt="right-blue" class="left-yellow fade-in-element" />
+          <img :src="leftBlue" alt="right-blue" class="left-blue fade-in-element" />
         </div>
       </div>
     </div>
@@ -217,35 +221,6 @@ function playAudio() {
 function pauseAudio() {
   x.pause();
 }
-
-onMounted(() => {
-  if (process.client) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-out-show");
-        } else {
-          entry.target.classList.remove("fade-out-show");
-        }
-      });
-    });
-
-    const observerLogo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("slide-transition-show");
-        } else {
-          entry.target.classList.remove("slide-transition-show");
-        }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll(".fade-out-hide");
-    hiddenElements.forEach((el) => observer.observe(el));
-    const hiddenLogo = document.querySelectorAll(".section-bottom-welcome");
-    hiddenLogo.forEach((el) => observerLogo.observe(el));
-  }
-});
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend+Deca:wght@100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
@@ -412,5 +387,18 @@ html {
   color: #29abe0;
   margin-top: 40px;
   margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-element {
+  animation: fadeIn 2s ease-in;
 }
 </style>
