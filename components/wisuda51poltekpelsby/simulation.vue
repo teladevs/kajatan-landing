@@ -3,7 +3,7 @@
     <div class="grid grid-cols-3 gap-5 text-center">
       <div v-for="(valSec, idxSec) in sectorAll">
         <div class="text-center my-10">{{ valSec.name }}</div>
-        <div class="grid grid-cols-4 gap-2">
+        <div class="grid grid-cols-4 gap-4">
           <div
             class="seat flex items-center justify-center"
             :id="`sector-${valSec.sector}-${idxSeat + 1}`"

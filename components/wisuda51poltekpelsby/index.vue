@@ -1,52 +1,51 @@
 <template>
   <div class="container">
-    <audio ref="audioElement">
+    <audio ref="audioElement" loop>
       <source src="/wisuda51poltekpelsby/mars-perhubungan.mp3" type="audio/mpeg" />
     </audio>
-    <a
-      class="btn-play btn-audio"
-      @click="playAudio()"
-      id="btn-play"
-      v-if="soundPlay == false"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
-        />
-      </svg>
-    </a>
-    <a
-      class="btn-pause btn-audio"
-      @click="pauseAudio()"
-      id="btn-pause"
-      v-if="soundPlay == true"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
-    </a>
-
     <div class="page-welcome">
+      <a
+        class="btn-play btn-audio"
+        @click="playAudio()"
+        id="btn-play"
+        v-if="soundPlay == false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
+          />
+        </svg>
+      </a>
+      <a
+        class="btn-pause btn-audio"
+        @click="pauseAudio()"
+        id="btn-pause"
+        v-if="soundPlay == true"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      </a>
       <div class="section-layout-welcome text-center">
         <div class="grid grid-cols-1 gap-5">
           <div class="flex flex-col justify-center items-center">
@@ -304,7 +303,6 @@ import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";
 import leftYellow from "@/public/wisuda51poltekpelsby/left-yellow.png";
 import leftBlue from "@/public/wisuda51poltekpelsby/left-blue.png";
 import AudioPlayer from "@/components/audio";
-import { nextTick } from "vue";
 
 const showContent = ref(false);
 const buttonInvitation = ref(true);
@@ -313,22 +311,13 @@ const soundPlay = ref(null);
 const audioElement = ref(null);
 const sectionRundown = ref(null);
 
-const focusInput = async () => {
-  await nextTick();
-  if (sectionRundown.value) {
-    sectionRundown.value.focus();
-  } else {
-    console.error("Ref is not assigned");
-  }
-};
-
 const openInvitation = () => {
   playAudio();
   showContent.value = true;
   buttonInvitation.value = false;
   setTimeout(() => {
     window.scrollTo(0, 700, "smooth");
-  }, 500);
+  }, 200);
 };
 
 const playAudio = () => {
