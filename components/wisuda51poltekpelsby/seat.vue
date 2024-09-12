@@ -1,8 +1,8 @@
 <template>
-  <div class="container p-2">
-    <div class="detail-info mt-5 mb-10">
+  <div class="container">
+    <div class="detail-info mt-5 mb-10 w-full">
       <div
-        class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <div>
           <div class="px-4 sm:px-0">
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div
-      class="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
       <div class="w-full my-10">
         <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
@@ -123,6 +123,11 @@ setTimeout(() => {
 }, 1000);
 </script>
 <style scoped>
+.container {
+  max-width: 600px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 .block-sector {
   display: flex;
   justify-content: center;

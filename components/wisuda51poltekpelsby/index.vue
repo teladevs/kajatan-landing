@@ -350,6 +350,11 @@ useSeoMeta({
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend+Deca:wght@100..900&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap");
+.container {
+  max-width: 600px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 .img-top-welcome {
   width: 100px;
 }
