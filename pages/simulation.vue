@@ -64,6 +64,7 @@
   width: 25px;
   height: 25px;
   background-color: white;
+  color: black;
   font-size: 10px;
 }
 .seat.booked {
@@ -71,7 +72,7 @@
 }
 .seat.booked.YATIM {
   background-color: #ffc0cb;
-  color: white;
+  color: black;
 }
 .seat.booked.VIP-VVIP {
   background-color: #ffffff;
@@ -91,11 +92,11 @@
 }
 .seat.booked.DP-IV {
   background-color: #add8e6;
-  color: white;
+  color: black;
 }
 .seat.booked.DP-V {
   background-color: #00ff00;
-  color: white;
+  color: black;
 }
 .seat.booked.TROK {
   background-color: #ffff00;
@@ -111,7 +112,7 @@
 }
 .seat.booked.TRANSLA {
   background-color: #ffc0cb;
-  color: white;
+  color: black;
 }
 .seat.booked.D-III-NAUTIKA {
   background-color: #8b4513;
@@ -131,72 +132,17 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 console.log(router);
 const sectorAll = [
-  { name: "Sector 1", sector: 1, total: 160 },
-  { name: "Sector 2", sector: 2, total: 160 },
-  { name: "Sector 3", sector: 3, total: 160 },
-  { name: "Sector 4", sector: 4, total: 160 },
-  { name: "Sector 5", sector: 5, total: 48 },
-  { name: "Sector 6", sector: 6, total: 48 },
-  { name: "Sector 7", sector: 7, total: 160 },
-  { name: "Sector 8", sector: 8, total: 160 },
-  { name: "Sector 9", sector: 9, total: 160 },
-  { name: "Sector 10", sector: 10, total: 160 },
+  { name: "Sektor 1", sector: 1, total: 160 },
+  { name: "Sektor 2", sector: 2, total: 160 },
+  { name: "Sektor 3", sector: 3, total: 160 },
+  { name: "Sektor 4", sector: 4, total: 160 },
+  { name: "Sektor 5", sector: 5, total: 48 },
+  { name: "Sektor 6", sector: 6, total: 48 },
+  { name: "Sektor 7", sector: 7, total: 160 },
+  { name: "Sektor 8", sector: 8, total: 160 },
+  { name: "Sektor 9", sector: 9, total: 160 },
+  { name: "Sektor 10", sector: 10, total: 160 },
 ];
-
-const seatBooked = [
-  {
-    id: 1,
-    event_id: 28,
-    contact_id: 1,
-    code_sector: "2",
-    seat_number: "B11",
-    number: 1,
-    name_sector: "Sektor 1",
-    category: "DP-I",
-  },
-  {
-    id: 2,
-    event_id: 28,
-    contact_id: 2,
-    code_sector: "2",
-    seat_number: "B12",
-    number: 2,
-    name_sector: "Sector 1",
-    category: "DP-I",
-  },
-  {
-    id: 3,
-    event_id: 28,
-    contact_id: 3,
-    code_sector: "1",
-    seat_number: "D6",
-    number: 11,
-    name_sector: "Sector 1",
-    category: "DP-III",
-  },
-  {
-    id: 4,
-    event_id: 28,
-    contact_id: 4,
-    code_sector: "1",
-    seat_number: "E9",
-    number: 19,
-    name_sector: "Sector 1",
-    category: "DP-III",
-  },
-];
-
-const setSeatBooked = () => {
-  seatBooked.forEach((val, idx) => {
-    const element = document.querySelector(
-      `#sector-${val.code_sector}-${val.seat_number}`
-    );
-    if (element) {
-      element.classList.add("booked");
-      element.classList.add(val.category);
-    }
-  });
-};
 
 const checkColor = (category) => {
   let color = "";
@@ -357,35 +303,30 @@ const loadDataSector = async (sector) => {
   );
   let getData = response.data.value.data;
   getData.forEach((val, idx) => {
-    const element = document.querySelector(
-      `#sector-${val.code_sector}-${val.seat_number}`
-    );
-    console.log(`#sector-${val.code_sector}-${val.seat_number}`);
-    if (element) {
-      element.classList.add("booked");
-      element.classList.add(val.category);
+    if (val.status == 1) {
+      const element = document.querySelector(
+        `#sector-${val.code_sector}-${val.seat_number}`
+      );
+      if (element) {
+        element.classList.add("booked");
+        element.classList.add(val.category);
+      }
     }
   });
 };
 
-setTimeout(() => {
-  loadDataSector("SEKTOR 1");
-  loadDataSector("SEKTOR 2");
-}, 1000);
-setTimeout(() => {
-  loadDataSector("SEKTOR 3");
-  loadDataSector("SEKTOR 4");
-}, 2000);
-setTimeout(() => {
-  loadDataSector("SEKTOR 5");
-  loadDataSector("SEKTOR 6");
-}, 3000);
-setTimeout(() => {
-  loadDataSector("SEKTOR 7");
-  loadDataSector("SEKTOR 8");
-}, 4000);
-setTimeout(() => {
-  loadDataSector("SEKTOR 9");
-  loadDataSector("SEKTOR 10");
-}, 5000);
+const loadAllSectorsInQueue = async () => {
+  await loadDataSector("SEKTOR 1");
+  await loadDataSector("SEKTOR 2");
+  await loadDataSector("SEKTOR 3");
+  await loadDataSector("SEKTOR 4");
+  await loadDataSector("SEKTOR 5");
+  await loadDataSector("SEKTOR 6");
+  await loadDataSector("SEKTOR 7");
+  await loadDataSector("SEKTOR 8");
+  await loadDataSector("SEKTOR 9");
+  await loadDataSector("SEKTOR 10");
+};
+
+loadAllSectorsInQueue();
 </script>
