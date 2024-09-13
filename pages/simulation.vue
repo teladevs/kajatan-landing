@@ -99,7 +99,7 @@
 }
 .seat.booked.TROK {
   background-color: #ffff00;
-  color: white;
+  color: black;
 }
 .seat.booked.TRPK {
   background-color: #ffa500;
