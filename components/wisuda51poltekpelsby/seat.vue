@@ -29,7 +29,7 @@
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
                   <!-- {{ detailContact.study }} -->
-                  DP-I NAUTIKA
+                  DP-III NAUTIKA
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -65,45 +65,30 @@
     <div
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
+      <div class="seat-block pb-5">
+        <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
+          DENAH BLOK II
+        </div>
+        <div class="grid grid-cols-1 gap-5">
+          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+            <div class="text-base font-bold w-full text-center mb-2">
+              KELUARGA PASIS DP-III
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="w-full my-10">
         <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
           Layout Tempat Duduk Lapangan
         </div>
         <img :src="imageDenahLapangan" alt="" />
       </div>
-      <div class="seat-block pb-5">
-        <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
-          DENAH BLOK II
-        </div>
-        <div class="grid grid-cols-2 gap-5">
-          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
-            <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS {{ detailContact.study }}
-            </div>
-          </div>
-          <div class="gatea block-sector dp3 flex justify-center flex-col p-2">
-            <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS DP-III
-            </div>
-          </div>
-          <div class="gatea block-sector dp5 flex justify-center flex-col p-2">
-            <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS DP-V
-            </div>
-          </div>
-          <div class="gatea block-sector eto flex justify-center flex-col p-2">
-            <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS ETO
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout_lapangan_upacara110x130.png";
+import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout-seat.png";
 
 const router = useRouter();
 const detailContact = ref({});
@@ -150,8 +135,8 @@ setTimeout(() => {
   height: 100%;
 }
 .dp1 {
-  background-color: cyan;
-  color: black;
+  background-color: #ff0000;
+  color: white;
 }
 .seat-icon {
   width: 20px;

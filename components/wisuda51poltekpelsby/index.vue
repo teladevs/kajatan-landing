@@ -296,7 +296,7 @@ import marsPerhubungan from "@/public/wisuda51poltekpelsby/mars-perhubungan.mp3"
 import bpsdmWebp from "@/public/wisuda51poltekpelsby/logo-web.png";
 import proprestasiWebp from "@/public/wisuda51poltekpelsby/proprestasi_gen2.webp";
 import goldgenerationWebp from "@/public/wisuda51poltekpelsby/goldgeneration_gen2.webp";
-import layoutUpacara from "@/public/wisuda51poltekpelsby/layout-lapangan.jpg";
+import layoutUpacara from "@/public/wisuda51poltekpelsby/layout-lapangan.png";
 import denahParkir from "@/public/wisuda51poltekpelsby/denah-parkir.webp";
 import rightYellow from "@/public/wisuda51poltekpelsby/right-yellow.png";
 import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";

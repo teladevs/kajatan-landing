@@ -31,21 +31,10 @@
 <script setup>
 import { useRouter } from "vue-router";
 const router = useRouter();
-console.log(router);
 const sectorAll = [
   { name: "Sector A", sector: "sca", total: 20 },
   { name: "Sector B", sector: "scb", total: 10 },
   { name: "Sector C", sector: "scc", total: 30 },
-];
-
-const seatBooked = [
-  "sector-sca-5",
-  "sector-sca-2",
-  "sector-sca-10",
-  "sector-scb-9",
-  "sector-scc-29",
-  "sector-scc-25",
-  "sector-scc-20",
 ];
 
 const setSeatBooked = () => {

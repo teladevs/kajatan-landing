@@ -69,6 +69,14 @@
 .seat.booked {
   background-color: red;
 }
+.seat.booked.YATIM {
+  background-color: #ffc0cb;
+  color: white;
+}
+.seat.booked.VIP-VVIP {
+  background-color: #ffffff;
+  color: black;
+}
 .seat.booked.DP-I {
   background-color: #0000ff;
   color: white;
@@ -105,15 +113,15 @@
   background-color: #ffc0cb;
   color: white;
 }
-.seat.booked.D3-NAUTIKA {
+.seat.booked.D-III-NAUTIKA {
   background-color: #8b4513;
   color: white;
 }
-.seat.booked.D3-TEKNIKA {
+.seat.booked.D-III-TEKNIKA {
   background-color: #808080;
   color: white;
 }
-.seat.booked.D3-ETO {
+.seat.booked.D-III-ETO {
   background-color: #008080;
   color: white;
 }
@@ -340,7 +348,44 @@ const checkAlphabet = (number, seat, sector) => {
   }
 };
 
+const loadDataSector = async (sector) => {
+  let response = await useCustomFetch(
+    `/api/event-seat/detail-event-seat-sector/28/${sector}`,
+    "get",
+    {},
+    true
+  );
+  let getData = response.data.value.data;
+  getData.forEach((val, idx) => {
+    const element = document.querySelector(
+      `#sector-${val.code_sector}-${val.seat_number}`
+    );
+    console.log(`#sector-${val.code_sector}-${val.seat_number}`);
+    if (element) {
+      element.classList.add("booked");
+      element.classList.add(val.category);
+    }
+  });
+};
+
 setTimeout(() => {
-  setSeatBooked();
-}, 1500);
+  loadDataSector("SEKTOR 1");
+  loadDataSector("SEKTOR 2");
+}, 1000);
+setTimeout(() => {
+  loadDataSector("SEKTOR 3");
+  loadDataSector("SEKTOR 4");
+}, 2000);
+setTimeout(() => {
+  loadDataSector("SEKTOR 5");
+  loadDataSector("SEKTOR 6");
+}, 3000);
+setTimeout(() => {
+  loadDataSector("SEKTOR 7");
+  loadDataSector("SEKTOR 8");
+}, 4000);
+setTimeout(() => {
+  loadDataSector("SEKTOR 9");
+  loadDataSector("SEKTOR 10");
+}, 5000);
 </script>
