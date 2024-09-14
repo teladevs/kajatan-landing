@@ -71,9 +71,11 @@
       </div>
       <!-- <img src="wisuda50poltekpelsby_backdrop_invitation.webp" alt="banner-wisuda" class="img-fluid image-welcome"> -->
       <div class="text-center text-top-welcome mt-10">
-        <div class="mb-4 text-headline">WISUDA KE-51 & PELEPASAN</div>
+        <div class="mb-4 text-headline">
+          UPACARA WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
+        </div>
         <div class="mb-4 text-headline-2">
-          PERWIRA TRANSPORTASI LAUT POLITEKNIK PELAYARAN SURABAYA TAHUN 2024
+          "PROGRAM SARJANA TERAPAN DAN DIPLOMA III SERTA DIKLAT PELAUT I, II, III, IV & V"
         </div>
         <div class="text-headline-3">
           "Sustainable Transportation Technology For Advanced Maritime"
@@ -409,7 +411,7 @@ html {
 .page-welcome {
   background-image: url("../../public/wisuda51poltekpelsby/background-web.png");
   background-position: center;
-  height: 770px;
+  height: 790px;
 }
 .section-bottom-welcome {
   position: relative;
@@ -463,18 +465,18 @@ html {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: italic;
-  color: #29abe0;
-  font-size: 30px;
+  color: #0097de;
+  font-size: 28px;
   line-height: 1;
-  text-shadow: 1px 1px 4px rgba(69, 69, 69, 0.38);
+  text-shadow: 1px 1px 4px rgb(251 251 251);
 }
 .text-headline-2 {
   font-family: "Lexend Deca", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  color: #29abe0;
-  font-size: 25px;
+  color: #002f77;
+  font-size: 22px;
   line-height: 1;
   text-shadow: 1px 1px 2px rgba(69, 69, 69, 0.38);
 }
@@ -484,7 +486,7 @@ html {
   font-style: italic;
   line-height: 1;
   font-size: 25px;
-  color: #4e5fa9;
+  color: #005397;
   margin-bottom: 40px;
 }
 .text-headline-4 {
