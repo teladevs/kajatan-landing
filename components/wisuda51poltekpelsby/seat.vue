@@ -43,9 +43,9 @@
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-slate-400">Pintu Masuk</dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-capitalize"
                 >
-                  PINTU {{ detailContact.gate.toUppercase() }}
+                  PINTU {{ detailContact.gate }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
