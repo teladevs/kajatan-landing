@@ -29,7 +29,7 @@
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
                   <!-- {{ detailContact.study }} -->
-                  DP-III NAUTIKA
+                  {{ detailContact.jurusan }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -37,7 +37,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  ZONA 2 & 3
+                  ZONA {{ detailContact.zona }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -45,7 +45,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  PINTU A
+                  PINTU {{ detailContact.gate.toUppercase() }}
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -54,7 +54,7 @@
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
                   <!-- BLOK II - {{ detailContact.study }} -->
-                  BLOK II - KELUARGA PASIS DP-I
+                  {{ detailContact.nama_sektor }}
                 </dd>
               </div>
             </dl>
@@ -67,12 +67,12 @@
     >
       <div class="seat-block pb-5">
         <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
-          DENAH BLOK II
+          DENAH TEMPAT DUDUk
         </div>
         <div class="grid grid-cols-1 gap-5">
           <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
             <div class="text-base font-bold w-full text-center mb-2">
-              KELUARGA PASIS DP-III
+              SEKTOR {{ contactDetail.nama_sektor }}
             </div>
           </div>
         </div>
