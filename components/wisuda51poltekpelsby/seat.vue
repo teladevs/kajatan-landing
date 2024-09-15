@@ -89,13 +89,16 @@
 <script setup>
 import { useRouter } from "vue-router";
 import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout-seat.png";
+const url = useRequestURL();
 
 const router = useRouter();
 const detailContact = ref({});
 
 const loadData = async () => {
+  let eventDetail = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+
   let response = await useCustomFetch(
-    `api/event-seat/detail-contact-seat/28/${router.currentRoute.value.query.id}`,
+    `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
     "get",
     {},
     true
