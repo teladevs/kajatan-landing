@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="detail-info mt-5 mb-10 w-full">
+    <div class="detail-info mt-5 mb-5 w-full">
       <div
         class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
@@ -54,7 +54,7 @@
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
                   <!-- BLOK II - {{ detailContact.study }} -->
-                  {{ detailContact.nama_sektor }}
+                  {{ detailContact?.nama_sektor }}
                 </dd>
               </div>
             </dl>
@@ -70,9 +70,12 @@
           DENAH TEMPAT DUDUk
         </div>
         <div class="grid grid-cols-1 gap-5">
-          <div class="gatea block-sector dp1 flex justify-center flex-col p-2">
+          <div
+            class="seat booked block-sector flex justify-center flex-col p-2"
+            :class="detailContact?.kategori"
+          >
             <div class="text-base font-bold w-full text-center mb-2">
-              SEKTOR {{ contactDetail.nama_sektor }}
+              {{ detailContact?.jurusan }}
             </div>
           </div>
         </div>
@@ -95,7 +98,12 @@ const router = useRouter();
 const detailContact = ref({});
 
 const loadData = async () => {
-  let eventDetail = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+  let eventDetail = await useCustomFetch(
+    `api/event/domain/${"wisuda51poltekpelsby.telanusa.com"}`,
+    "get",
+    {},
+    true
+  );
 
   let response = await useCustomFetch(
     `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
@@ -157,5 +165,53 @@ setTimeout(() => {
 .seat-sector-active-10 {
   background-color: yellow;
   color: black;
+}
+.seat.booked.DP-I {
+  background-color: #0000ff;
+  color: white;
+}
+.seat.booked.DP-II {
+  background-color: #000080;
+  color: white;
+}
+.seat.booked.DP-III {
+  background-color: #ff0000;
+  color: white;
+}
+.seat.booked.DP-IV {
+  background-color: #add8e6;
+  color: black;
+}
+.seat.booked.DP-V {
+  background-color: #00ff00;
+  color: black;
+}
+.seat.booked.TROK {
+  background-color: #ffff00;
+  color: black;
+}
+.seat.booked.TRPK {
+  background-color: #ffa500;
+  color: white;
+}
+.seat.booked.TRKK {
+  background-color: #800080;
+  color: white;
+}
+.seat.booked.TRANSLA {
+  background-color: #ffc0cb;
+  color: black;
+}
+.seat.booked.D-III-NAUTIKA {
+  background-color: #8b4513;
+  color: white;
+}
+.seat.booked.D-III-TEKNIKA {
+  background-color: #808080;
+  color: white;
+}
+.seat.booked.D-III-ETO {
+  background-color: #008080;
+  color: white;
 }
 </style>
