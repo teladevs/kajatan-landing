@@ -55,17 +55,29 @@
               class="img-fluid img-top-perhubungan"
             />
           </div>
-          <div class="flex flex-col justify-center items-center">
-            <img
-              :src="proprestasiWebp"
-              alt="poltekpelxperhubungan"
-              class="img-fluid img-top-welcome"
-            />
-            <img
-              :src="goldgenerationWebp"
-              alt="poltekpelxperhubungan"
-              class="img-fluid img-top-welcome"
-            />
+          <div class="grid grid-cols-1 gap-5">
+            <div class="flex justify-center items-center">
+              <img
+                :src="harhubnas"
+                alt="poltekpelxperhubungan"
+                class="img-fluid logo-top-welcome"
+              />
+              <img
+                :src="blu"
+                alt="poltekpelxperhubungan"
+                class="img-fluid logo-top-welcome"
+              />
+              <img
+                :src="proprestasiWebp"
+                alt="poltekpelxperhubungan"
+                class="img-fluid logo-top-welcome"
+              />
+              <img
+                :src="goldgenerationWebp"
+                alt="poltekpelxperhubungan"
+                class="img-fluid logo-top-welcome"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -304,6 +316,8 @@ import rightYellow from "@/public/wisuda51poltekpelsby/right-yellow.png";
 import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";
 import leftYellow from "@/public/wisuda51poltekpelsby/left-yellow.png";
 import leftBlue from "@/public/wisuda51poltekpelsby/left-blue.png";
+import blu from "@/public/wisuda51poltekpelsby/blu.png";
+import harhubnas from "@/public/wisuda51poltekpelsby/harhubnas.png";
 import AudioPlayer from "@/components/audio";
 
 const showContent = ref(false);
@@ -348,6 +362,13 @@ useSeoMeta({
 }
 .img-top-welcome {
   width: 100px;
+}
+.logo-top-welcome {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .img-top-perhubungan {
   width: 200px;

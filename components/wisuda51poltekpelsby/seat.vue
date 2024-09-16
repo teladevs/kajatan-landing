@@ -67,7 +67,7 @@
     >
       <div class="seat-block pb-5">
         <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
-          DENAH TEMPAT DUDUk
+          DENAH TEMPAT DUDUK
         </div>
         <div class="grid grid-cols-1 gap-5">
           <div
