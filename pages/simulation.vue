@@ -144,23 +144,6 @@ const sectorAll = [
   { name: "Sektor 10", sector: 10, total: 160 },
 ];
 
-const checkColor = (category) => {
-  let color = "";
-  switch (category) {
-    case "DP-I":
-      color = "cyan";
-      break;
-    case "DP-III":
-      color = "red";
-      break;
-
-    default:
-      break;
-  }
-
-  return color;
-};
-
 const checkAlphabet = (number, seat, sector) => {
   let alphabet = "";
   if (sector == 5 || sector == 6) {
@@ -329,4 +312,7 @@ const loadAllSectorsInQueue = async () => {
 };
 
 loadAllSectorsInQueue();
+setInterval(() => {
+  loadAllSectorsInQueue();
+}, 5000);
 </script>

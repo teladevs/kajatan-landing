@@ -91,7 +91,7 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout-seat.png";
+import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout-seat.jpg";
 const url = useRequestURL();
 
 const router = useRouter();
