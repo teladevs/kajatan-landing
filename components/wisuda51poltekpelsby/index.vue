@@ -200,11 +200,16 @@
             <img :src="layoutUpacara" alt="layout" class="img-fluid" />
           </div>
           <div class="section-layout-denah text-center px-5">
-            <div class="text-2xl font-bold mb-5">Denah Parkir</div>
+            <div class="text-md font-bold">DENAH PARKIR</div>
+            <div class="text-sm font-bold">
+              WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK PELAYARAN
+              SURABAYA
+            </div>
+            <div class="text-sm font-bold mb-5">2024</div>
             <img :src="denahParkir" alt="denah" class="img-fluid" />
           </div>
           <div class="section-lokasi text-center">
-            <h2 class="text-section">Lokasi</h2>
+            <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0965068301093!2d112.79223247357261!3d-7.34305897223099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2sid!4v1715309908294!5m2!1sid!2sid"
               width="100%"
