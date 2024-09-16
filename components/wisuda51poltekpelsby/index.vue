@@ -196,9 +196,6 @@
             <div class="ms-3">3) Penampilan Marching Band</div>
             <div class="ms-3">4) Atraksi Tari Bersama / Flash Mob</div>
           </div>
-          <div class="section-layout-lapangan text-center">
-            <img :src="layoutUpacara" alt="layout" class="img-fluid" />
-          </div>
           <div class="section-layout-denah text-center px-5">
             <div class="text-md font-bold">DENAH PARKIR</div>
             <div class="text-sm font-bold">
@@ -207,6 +204,12 @@
             </div>
             <div class="text-sm font-bold mb-5">2024</div>
             <img :src="denahParkir" alt="denah" class="img-fluid" />
+          </div>
+          <div class="section-layout-lapangan text-center">
+            <img :src="layoutUpacara" alt="layout" class="img-fluid" />
+          </div>
+          <div class="section-layout-lapangan text-center">
+            <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div>
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
@@ -316,6 +319,7 @@ import bpsdmWebp from "@/public/wisuda51poltekpelsby/logo-web.png";
 import proprestasiWebp from "@/public/wisuda51poltekpelsby/proprestasi_gen2.webp";
 import goldgenerationWebp from "@/public/wisuda51poltekpelsby/goldgeneration_gen2.webp";
 import layoutUpacara from "@/public/wisuda51poltekpelsby/layout-lapangan.png";
+import layoutTempatDuduk from "@/public/wisuda51poltekpelsby/web-seat-layout-wisuda51_720p.webp";
 import denahParkir from "@/public/wisuda51poltekpelsby/denah-parkir.webp";
 import rightYellow from "@/public/wisuda51poltekpelsby/right-yellow.png";
 import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";
