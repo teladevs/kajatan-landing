@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <div class="detail-info mt-5 mb-5 w-full">
-      <div
-        class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-      >
+      <div class="w-full p-6 border rounded-lg shadow bg-gray-800 border-gray-700">
         <div>
           <div class="px-4 sm:px-0">
             <h3 class="text-lg text-center font-semibold leading-7 text-slate-100">
@@ -62,9 +60,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-    >
+    <div class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg shadow">
       <div class="seat-block pb-5">
         <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
           DENAH TEMPAT DUDUK
