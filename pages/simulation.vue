@@ -61,8 +61,9 @@
   background-color: #429ac0;
 }
 .seat {
-  width: 25px;
+  width: 30px;
   height: 25px;
+  border-radius: 10px 10px 0px 0px;
   background-color: white;
   color: black;
   font-size: 10px;
