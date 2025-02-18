@@ -10,13 +10,20 @@ const doLoadComponent = async (componentName: string) => {
 
 const loadData = async () => {
   if (url.host === "kajatan.telanusa.id" || url.host === "localhost:3000") {
-    doLoadComponent("default");
+    doLoadComponent("wisuda52poltekpelsby");
   } else {
-    let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+    let response = await useCustomFetch(
+      `api/event/domain/${url.host}`,
+      "get",
+      {},
+      true
+    );
     if (response.data.value.status) {
       doLoadComponent(response.data.value.data.config.value.name);
     } else {
-      loadComponent.value = defineAsyncComponent(() => import(`@/components/error.vue`));
+      loadComponent.value = defineAsyncComponent(
+        () => import(`@/components/error.vue`)
+      );
     }
   }
 };

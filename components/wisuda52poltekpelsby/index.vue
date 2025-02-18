@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <audio ref="audioElement" loop>
-      <source src="/wisuda51poltekpelsby/mars-perhubungan.mp3" type="audio/mpeg" />
+      <source
+        src="/wisuda52poltekpelsby/mars-perhubungan.mp3"
+        type="audio/mpeg"
+      />
     </audio>
     <div class="page-welcome">
       <a
@@ -46,71 +49,14 @@
           />
         </svg>
       </a>
-      <div class="section-layout-welcome text-center">
-        <div class="grid grid-cols-1 gap-5">
-          <div class="flex flex-col justify-center items-center">
-            <img
-              :src="bpsdmWebp"
-              alt="poltekpelxperhubungan"
-              class="img-fluid img-top-perhubungan"
-            />
-          </div>
-          <div class="grid grid-cols-1 gap-5">
-            <div class="flex justify-center items-center">
-              <img
-                :src="harhubnas"
-                alt="poltekpelxperhubungan"
-                class="img-fluid logo-top-welcome"
-              />
-              <img
-                :src="blu"
-                alt="poltekpelxperhubungan"
-                class="img-fluid logo-top-welcome"
-              />
-              <img
-                :src="proprestasiWebp"
-                alt="poltekpelxperhubungan"
-                class="img-fluid logo-top-welcome"
-              />
-              <img
-                :src="goldgenerationWebp"
-                alt="poltekpelxperhubungan"
-                class="img-fluid logo-top-welcome"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <img src="wisuda50poltekpelsby_backdrop_invitation.webp" alt="banner-wisuda" class="img-fluid image-welcome"> -->
-      <div class="text-center text-top-welcome mt-10">
-        <div class="mb-4 text-headline">
-          UPACARA WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
-        </div>
-        <div class="mb-4 text-headline-2">
-          "PROGRAM SARJANA TERAPAN DAN DIPLOMA III SERTA DIKLAT PELAUT I, II, III, IV & V"
-        </div>
-        <div class="text-headline-3">
-          "Sustainable Transportation Technology For Advanced Maritime"
-        </div>
+      <div class="text-center text-top-welcome">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
           v-if="buttonInvitation"
           @click="openInvitation()"
         >
           Buka Undangan
         </button>
-        <div class="section-bottom-welcome">
-          <div class="text-date">Surabaya, 19 September 2024</div>
-          <div class="text-headline-4">"Together To Give The Best"</div>
-          <img
-            :src="rightYellow"
-            alt="right-yellow"
-            class="right-yellow fade-in-element"
-          />
-          <img :src="rightBlue" alt="right-blue" class="right-blue fade-in-element" />
-          <img :src="leftYellow" alt="right-blue" class="left-yellow fade-in-element" />
-          <img :src="leftBlue" alt="right-blue" class="left-blue fade-in-element" />
-        </div>
       </div>
     </div>
     <div class="container-fluid d-none" id="content-page" v-if="showContent">
@@ -129,38 +75,50 @@
               e. Seluruh tamu undangan keluarga berada di tenda undangan
             </div>
             <div class="ms-3">
-              f. Instrumen bunyi sangkakala pertama, seluruh peserta upacara siap di
-              daerah persiapan
+              f. Instrumen bunyi sangkakala pertama, seluruh peserta upacara
+              siap di daerah persiapan
             </div>
-            <div class="ms-3">g. Seluruh petugas upacara memasuki lapangan upacara</div>
+            <div class="ms-3">
+              g. Seluruh petugas upacara memasuki lapangan upacara
+            </div>
             <div class="ms-3">h. Pembukaan MC</div>
             <div class="ms-3">
-              i. Sangkakala kedua, peserta upacara memasuki lapangan upacara diiring
-              korsik
+              i. Sangkakala kedua, peserta upacara memasuki lapangan upacara
+              diiring korsik
             </div>
             <div class="ms-3">
-              j. Seluruh undangan VIP dan Undangan VVIP telah mengambil tempat yang telah
-              ditentukan
+              j. Seluruh undangan VIP dan Undangan VVIP telah mengambil tempat
+              yang telah ditentukan
             </div>
             <div class="ms-3">k. Pemberitahuan tanda upacara dimulai</div>
-            <div class="ms-3">l. Komandan Upacara memasuki lapangan upacara</div>
-            <div class="ms-3">m. Panji Perhubungan memasuki lapangan upacara</div>
+            <div class="ms-3">
+              l. Komandan Upacara memasuki lapangan upacara
+            </div>
+            <div class="ms-3">
+              m. Panji Perhubungan memasuki lapangan upacara
+            </div>
 
             <div class="mt-2">2. Acara Pendahuluan</div>
             <div class="ms-3">a. Laporan Perwira Upacara;</div>
-            <div class="ms-3">b. Inspektur Upacara memasuki tempat upacara.</div>
+            <div class="ms-3">
+              b. Inspektur Upacara memasuki tempat upacara.
+            </div>
 
             <div class="mt-2">3. Acara Pokok</div>
             <div class="ms-3">a. Lagu Kebangsaan Indonesia Raya (korsik)</div>
             <div class="ms-3">b. Hymne Perhubungan (Paduan Suara)</div>
-            <div class="ms-3">c. Penghormatan Umum kepada Inspektur Upacara;</div>
+            <div class="ms-3">
+              c. Penghormatan Umum kepada Inspektur Upacara;
+            </div>
             <div class="ms-3">d. Laporan Komandan Upacara;</div>
             <div class="ms-3">e. Penghormatan Kepada Panji Perhubungan;</div>
             <div class="ms-3">f. Pembacaan Laporan Pendidikan;</div>
-            <div class="ms-3">g. Pernyataan Wisuda Perwira Transportasi Laut;</div>
             <div class="ms-3">
-              h. Prosesi Wisuda; (Penyematan Epolet, Pengalungan Samir, Penyerahan Ijasah,
-              Pemercikan Tirta dan Ikrar Perwira)
+              g. Pernyataan Wisuda Perwira Transportasi Laut;
+            </div>
+            <div class="ms-3">
+              h. Prosesi Wisuda; (Penyematan Epolet, Pengalungan Samir,
+              Penyerahan Ijasah, Pemercikan Tirta dan Ikrar Perwira)
             </div>
             <div class="ms-3">i. Amanat Inspektur Upacara;</div>
             <div class="ms-3">j. Pembacaan Do'a;</div>
@@ -170,9 +128,13 @@
             <div class="ms-3">n. Penghormatan Kepada Panji Perhubungan;</div>
             <div class="ms-3">o. Laporan Komandan Upacara;</div>
             <div class="ms-3">p. Penghormatan Pasukan;</div>
-            <div class="ms-3">q. Inspektur Upacara kembali ke mimbar kehormatan;</div>
+            <div class="ms-3">
+              q. Inspektur Upacara kembali ke mimbar kehormatan;
+            </div>
             <div class="ms-3">r. Laporan Perwira Upacara;</div>
-            <div class="ms-3">s. Panji Perhubungan meninggalkan lapangan upcara;</div>
+            <div class="ms-3">
+              s. Panji Perhubungan meninggalkan lapangan upcara;
+            </div>
             <div class="ms-3">
               t. Upacara selesai, komandan upacara meninggalkan lapangan upacara
             </div>
@@ -182,14 +144,16 @@
             </div>
             <div class="ms-3">v. Perwujudan Tanda Kesetiaan Terhadap NKRI;</div>
             <div class="ms-3">w. Penyerahan Lulusan Kepada Korps Alumni;</div>
-            <div class="ms-3">x. Pendatanganan Kerjasama dengan Perusahan Pelayaran;</div>
+            <div class="ms-3">
+              x. Pendatanganan Kerjasama dengan Perusahan Pelayaran;
+            </div>
 
             <div class="mt-2">4. Acara Tambahan</div>
             <div class="ms-3">a. Pemberian santunan kepada anak yatim;</div>
             <div class="ms-3">b. Foto Bersama;</div>
             <div class="ms-3">
-              c. Rangkaian Upacara selesai, ucapan terimakasih dilanjutkan dengan acara
-              tambahan
+              c. Rangkaian Upacara selesai, ucapan terimakasih dilanjutkan
+              dengan acara tambahan
             </div>
             <div class="ms-3">1) Penampilan Passing Out Parade</div>
             <div class="ms-3">2) Penampilan Atraksi Reog</div>
@@ -199,8 +163,8 @@
           <div class="section-layout-denah text-center px-5">
             <div class="text-md font-bold">DENAH PARKIR</div>
             <div class="text-sm font-bold">
-              WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK PELAYARAN
-              SURABAYA
+              WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK
+              PELAYARAN SURABAYA
             </div>
             <div class="text-sm font-bold mb-5">2024</div>
             <img :src="denahParkir" alt="denah" class="img-fluid" />
@@ -226,12 +190,19 @@
         </div>
       </div>
     </div>
-    <div class="section-social-media d-none" id="content-page-footer" v-if="showContent">
+    <div
+      class="section-social-media d-none"
+      id="content-page-footer"
+      v-if="showContent"
+    >
       <h2 class="text-center">Follow Sosial Media</h2>
       <h2 class="text-center">Politeknik Pelayaran Surabaya</h2>
       <div class="grid grid-cols-2 gap-5 mt-5">
         <div class="sosial-media-list">
-          <a href="https://www.instagram.com/poltekpel_sby/?hl=id" target="_blank">
+          <a
+            href="https://www.instagram.com/poltekpel_sby/?hl=id"
+            target="_blank"
+          >
             <div class="flex flex-col justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -286,12 +257,17 @@
                   d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
                 />
               </svg>
-              <div class="text-xs text-center">Politeknik Pelayaran Surabaya</div>
+              <div class="text-xs text-center">
+                Politeknik Pelayaran Surabaya
+              </div>
             </div>
           </a>
         </div>
         <div class="sosial-media-list">
-          <a href="https://www.tiktok.com/@poltekpel_sby?lang=id-ID" target="_blank">
+          <a
+            href="https://www.tiktok.com/@poltekpel_sby?lang=id-ID"
+            target="_blank"
+          >
             <div class="flex flex-col justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -314,19 +290,19 @@
   </div>
 </template>
 <script setup>
-import marsPerhubungan from "@/public/wisuda51poltekpelsby/mars-perhubungan.mp3";
-import bpsdmWebp from "@/public/wisuda51poltekpelsby/logo-web.png";
-import proprestasiWebp from "@/public/wisuda51poltekpelsby/proprestasi_gen2.webp";
-import goldgenerationWebp from "@/public/wisuda51poltekpelsby/goldgeneration_gen2.webp";
-import layoutUpacara from "@/public/wisuda51poltekpelsby/layout-lapangan.png";
-import layoutTempatDuduk from "@/public/wisuda51poltekpelsby/web-seat-layout-wisuda51_720p.webp";
-import denahParkir from "@/public/wisuda51poltekpelsby/denah-parkir.webp";
-import rightYellow from "@/public/wisuda51poltekpelsby/right-yellow.png";
-import rightBlue from "@/public/wisuda51poltekpelsby/right-blue.png";
-import leftYellow from "@/public/wisuda51poltekpelsby/left-yellow.png";
-import leftBlue from "@/public/wisuda51poltekpelsby/left-blue.png";
-import blu from "@/public/wisuda51poltekpelsby/blu.png";
-import harhubnas from "@/public/wisuda51poltekpelsby/harhubnas.png";
+import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
+import bpsdmWebp from "@/public/wisuda52poltekpelsby/logo-web.png";
+import proprestasiWebp from "@/public/wisuda52poltekpelsby/proprestasi_gen2.webp";
+import goldgenerationWebp from "@/public/wisuda52poltekpelsby/goldgeneration_gen2.webp";
+import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.png";
+import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/web-seat-layout-wisuda51_720p.webp";
+import denahParkir from "@/public/wisuda52poltekpelsby/denah-parkir.webp";
+import rightYellow from "@/public/wisuda52poltekpelsby/right-yellow.png";
+import rightBlue from "@/public/wisuda52poltekpelsby/right-blue.png";
+import leftYellow from "@/public/wisuda52poltekpelsby/left-yellow.png";
+import leftBlue from "@/public/wisuda52poltekpelsby/left-blue.png";
+import blu from "@/public/wisuda52poltekpelsby/blu.png";
+import harhubnas from "@/public/wisuda52poltekpelsby/harhubnas.png";
 import AudioPlayer from "@/components/audio";
 
 const showContent = ref(false);
@@ -359,7 +335,7 @@ const pauseAudio = () => {
 };
 
 useSeoMeta({
-  ogImage: "../../public/wisuda51poltekpelsby/logo.png",
+  ogImage: "../../public/wisuda52poltekpelsby/logo.png",
 });
 </script>
 <style scoped>
@@ -439,9 +415,11 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda51poltekpelsby/background-web.png");
+  background-image: url("../../public/wisuda52poltekpelsby/background-web-2.jpg");
   background-position: center;
-  height: 790px;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .section-bottom-welcome {
   position: relative;
@@ -478,9 +456,6 @@ html {
     height: 150px;
     width: 100%;
     object-fit: cover;
-  }
-  .text-top-welcome {
-    margin-top: 30px;
   }
 }
 .text-top-welcome {
@@ -552,5 +527,9 @@ html {
 
 .fade-in-element {
   animation: fadeIn 2s ease-in;
+}
+.btn-invitation {
+  position: absolute;
+  top: 78%;
 }
 </style>
