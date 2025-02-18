@@ -415,7 +415,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda52poltekpelsby/background-web-2.jpg");
+  background-image: url("../../public/wisuda52poltekpelsby/background-web-2.webp");
   background-position: center;
   height: 850px;
   background-size: 100% 100%;
