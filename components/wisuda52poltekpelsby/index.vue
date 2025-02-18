@@ -417,7 +417,7 @@ html {
 .page-welcome {
   background-image: url("../../public/wisuda52poltekpelsby/background-web-2.webp");
   background-position: center;
-  height: 850px;
+  height: 1100px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -448,7 +448,18 @@ html {
   left: -15%;
   bottom: -70%;
 }
+.btn-invitation {
+  position: absolute;
+  top: 860px;
+}
 @media (max-width: 576px) {
+  .page-welcome {
+    height: 850px;
+    background-size: 100% 100%;
+  }
+  .btn-invitation {
+    top: 660px;
+  }
   .section-layout-welcome {
     position: relative;
   }
@@ -527,9 +538,5 @@ html {
 
 .fade-in-element {
   animation: fadeIn 2s ease-in;
-}
-.btn-invitation {
-  position: absolute;
-  top: 660px;
 }
 </style>
