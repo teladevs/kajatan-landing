@@ -171,7 +171,7 @@
               WISUDA KE-52 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK
               PELAYARAN SURABAYA
             </div>
-            <div class="text-sm font-bold mb-5">2024</div>
+            <div class="text-sm font-bold mb-5">2025</div>
             <img :src="denahParkir" alt="denah" class="img-fluid" />
           </div>
           <div class="section-layout-lapangan text-center">
