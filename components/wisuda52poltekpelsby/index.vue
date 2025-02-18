@@ -296,18 +296,9 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import bpsdmWebp from "@/public/wisuda52poltekpelsby/logo-web.png";
-import proprestasiWebp from "@/public/wisuda52poltekpelsby/proprestasi_gen2.webp";
-import goldgenerationWebp from "@/public/wisuda52poltekpelsby/goldgeneration_gen2.webp";
-import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.png";
-import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/web-seat-layout-wisuda51_720p.webp";
+import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.webp";
+import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/layout-seat.webp";
 import denahParkir from "@/public/wisuda52poltekpelsby/denah-parkir.webp";
-import rightYellow from "@/public/wisuda52poltekpelsby/right-yellow.png";
-import rightBlue from "@/public/wisuda52poltekpelsby/right-blue.png";
-import leftYellow from "@/public/wisuda52poltekpelsby/left-yellow.png";
-import leftBlue from "@/public/wisuda52poltekpelsby/left-blue.png";
-import blu from "@/public/wisuda52poltekpelsby/blu.png";
-import harhubnas from "@/public/wisuda52poltekpelsby/harhubnas.png";
 import AudioPlayer from "@/components/audio";
 
 const showContent = ref(false);
