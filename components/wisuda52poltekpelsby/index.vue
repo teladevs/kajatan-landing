@@ -381,10 +381,10 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 40px 40px 40px;
-  background-color: #3b65af;
-  border-radius: 10px;
+  background-color: #0d394f;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: white !important;
-  margin-top: 20px;
 }
 .text-section {
   margin-top: 20px;
@@ -405,7 +405,7 @@ html {
 }
 
 .section-social-media {
-  background-color: #3b65af;
+  background-color: #0d394f;
   color: white !important;
   margin-top: 50px;
   text-decoration: none;
