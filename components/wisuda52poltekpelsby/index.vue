@@ -168,7 +168,7 @@
           <div class="section-layout-denah text-center px-5">
             <div class="text-md font-bold">DENAH PARKIR</div>
             <div class="text-sm font-bold">
-              WISUDA KE-51 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK
+              WISUDA KE-52 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK
               PELAYARAN SURABAYA
             </div>
             <div class="text-sm font-bold mb-5">2024</div>
