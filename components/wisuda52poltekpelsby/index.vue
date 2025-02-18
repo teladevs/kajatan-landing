@@ -376,7 +376,7 @@ useSeoMeta({
 .section-rundown {
   height: 100%;
   width: 100%;
-  padding: 30px 40px 40px 40px;
+  padding: 30px 30px 40px 30px;
   background-color: #0d394f;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
