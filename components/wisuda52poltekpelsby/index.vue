@@ -530,6 +530,6 @@ html {
 }
 .btn-invitation {
   position: absolute;
-  top: 78%;
+  top: 82%;
 }
 </style>
