@@ -65,23 +65,23 @@
           <div class="section-rundown" ref="sectionRundown">
             <h2 class="text-center w-100" id="rundown-acara">Rundown Acara</h2>
             <div>1. Acara Persiapan</div>
-            <div class="ms-3">a. MC</div>
-            <div class="ms-3">b. Petugas Upacara</div>
-            <div class="ms-3">c. Jajar Kehormatan</div>
+            <div class="ms-3">a. MC;</div>
+            <div class="ms-3">b. Petugas Upacara;</div>
+            <div class="ms-3">c. Jajar Kehormatan;</div>
             <div class="ms-3">
-              d. Seluruh pasukan mempersiapan diri di daerah persiapan
+              d. Seluruh peserta Pelantikan berada di daerah Persiapan;
             </div>
             <div class="ms-3">
               e. Seluruh tamu undangan keluarga berada di tenda undangan
             </div>
             <div class="ms-3">
               f. Instrumen bunyi sangkakala pertama, seluruh peserta upacara
-              siap di daerah persiapan
+              siap di daerah persiapan;
             </div>
             <div class="ms-3">
               g. Seluruh petugas upacara memasuki lapangan upacara
             </div>
-            <div class="ms-3">h. Pembukaan MC</div>
+            <div class="ms-3">h. Pembukaan MC;</div>
             <div class="ms-3">
               i. Sangkakala kedua, peserta upacara memasuki lapangan upacara
               diiring korsik
@@ -90,7 +90,7 @@
               j. Seluruh undangan VIP dan Undangan VVIP telah mengambil tempat
               yang telah ditentukan
             </div>
-            <div class="ms-3">k. Pemberitahuan tanda upacara dimulai</div>
+            <div class="ms-3">k. Pemberitahuan tanda upacara dimulai;</div>
             <div class="ms-3">
               l. Komandan Upacara memasuki lapangan upacara
             </div>
@@ -144,9 +144,6 @@
             </div>
             <div class="ms-3">v. Perwujudan Tanda Kesetiaan Terhadap NKRI;</div>
             <div class="ms-3">w. Penyerahan Lulusan Kepada Korps Alumni;</div>
-            <div class="ms-3">
-              x. Pendatanganan Kerjasama dengan Perusahan Pelayaran;
-            </div>
 
             <div class="mt-2">4. Acara Tambahan</div>
             <div class="ms-3">a. Pemberian santunan kepada anak yatim;</div>
@@ -156,9 +153,17 @@
               dengan acara tambahan
             </div>
             <div class="ms-3">1) Penampilan Passing Out Parade</div>
-            <div class="ms-3">2) Penampilan Atraksi Reog</div>
-            <div class="ms-3">3) Penampilan Marching Band</div>
-            <div class="ms-3">4) Atraksi Tari Bersama / Flash Mob</div>
+            <div class="ms-3">2) Penampilan Marching Band</div>
+            <div class="ms-3">3) Atraksi Tari Bersama / Flash Mob</div>
+
+            <div class="mt-2">5. Acara Ramah Tamah</div>
+            <div class="ms-3">
+              a. Tamu undangan VIP dan VVIP menuju Ruang Ramah Tamah;
+            </div>
+            <div class="ms-3">
+              b. Kegiatan Ramah Tamah dilaksanakan dengan menerapkan Protokol
+              Kesehatan.
+            </div>
           </div>
           <div class="section-layout-denah text-center px-5">
             <div class="text-md font-bold">DENAH PARKIR</div>
