@@ -417,7 +417,7 @@ html {
 .page-welcome {
   background-image: url("../../public/wisuda52poltekpelsby/background-web-2.jpg");
   background-position: center;
-  height: 100vh;
+  height: 850px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -530,6 +530,6 @@ html {
 }
 .btn-invitation {
   position: absolute;
-  top: 82%;
+  top: 660px;
 }
 </style>
