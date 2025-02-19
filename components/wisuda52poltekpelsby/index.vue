@@ -450,7 +450,7 @@ html {
 }
 @media (max-width: 576px) {
   .page-welcome {
-    height: 750px;
+    height: 800px;
     background-size: 100% 100%;
   }
   .btn-invitation {
