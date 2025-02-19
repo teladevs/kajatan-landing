@@ -450,11 +450,11 @@ html {
 }
 @media (max-width: 576px) {
   .page-welcome {
-    height: 850px;
+    height: 750px;
     background-size: 100% 100%;
   }
   .btn-invitation {
-    top: 660px;
+    top: 600px;
   }
   .section-layout-welcome {
     position: relative;
