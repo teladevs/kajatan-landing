@@ -64,105 +64,96 @@
         <div class="col-md-12">
           <div class="section-rundown" ref="sectionRundown">
             <h2 class="text-center w-100" id="rundown-acara">Rundown Acara</h2>
-            <div>1. Acara Persiapan</div>
-            <div class="ms-3">a. MC;</div>
-            <div class="ms-3">b. Petugas Upacara;</div>
-            <div class="ms-3">c. Jajar Kehormatan;</div>
+            <div>1. ACARA PERSIAPAN</div>
             <div class="ms-3">
-              d. Seluruh peserta Pelantikan berada di daerah Persiapan;
+              a. Seluruh pasukan mempersiapan diri di daerah persiapan;
             </div>
             <div class="ms-3">
-              e. Seluruh tamu undangan keluarga berada di tenda undangan
-            </div>
-            <div class="ms-3">
-              f. Instrumen bunyi sangkakala pertama, seluruh peserta upacara
-              siap di daerah persiapan;
-            </div>
-            <div class="ms-3">
-              g. Seluruh petugas upacara memasuki lapangan upacara
-            </div>
-            <div class="ms-3">h. Pembukaan MC;</div>
-            <div class="ms-3">
-              i. Sangkakala kedua, peserta upacara memasuki lapangan upacara
-              diiring korsik
-            </div>
-            <div class="ms-3">
-              j. Seluruh undangan VIP dan Undangan VVIP telah mengambil tempat
-              yang telah ditentukan
-            </div>
-            <div class="ms-3">k. Pemberitahuan tanda upacara dimulai;</div>
-            <div class="ms-3">
-              l. Komandan Upacara memasuki lapangan upacara
-            </div>
-            <div class="ms-3">
-              m. Panji Perhubungan memasuki lapangan upacara
+              b. Seluruh pasukan upacara telah siap dilapangan upacara;
             </div>
 
-            <div class="mt-2">2. Acara Pendahuluan</div>
-            <div class="ms-3">a. Laporan Perwira Upacara;</div>
+            <div class="mt-2">2. ACARA PENDAHULUAN</div>
             <div class="ms-3">
-              b. Inspektur Upacara memasuki tempat upacara.
+              a. Komandan upacara memasuki lapangan upacara;
+            </div>
+            <div class="ms-3">
+              b. Panji Perhubungan memasuki lapangan upacara.
+            </div>
+            <div class="ms-3">
+              c. Inspektur Upacara tiba di mimbar kehormatan.
             </div>
 
-            <div class="mt-2">3. Acara Pokok</div>
-            <div class="ms-3">a. Lagu Kebangsaan Indonesia Raya (korsik)</div>
-            <div class="ms-3">b. Hymne Perhubungan (Paduan Suara)</div>
+            <div class="mt-2">3. ACARA POKOK</div>
             <div class="ms-3">
-              c. Penghormatan Umum kepada Inspektur Upacara;
-            </div>
-            <div class="ms-3">d. Laporan Komandan Upacara;</div>
-            <div class="ms-3">e. Penghormatan Kepada Panji Perhubungan;</div>
-            <div class="ms-3">f. Pembacaan Laporan Pendidikan;</div>
-            <div class="ms-3">
-              g. Pernyataan Wisuda Perwira Transportasi Laut;
+              a. Laporan Perwira Upacara kepada Inspektur Upacara;
             </div>
             <div class="ms-3">
-              h. Prosesi Wisuda; (Penyematan Epolet, Pengalungan Samir,
-              Penyerahan Ijasah, Pemercikan Tirta dan Ikrar Perwira)
-            </div>
-            <div class="ms-3">i. Amanat Inspektur Upacara;</div>
-            <div class="ms-3">j. Pembacaan Do'a;</div>
-            <div class="ms-3">k. Andhika Bhayangkari;</div>
-            <div class="ms-3">l. Lagu Bagimu Negeri</div>
-            <div class="ms-3">m. Mars Perhubungan;</div>
-            <div class="ms-3">n. Penghormatan Kepada Panji Perhubungan;</div>
-            <div class="ms-3">o. Laporan Komandan Upacara;</div>
-            <div class="ms-3">p. Penghormatan Pasukan;</div>
-            <div class="ms-3">
-              q. Inspektur Upacara kembali ke mimbar kehormatan;
-            </div>
-            <div class="ms-3">r. Laporan Perwira Upacara;</div>
-            <div class="ms-3">
-              s. Panji Perhubungan meninggalkan lapangan upcara;
+              b. Inspektur Upacara memasuki mimbar upacara;
             </div>
             <div class="ms-3">
-              t. Upacara selesai, komandan upacara meninggalkan lapangan upacara
+              c. Lagu Kebangsaan Indonesia Raya dan Hymne Perhubungan;
             </div>
-            ;
             <div class="ms-3">
-              u. Pemasangan Samir Oleh Keluarga Perwira Transportasi Laut;
+              d. Penghormatan Umum kepada Inspektur Upacara;
             </div>
-            <div class="ms-3">v. Perwujudan Tanda Kesetiaan Terhadap NKRI;</div>
-            <div class="ms-3">w. Penyerahan Lulusan Kepada Korps Alumni;</div>
+            <div class="ms-3">e. Laporan Komandan Upacara;</div>
+            <div class="ms-3">f. Penghormatan kepada Panji Perhubungan;</div>
+            <div class="ms-3">g. Laporan Pendidikan;</div>
+            <div class="ms-3">
+              h. Pernyataan Wisuda Perwira Transportasi Laut;
+            </div>
+            <div class="ms-3">
+              i. Prosesi Wisuda Perwira Transportasi Laut oleh Inspektur
+              Upacara;
+            </div>
+            <div class="ms-3">j. Ikrar Wisudawan;</div>
+            <div class="ms-3">k. Amanat Inspektur Upacara;</div>
+            <div class="ms-3">l. Doa;</div>
+            <div class="ms-3">m. Andika Bhayangkari;</div>
+            <div class="ms-3">n. Lagu Bagimu Negeri dan Mars Perhubungan;</div>
+            <div class="ms-3">o. Penghormatan kepada Panji Perhubungan;</div>
+            <div class="ms-3">p. Laporan Komandan Upacara;</div>
+            <div class="ms-3">
+              q. Penghormatan Pasukan kepada Inspektur Upacara;
+            </div>
+            <div class="ms-3">
+              r. Inspektur Upacara meninggalkan lapangan upacara;
+            </div>
 
-            <div class="mt-2">4. Acara Tambahan</div>
-            <div class="ms-3">a. Pemberian santunan kepada anak yatim;</div>
-            <div class="ms-3">b. Foto Bersama;</div>
+            <div class="mt-2">4. ACARA PENUTUP</div>
             <div class="ms-3">
-              c. Rangkaian Upacara selesai, ucapan terimakasih dilanjutkan
-              dengan acara tambahan
+              a. Laporan Perwira Upacara kepada Inspektur Upacara;
             </div>
-            <div class="ms-3">1) Penampilan Passing Out Parade</div>
-            <div class="ms-3">2) Penampilan Marching Band</div>
-            <div class="ms-3">3) Atraksi Tari Bersama / Flash Mob</div>
+            <div class="ms-3">
+              b. Panji Perhubungan meninggalkan lapangan Upacara;
+            </div>
+            <div class="ms-3">
+              c. Komandan Upacara meninggalkan lapangan upacara;
+            </div>
+            <div class="ms-3">
+              d. Pemasangan Samir oleh keluarga Perwira Transportasi Laut;
+            </div>
+            <div class="ms-3">
+              e. Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+              Indonesia (NKRI);
+            </div>
+            <div class="ms-3">
+              f. Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni;
+            </div>
+            <div class="ms-3">
+              g. Penandatanganan kerjasama dengan Perusahaan Pelayaran;
+            </div>
 
-            <div class="mt-2">5. Acara Ramah Tamah</div>
+            <div class="mt-2">5. ACARA TAMBAHAN</div>
+            <div class="ms-3">a. Penyerahan Tali Asih kepada Panti Asuhan;</div>
+            <div class="ms-3">b. Foto bersama Perwira Transportasi Laut;</div>
+            <div class="ms-3">c. Passing Out Parade;</div>
             <div class="ms-3">
-              a. Tamu undangan VIP dan VVIP menuju Ruang Ramah Tamah;
+              d. Atraksi Marching Band GITA SWARA SAMUDRA; ;
             </div>
             <div class="ms-3">
-              b. Kegiatan Ramah Tamah dilaksanakan dengan menerapkan Protokol
-              Kesehatan.
+              e. Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
+              tamah; ;
             </div>
           </div>
           <div class="section-layout-denah text-center px-5">
