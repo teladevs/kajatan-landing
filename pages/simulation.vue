@@ -1,13 +1,20 @@
 <template>
   <div class="seat-container">
-    <div class="grid grid-cols-10 gap-10 text-center py-10 px-10">
-      <div v-for="(valSec, idxSec) in sectorAll">
+    <div class="sector-block text-center py-10 px-10">
+      <div
+        v-for="(valSec, idxSec) in sectorAll"
+        :class="
+          valSec.sector === 4 || valSec.sector === 5
+            ? 'grid-sector-3'
+            : 'grid-sector'
+        "
+      >
         <div class="text-center text-2xl font-bold text-slate-100 my-10">
           {{ valSec.name }}
         </div>
         <div
           class="grid grid-cols-10 gap-2"
-          v-if="valSec.sector !== 5 && valSec.sector !== 6"
+          v-if="valSec.sector !== 4 && valSec.sector !== 5"
         >
           <div
             class="seat flex items-center justify-center"
@@ -30,7 +37,7 @@
         <div class="text-center flex justify-center">
           <div
             class="grid grid-cols-3 gap-2"
-            v-if="valSec.sector === 5 || valSec.sector === 6"
+            v-if="valSec.sector === 4 || valSec.sector === 5"
           >
             <div
               class="seat flex items-center justify-center"
@@ -56,13 +63,28 @@
   </div>
 </template>
 <style scoped>
+.sector-block {
+  display: flex;
+  flex-direction: row;
+}
+.grid-sector {
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.grid-sector-3 {
+  width: 110px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .seat-container {
   width: 3500px;
+  height: 100vh;
   background-color: #429ac0;
 }
 .seat {
-  width: 30px;
-  height: 25px;
+  width: 25px;
+  height: 20px;
   border-radius: 10px 10px 0px 0px;
   background-color: white;
   color: black;
@@ -135,19 +157,17 @@ console.log(router);
 const sectorAll = [
   { name: "Sektor 1", sector: 1, total: 160 },
   { name: "Sektor 2", sector: 2, total: 160 },
-  { name: "Sektor 3", sector: 3, total: 160 },
-  { name: "Sektor 4", sector: 4, total: 160 },
-  { name: "Sektor 5", sector: 5, total: 48 },
-  { name: "Sektor 6", sector: 6, total: 48 },
+  { name: "Sektor 3", sector: 3, total: 140 },
+  { name: "Sektor 4", sector: 4, total: 36 },
+  { name: "Sektor 5", sector: 5, total: 36 },
+  { name: "Sektor 6", sector: 6, total: 140 },
   { name: "Sektor 7", sector: 7, total: 160 },
   { name: "Sektor 8", sector: 8, total: 160 },
-  { name: "Sektor 9", sector: 9, total: 160 },
-  { name: "Sektor 10", sector: 10, total: 160 },
 ];
 
 const checkAlphabet = (number, seat, sector) => {
   let alphabet = "";
-  if (sector == 5 || sector == 6) {
+  if (sector == 4 || sector == 5) {
     switch (number) {
       case 0:
         alphabet = "A";
@@ -308,12 +328,10 @@ const loadAllSectorsInQueue = async () => {
   await loadDataSector("SEKTOR 6");
   await loadDataSector("SEKTOR 7");
   await loadDataSector("SEKTOR 8");
-  await loadDataSector("SEKTOR 9");
-  await loadDataSector("SEKTOR 10");
 };
 
-loadAllSectorsInQueue();
+// loadAllSectorsInQueue();
 setInterval(() => {
-  loadAllSectorsInQueue();
+  // loadAllSectorsInQueue();
 }, 5000);
 </script>
