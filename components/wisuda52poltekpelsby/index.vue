@@ -437,7 +437,7 @@ html {
 }
 .btn-invitation {
   position: absolute;
-  top: 860px;
+  top: 830px;
 }
 @media (max-width: 576px) {
   .page-welcome {
