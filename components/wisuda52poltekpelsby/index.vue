@@ -446,7 +446,7 @@ html {
     background-size: 100% 100%;
   }
   .btn-invitation {
-    top: 570px;
+    top: 580px;
   }
   .section-layout-welcome {
     position: relative;
