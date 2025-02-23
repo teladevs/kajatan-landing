@@ -304,7 +304,7 @@ const checkAlphabet = (number, seat, sector) => {
 
 const loadDataSector = async (sector) => {
   let response = await useCustomFetch(
-    `/api/event-seat/detail-event-seat-sector/28/${sector}`,
+    `/api/event-seat/detail-event-seat-sector/33/${sector}`,
     "get",
     {},
     true
