@@ -149,6 +149,10 @@
   background-color: #008080;
   color: white;
 }
+.seat.booked.DP-ETO {
+  background-color: #156541;
+  color: white;
+}
 </style>
 <script setup>
 import { useRouter } from "vue-router";

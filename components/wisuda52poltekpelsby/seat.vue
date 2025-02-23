@@ -85,7 +85,7 @@
             :class="detailContact?.kategori"
           >
             <div class="text-base font-bold w-full text-center mb-2">
-              {{ detailContact?.jurusan }}
+              {{ detailContact?.nama_sektor }}
             </div>
           </div>
         </div>
@@ -231,7 +231,7 @@ setTimeout(() => {
   color: white;
 }
 .seat.booked.DP-ETO {
-  background-color: #eaf3f1;
+  background-color: #156541;
   color: white;
 }
 </style>
