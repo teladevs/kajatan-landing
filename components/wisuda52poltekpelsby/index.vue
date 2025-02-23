@@ -66,103 +66,287 @@
             <h2 class="text-center w-100" id="rundown-acara">Rundown Acara</h2>
             <div>1. ACARA PERSIAPAN</div>
             <div class="ms-3">
-              a. Seluruh pasukan mempersiapan diri di daerah persiapan;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">a.</div>
+                <div class="col-span-11">
+                  Seluruh pasukan mempersiapan diri di daerah persiapan;
+                </div>
+              </div>
             </div>
             <div class="ms-3">
-              b. Seluruh pasukan upacara telah siap dilapangan upacara;
-            </div>
-
-            <div class="mt-2">2. ACARA PENDAHULUAN</div>
-            <div class="ms-3">
-              a. Komandan upacara memasuki lapangan upacara;
-            </div>
-            <div class="ms-3">
-              b. Panji Perhubungan memasuki lapangan upacara.
-            </div>
-            <div class="ms-3">
-              c. Inspektur Upacara tiba di mimbar kehormatan.
-            </div>
-
-            <div class="mt-2">3. ACARA POKOK</div>
-            <div class="ms-3">
-              a. Laporan Perwira Upacara kepada Inspektur Upacara;
-            </div>
-            <div class="ms-3">
-              b. Inspektur Upacara memasuki mimbar upacara;
-            </div>
-            <div class="ms-3">
-              c. Lagu Kebangsaan Indonesia Raya dan Hymne Perhubungan;
-            </div>
-            <div class="ms-3">
-              d. Penghormatan Umum kepada Inspektur Upacara;
-            </div>
-            <div class="ms-3">e. Laporan Komandan Upacara;</div>
-            <div class="ms-3">f. Penghormatan kepada Panji Perhubungan;</div>
-            <div class="ms-3">g. Laporan Pendidikan;</div>
-            <div class="ms-3">
-              h. Pernyataan Wisuda Perwira Transportasi Laut;
-            </div>
-            <div class="ms-3">
-              i. Prosesi Wisuda Perwira Transportasi Laut oleh Inspektur
-              Upacara;
-            </div>
-            <div class="ms-3">j. Ikrar Wisudawan;</div>
-            <div class="ms-3">k. Amanat Inspektur Upacara;</div>
-            <div class="ms-3">l. Doa;</div>
-            <div class="ms-3">m. Andika Bhayangkari;</div>
-            <div class="ms-3">n. Lagu Bagimu Negeri dan Mars Perhubungan;</div>
-            <div class="ms-3">o. Penghormatan kepada Panji Perhubungan;</div>
-            <div class="ms-3">p. Laporan Komandan Upacara;</div>
-            <div class="ms-3">
-              q. Penghormatan Pasukan kepada Inspektur Upacara;
-            </div>
-            <div class="ms-3">
-              r. Inspektur Upacara meninggalkan lapangan upacara;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">b.</div>
+                <div class="col-span-11">
+                  Seluruh pasukan upacara telah siap dilapangan upacara;
+                </div>
+              </div>
             </div>
 
-            <div class="mt-2">4. ACARA PENUTUP</div>
+            <div class="mt-2 mb-2">2. ACARA PENDAHULUAN</div>
             <div class="ms-3">
-              a. Laporan Perwira Upacara kepada Inspektur Upacara;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">a.</div>
+                <div class="col-span-11">
+                  Komandan upacara memasuki lapangan upacara;
+                </div>
+              </div>
             </div>
             <div class="ms-3">
-              b. Panji Perhubungan meninggalkan lapangan Upacara;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">b.</div>
+                <div class="col-span-11">
+                  Panji Perhubungan memasuki lapangan upacara.
+                </div>
+              </div>
             </div>
             <div class="ms-3">
-              c. Komandan Upacara meninggalkan lapangan upacara;
-            </div>
-            <div class="ms-3">
-              d. Pemasangan Samir oleh keluarga Perwira Transportasi Laut;
-            </div>
-            <div class="ms-3">
-              e. Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
-              Indonesia (NKRI);
-            </div>
-            <div class="ms-3">
-              f. Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni;
-            </div>
-            <div class="ms-3">
-              g. Penandatanganan kerjasama dengan Perusahaan Pelayaran;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">c.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara tiba di mimbar kehormatan.
+                </div>
+              </div>
             </div>
 
-            <div class="mt-2">5. ACARA TAMBAHAN</div>
-            <div class="ms-3">a. Penyerahan Tali Asih kepada Panti Asuhan;</div>
-            <div class="ms-3">b. Foto bersama Perwira Transportasi Laut;</div>
-            <div class="ms-3">c. Passing Out Parade;</div>
+            <div class="mt-2 mb-2">3. ACARA POKOK</div>
             <div class="ms-3">
-              d. Atraksi Marching Band GITA SWARA SAMUDRA; ;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">a.</div>
+                <div class="col-span-11">
+                  Laporan Perwira Upacara kepada Inspektur Upacara;
+                </div>
+              </div>
             </div>
             <div class="ms-3">
-              e. Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
-              tamah; ;
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">b.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara memasuki mimbar upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">c.</div>
+                <div class="col-span-11">
+                  Lagu Kebangsaan Indonesia Raya dan Hymne Perhubungan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">d.</div>
+                <div class="col-span-11">
+                  Penghormatan Umum kepada Inspektur Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">e.</div>
+                <div class="col-span-11">Laporan Komandan Upacara;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">f.</div>
+                <div class="col-span-11">
+                  Penghormatan kepada Panji Perhubungan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">g.</div>
+                <div class="col-span-11">Laporan Pendidikan;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">h.</div>
+                <div class="col-span-11">
+                  Pernyataan Wisuda Perwira Transportasi Laut;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">i.</div>
+                <div class="col-span-11">
+                  Prosesi Wisuda Perwira Transportasi Laut oleh Inspektur
+                  Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">j.</div>
+                <div class="col-span-11">Ikrar Wisudawan;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">k.</div>
+                <div class="col-span-11">Amanat Inspektur Upacara;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">l.</div>
+                <div class="col-span-11">Doa;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">m.</div>
+                <div class="col-span-11">Andika Bhayangkari;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">n.</div>
+                <div class="col-span-11">
+                  Lagu Bagimu Negeri dan Mars Perhubungan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">o.</div>
+                <div class="col-span-11">
+                  Penghormatan kepada Panji Perhubungan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">p.</div>
+                <div class="col-span-11">Laporan Komandan Upacara;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">q.</div>
+                <div class="col-span-11">
+                  Penghormatan Pasukan kepada Inspektur Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">r.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara meninggalkan lapangan upacara;
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-2 mb-2">4. ACARA PENUTUP</div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">a.</div>
+                <div class="col-span-11">
+                  Laporan Perwira Upacara kepada Inspektur Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">b.</div>
+                <div class="col-span-11">
+                  Panji Perhubungan meninggalkan lapangan Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">c.</div>
+                <div class="col-span-11">
+                  Komandan Upacara meninggalkan lapangan upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">d.</div>
+                <div class="col-span-11">
+                  Pemasangan Samir oleh keluarga Perwira Transportasi Laut;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">e.</div>
+                <div class="col-span-11">
+                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+                  Indonesia (NKRI);
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">f.</div>
+                <div class="col-span-11">
+                  Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">g.</div>
+                <div class="col-span-11">
+                  Penandatanganan kerjasama dengan Perusahaan Pelayaran;
+                </div>
+              </div>
+            </div>
+            <div class="mt-2 mb-2">5. ACARA TAMBAHAN</div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">a.</div>
+                <div class="col-span-11">
+                  Penyerahan Tali Asih kepada Panti Asuhan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">b.</div>
+                <div class="col-span-11">
+                  Foto bersama Perwira Transportasi Laut;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">c.</div>
+                <div class="col-span-11">Passing Out Parade;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">d.</div>
+                <div class="col-span-11">
+                  Atraksi Marching Band GITA SWARA SAMUDRA;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">e.</div>
+                <div class="col-span-11">
+                  Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
+                  tamah;
+                </div>
+              </div>
             </div>
           </div>
           <div class="section-layout-denah text-center px-5">
-            <div class="text-md font-bold">DENAH PARKIR</div>
+            <!-- <div class="text-md font-bold">DENAH PARKIR</div>
             <div class="text-sm font-bold">
               WISUDA KE-52 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT POLITEKNIK
               PELAYARAN SURABAYA
             </div>
-            <div class="text-sm font-bold mb-5">2025</div>
+            <div class="text-sm font-bold mb-5">2025</div> -->
             <img :src="denahParkir" alt="denah" class="img-fluid" />
           </div>
           <div class="section-layout-lapangan text-center">
@@ -172,9 +356,25 @@
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div>
           <div class="section-lokasi text-center">
-            <h2 class="text-section text-lg font-bold">Lokasi</h2>
+            <h2 class="text-section text-lg font-bold">
+              Lokasi {{ detailContact }}
+            </h2>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0965068301093!2d112.79223247357261!3d-7.34305897223099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2sid!4v1715309908294!5m2!1sid!2sid"
+              v-if="detailContact.gate == 'A'"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5505797809205!2d112.79250048772934!3d-7.342536181283759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2ssg!4v1740317025524!5m2!1sid!2ssg"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <iframe
+              v-if="
+                detailContact.gate == 'B' ||
+                detailContact == 'Politeknik Pelayaran Surabaya'
+              "
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5387315413402!2d112.7934721179081!3d-7.345198382956895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbebcd81e647%3A0x20a1a151eabcedfe!2sPoltekpel%20Surabaya!5e0!3m2!1sid!2ssg!4v1740316827069!5m2!1sid!2ssg"
               width="100%"
               height="450"
               style="border: 0"
@@ -291,6 +491,7 @@ import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.webp";
 import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/layout-seat.webp";
 import denahParkir from "@/public/wisuda52poltekpelsby/denah-parkir.webp";
 import AudioPlayer from "@/components/audio";
+import { useRouter } from "vue-router";
 
 const showContent = ref(false);
 const buttonInvitation = ref(true);
@@ -298,6 +499,31 @@ const currentUrl = window.location.origin;
 const soundPlay = ref(null);
 const audioElement = ref(null);
 const sectionRundown = ref(null);
+const router = useRouter();
+const detailContact = ref("Politeknik Pelayaran Surabaya");
+
+const loadData = async () => {
+  if (router.currentRoute.value.query.id != undefined) {
+    let eventDetail = await useCustomFetch(
+      `api/event/domain/${"wisuda52poltekpelsby.telanusa.com"}`,
+      "get",
+      {},
+      true
+    );
+
+    let response = await useCustomFetch(
+      `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
+      "get",
+      {},
+      true
+    );
+    detailContact.value = response?.data?.value?.data;
+  }
+};
+
+setTimeout(() => {
+  loadData();
+}, 1000);
 
 const openInvitation = () => {
   playAudio();
