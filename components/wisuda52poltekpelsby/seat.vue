@@ -71,7 +71,7 @@
                   </div>
                   <div
                     v-if="
-                      detailContact?.kode_sektor != 'TRPK' ||
+                      detailContact?.kode_sektor != 'TRPK' &&
                       detailContact?.kode_sektor != 'TRKK'
                     "
                   >
