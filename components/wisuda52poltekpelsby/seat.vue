@@ -230,4 +230,8 @@ setTimeout(() => {
   background-color: #008080;
   color: white;
 }
+.seat.booked.DP-ETO {
+  background-color: #eaf3f1;
+  color: white;
+}
 </style>
