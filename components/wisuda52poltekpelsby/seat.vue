@@ -69,7 +69,14 @@
                   <div v-if="detailContact?.kode_sektor == 'TRPK'">
                     SEKTOR 6 & 7
                   </div>
-                  <div v-else>{{ detailContact?.nama_sektor }}</div>
+                  <div
+                    v-if="
+                      detailContact?.kode_sektor != 'TRPK' ||
+                      detailContact?.kode_sektor != 'TRKK'
+                    "
+                  >
+                    {{ detailContact?.nama_sektor }}
+                  </div>
                 </dd>
               </div>
             </dl>
