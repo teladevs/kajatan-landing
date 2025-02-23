@@ -96,6 +96,29 @@
         </div>
         <img :src="imageDenahLapangan" alt="" />
       </div>
+      <div class="section-lokasi text-center">
+        <h2 class="text-section text-lg font-bold">Lokasi</h2>
+        <iframe
+          v-if="detailContact.gate == 'A'"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5505797809205!2d112.79250048772934!3d-7.342536181283759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2ssg!4v1740317025524!5m2!1sid!2ssg"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <iframe
+          v-if="detailContact == 'Politeknik Pelayaran Surabaya'"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5387315413402!2d112.7934721179081!3d-7.345198382956895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbebcd81e647%3A0x20a1a151eabcedfe!2sPoltekpel%20Surabaya!5e0!3m2!1sid!2ssg!4v1740316827069!5m2!1sid!2ssg"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
