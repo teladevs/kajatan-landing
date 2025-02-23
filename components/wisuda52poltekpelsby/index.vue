@@ -63,7 +63,9 @@
       <div class="page">
         <div class="col-md-12">
           <div class="section-rundown" ref="sectionRundown">
-            <h2 class="text-center w-100" id="rundown-acara">Rundown Acara</h2>
+            <h2 class="text-center w-100 mb-4 text-xl" id="rundown-acara">
+              Rundown Acara
+            </h2>
             <div>1. ACARA PERSIAPAN</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
