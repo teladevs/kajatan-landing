@@ -334,8 +334,8 @@ const loadAllSectorsInQueue = async () => {
   await loadDataSector("SEKTOR 8");
 };
 
-// loadAllSectorsInQueue();
+loadAllSectorsInQueue();
 setInterval(() => {
-  // loadAllSectorsInQueue();
+  loadAllSectorsInQueue();
 }, 5000);
 </script>
