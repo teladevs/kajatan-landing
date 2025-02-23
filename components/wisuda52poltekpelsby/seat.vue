@@ -85,7 +85,7 @@
             :class="detailContact?.kategori"
           >
             <div class="text-base font-bold w-full text-center mb-2">
-              {{ detailContact?.nama_sektor }}
+              {{ detailContact?.jurusan }}
             </div>
           </div>
         </div>
