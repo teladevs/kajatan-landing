@@ -6,7 +6,9 @@
       >
         <div>
           <div class="px-4 sm:px-0">
-            <h3 class="text-lg text-center font-semibold leading-7 text-slate-100">
+            <h3
+              class="text-lg text-center font-semibold leading-7 text-slate-100"
+            >
               Informasi Keluarga <br />
               Wisudawan / Pasis
             </h3>
@@ -24,7 +26,9 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">Jurusan</dt>
+                <dt class="text-sm font-medium leading-6 text-slate-400">
+                  Jurusan
+                </dt>
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
@@ -33,7 +37,9 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">Zona Parkir</dt>
+                <dt class="text-sm font-medium leading-6 text-slate-400">
+                  Zona Parkir
+                </dt>
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
@@ -41,7 +47,9 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">Pintu Masuk</dt>
+                <dt class="text-sm font-medium leading-6 text-slate-400">
+                  Pintu Masuk
+                </dt>
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-capitalize"
                 >
@@ -49,7 +57,9 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">Tempat Duduk</dt>
+                <dt class="text-sm font-medium leading-6 text-slate-400">
+                  Tempat Duduk
+                </dt>
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
@@ -91,7 +101,7 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda51poltekpelsby/layout-seat.jpg";
+import imageDenahLapangan from "../../public/wisuda52poltekpelsby/layout-seat.jpg";
 const url = useRequestURL();
 
 const router = useRouter();
@@ -99,7 +109,7 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"wisuda51poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda52poltekpelsby.telanusa.com"}`,
     "get",
     {},
     true
