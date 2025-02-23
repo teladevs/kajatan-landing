@@ -63,8 +63,13 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  <!-- BLOK II - {{ detailContact.study }} -->
-                  {{ detailContact?.nama_sektor }}
+                  <div v-if="detailContact?.kode_sektor == 'TROK'">
+                    SEKTOR 3,4,5 & 6
+                  </div>
+                  <div v-if="detailContact?.kode_sektor == 'TRPK'">
+                    SEKTOR 6 & 7
+                  </div>
+                  <div v-else>{{ detailContact?.nama_sektor }}</div>
                 </dd>
               </div>
             </dl>
