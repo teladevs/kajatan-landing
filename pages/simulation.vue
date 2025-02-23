@@ -161,10 +161,10 @@ console.log(router);
 const sectorAll = [
   { name: "Sektor 1", sector: 1, total: 160 },
   { name: "Sektor 2", sector: 2, total: 160 },
-  { name: "Sektor 3", sector: 3, total: 140 },
+  { name: "Sektor 3", sector: 3, total: 120 },
   { name: "Sektor 4", sector: 4, total: 36 },
   { name: "Sektor 5", sector: 5, total: 36 },
-  { name: "Sektor 6", sector: 6, total: 140 },
+  { name: "Sektor 6", sector: 6, total: 120 },
   { name: "Sektor 7", sector: 7, total: 160 },
   { name: "Sektor 8", sector: 8, total: 160 },
 ];
