@@ -16,7 +16,7 @@
           <div class="mt-6 border-gray-300">
             <dl class="divide-y divide-gray-100">
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">
+                <dt class="text-sm font-medium leading-6 text-column">
                   Nama Wisudawan / Pasis
                 </dt>
                 <dd
@@ -26,7 +26,7 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">
+                <dt class="text-sm font-medium leading-6 text-column">
                   Jurusan
                 </dt>
                 <dd
@@ -37,7 +37,7 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">
+                <dt class="text-sm font-medium leading-6 text-column">
                   Zona Parkir
                 </dt>
                 <dd
@@ -47,7 +47,7 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">
+                <dt class="text-sm font-medium leading-6 text-column">
                   Pintu Masuk
                 </dt>
                 <dd
@@ -57,7 +57,7 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-slate-400">
+                <dt class="text-sm font-medium leading-6 text-column">
                   Tempat Duduk
                 </dt>
                 <dd
@@ -131,6 +131,9 @@ setTimeout(() => {
 <style scoped>
 .bg-seat {
   background-color: #770808;
+}
+.text-column {
+  color: #ffdab9 !important;
 }
 .container {
   max-width: 600px !important;
