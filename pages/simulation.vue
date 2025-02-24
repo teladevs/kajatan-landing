@@ -285,16 +285,16 @@ const checkAlphabet = (number, seat, sector) => {
     return alphabet + (seat + sector * 10 - 10);
   }
 
-  if (sector > 6) {
+  if (sector > 5) {
     return alphabet + (seat + (sector * 10 - 24));
   }
 
-  if (sector == 5) {
+  if (sector == 4) {
     return alphabet + (seat + 40);
   }
 
-  if (sector == 6) {
-    return alphabet + (seat + 43);
+  if (sector == 5) {
+    return alphabet + (seat + 33);
   }
 
   if (sector == 1) {
