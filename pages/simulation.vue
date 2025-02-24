@@ -79,7 +79,7 @@
 }
 .seat-container {
   width: 3500px;
-  height: 100vh;
+  height: 110vh;
   background-color: #429ac0;
 }
 .seat {
