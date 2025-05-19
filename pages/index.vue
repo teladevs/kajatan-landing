@@ -20,8 +20,7 @@ const loadData = async () => {
     );
     if (response.data.value.status) {
       var template = response.data.value.data.feature.value.landing_template;
-      console.log(template);
-      if (template != null || template == undefined) {
+      if (template == null || template == undefined) {
         template = response.data.value.data.config.value.name;
       }
       doLoadComponent(template);
