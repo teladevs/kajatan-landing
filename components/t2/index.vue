@@ -347,7 +347,7 @@ useSeoMeta({
 .btn-open-invitation {
   background-color: #dda853 !important;
   border-radius: 10px;
-  width: 50%;
+  width: 200px;
   position: absolute;
   bottom: 80px;
   color: #000;
