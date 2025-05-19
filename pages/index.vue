@@ -19,7 +19,11 @@ const loadData = async () => {
       true
     );
     if (response.data.value.status) {
-      doLoadComponent(response.data.value.data.config.value.name);
+      var template = response.data.value.data.feature.value.landing_template;
+      if (template != null || template == undefined) {
+        template = response.data.value.data.config.value.name;
+      }
+      doLoadComponent(template);
     } else {
       loadComponent.value = defineAsyncComponent(
         () => import(`@/components/error.vue`)
