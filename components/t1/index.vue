@@ -187,7 +187,7 @@
         <h2 class="text-center text-lg">Universitas Islam Malang</h2>
         <div class="grid grid-cols-2 gap-5 mt-5">
           <div class="sosial-media-list">
-            <a href="https://www.instagram.com/unisma/?hl=id" target="_blank">
+            <a href="https://www.instagram.com/unisma_malang/" target="_blank">
               <div class="flex flex-col justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +206,10 @@
             </a>
           </div>
           <div class="sosial-media-list">
-            <a href="https://twitter.com/unisma" target="_blank">
+            <a
+              href="https://x.com/unisma193?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"
+            >
               <div class="flex flex-col justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +229,7 @@
           </div>
           <div class="sosial-media-list">
             <a
-              href="https://www.facebook.com/unisma/?locale=id_ID"
+              href="https://www.facebook.com/unisma1/?locale=id_ID"
               target="_blank"
             >
               <div class="flex flex-col justify-center items-center">
@@ -247,10 +250,7 @@
             </a>
           </div>
           <div class="sosial-media-list">
-            <a
-              href="https://www.tiktok.com/@poltekpel_sby?lang=id-ID"
-              target="_blank"
-            >
+            <a href="https://www.tiktok.com/@unisma_malang" target="_blank">
               <div class="flex flex-col justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
