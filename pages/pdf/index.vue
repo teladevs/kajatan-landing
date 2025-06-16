@@ -14,7 +14,7 @@
 }
 .image {
   width: 500px;
-  height: 250px;
+  height: 500px;
 }
 .qr-position {
   position: absolute;
