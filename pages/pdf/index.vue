@@ -1,9 +1,9 @@
 <template>
   <div ref="download">
-    <img src="../../public/unisma/inv-1.jpg" alt="download-1" class="image" />
-    <img src="../../public/unisma/inv-2.jpg" alt="download-2" class="image" />
-    <img src="../../public/unisma/inv-3.jpg" alt="download-3" class="image" />
-    <img src="../../public/unisma/inv-4.jpg" alt="download-4" class="image" />
+    <img src="../../public/unisma/inv-1.png" alt="download-1" class="image" />
+    <img src="../../public/unisma/inv-2.png" alt="download-2" class="image" />
+    <img src="../../public/unisma/inv-3.png" alt="download-3" class="image" />
+    <img src="../../public/unisma/inv-4.png" alt="download-4" class="image" />
     <div class="qr-position">qr-code</div>
   </div>
   <button @click="exportToPdf">Download</button>
