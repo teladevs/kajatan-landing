@@ -389,7 +389,7 @@ useSeoMeta({
   border-radius: 10px;
   width: 200px;
   position: absolute;
-  bottom: 80px;
+  bottom: 100px;
   color: #fff;
 }
 
@@ -398,7 +398,7 @@ useSeoMeta({
   border-radius: 10px;
   width: 200px;
   position: absolute;
-  bottom: 120px;
+  bottom: 30px;
   color: #fff;
 }
 .dateplace-section {
