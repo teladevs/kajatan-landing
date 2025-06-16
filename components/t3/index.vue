@@ -39,7 +39,7 @@
         Buka Undangan
       </button>
       <button
-        class="text-xl py-4 px-4 rounded btn-open-invitation"
+        class="text-xl py-4 px-4 rounded btn-download-invitation"
         @click="downloadInvitation"
       >
         Unduh Undangan
@@ -390,6 +390,15 @@ useSeoMeta({
   width: 200px;
   position: absolute;
   bottom: 80px;
+  color: #fff;
+}
+
+.btn-download-invitation {
+  background-color: #002466 !important;
+  border-radius: 10px;
+  width: 200px;
+  position: absolute;
+  bottom: 120px;
   color: #fff;
 }
 .dateplace-section {
