@@ -35,12 +35,6 @@
       >
         Buka Undangan
       </button>
-      <button
-        class="text-xl py-4 px-4 rounded btn-download-invitation"
-        @click="downloadInvitation"
-      >
-        Unduh Undangan
-      </button>
     </div>
     <div class="body" v-if="showContent">
       <div class="box-card">
@@ -167,6 +161,14 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+      </div>
+      <div class="text-center mb-3">
+        <button
+          class="text-xl py-4 px-4 rounded btn-download-invitation"
+          @click="downloadInvitation"
+        >
+          Lihat Undangan
+        </button>
       </div>
       <div class="cs-section">
         <div class="rounded-lg p-6">
