@@ -38,6 +38,12 @@
       >
         Buka Undangan
       </button>
+      <button
+        class="text-xl py-4 px-4 rounded btn-open-invitation"
+        @click="downloadInvitation"
+      >
+        Unduh Undangan
+      </button>
     </div>
     <div class="body" v-if="showContent">
       <div class="box-card primary rounded-xl mx-5">
@@ -329,6 +335,10 @@ const openInvitation = () => {
   setTimeout(() => {
     window.scrollTo(0, 700, "smooth");
   }, 200);
+};
+
+const downloadInvitation = () => {
+  window.location.href = "/pdf/index";
 };
 
 const playAudio = () => {
