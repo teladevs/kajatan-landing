@@ -338,7 +338,7 @@ const openInvitation = () => {
 };
 
 const downloadInvitation = () => {
-  window.location.href = "/pdf/index";
+  window.location.href = `/pdf?code=${router.currentRoute.value.params.code}`;
 };
 
 const playAudio = () => {
