@@ -15,10 +15,10 @@
           />
         </div>
         <div class="grid grid-cols-4 bg-white rounded p-3 logo-text">
-          <div class="text-sm">Teknik Sipil</div>
-          <div class="text-sm">Teknik Mesin</div>
-          <div class="text-sm">Teknik Elektro</div>
-          <div class="text-sm">Teknik Informatika</div>
+          <div>Teknik Sipil</div>
+          <div>Teknik Mesin</div>
+          <div>Teknik Elektro</div>
+          <div>Teknik Informatika</div>
         </div>
       </div>
       <div class="text-section flex flex-col p-5">
@@ -338,7 +338,7 @@ const openInvitation = () => {
 };
 
 const downloadInvitation = () => {
-  window.location.href = `/pdf?code=${router.currentRoute.value.params.query.code}`;
+  window.location.href = `/pdf?code=${router.currentRoute.value.query.code}`;
 };
 
 const playAudio = () => {
@@ -389,7 +389,7 @@ useSeoMeta({
   border-radius: 10px;
   width: 200px;
   position: absolute;
-  bottom: 100px;
+  bottom: 110px;
   color: #fff;
 }
 
@@ -456,5 +456,6 @@ useSeoMeta({
   margin-top: 20px;
   color: #15755f;
   font-weight: 600;
+  font-size: 10.5px;
 }
 </style>

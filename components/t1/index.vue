@@ -17,10 +17,10 @@
           />
         </div>
         <div class="grid grid-cols-4 bg-white rounded p-3 logo-text">
-          <div class="text-sm">Teknik Sipil</div>
-          <div class="text-sm">Teknik Mesin</div>
-          <div class="text-sm">Teknik Elektro</div>
-          <div class="text-sm">Teknik Informatika</div>
+          <div>Teknik Sipil</div>
+          <div>Teknik Mesin</div>
+          <div>Teknik Elektro</div>
+          <div>Teknik Informatika</div>
         </div>
       </div>
       <div class="text-section flex flex-col justify-center items-center">
@@ -29,11 +29,17 @@
         </div>
       </div>
       <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded btn-open-invitation"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded btn-open-invitation mb-3"
         @click="openInvitation"
         v-if="!showContent"
       >
         Buka Undangan
+      </button>
+      <button
+        class="text-white font-bold py-2 px-4 rounded btn-download-invitation"
+        @click="downloadInvitation"
+      >
+        Unduh Undangan
       </button>
     </div>
     <div class="body" v-if="showContent">
@@ -335,6 +341,10 @@ const openInvitation = () => {
   }, 200);
 };
 
+const downloadInvitation = () => {
+  window.location.href = `/pdf?code=${router.currentRoute.value.query.code}`;
+};
+
 const playAudio = () => {
   soundPlay.value = true;
   if (audioElement.value) {
@@ -382,6 +392,11 @@ useSeoMeta({
   background-color: #f08a5d !important;
   border-radius: 10px;
 }
+.btn-download-invitation {
+  background-color: #f08a5d !important;
+  border-radius: 10px;
+  color: #fff;
+}
 .dateplace-section {
   margin-top: 20px;
 }
@@ -409,5 +424,6 @@ useSeoMeta({
   margin-top: 20px;
   color: #b83b5e;
   font-weight: 600;
+  font-size: 9px;
 }
 </style>

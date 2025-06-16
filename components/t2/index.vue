@@ -17,10 +17,10 @@
           />
         </div>
         <div class="grid grid-cols-4 bg-white rounded p-3 logo-text">
-          <div class="text-sm">Teknik Sipil</div>
-          <div class="text-sm">Teknik Mesin</div>
-          <div class="text-sm">Teknik Elektro</div>
-          <div class="text-sm">Teknik Informatika</div>
+          <div>Teknik Sipil</div>
+          <div>Teknik Mesin</div>
+          <div>Teknik Elektro</div>
+          <div>Teknik Informatika</div>
         </div>
       </div>
       <div class="text-section flex flex-col justify-center items-center">
@@ -34,6 +34,12 @@
         v-if="!showContent"
       >
         Buka Undangan
+      </button>
+      <button
+        class="text-xl py-4 px-4 rounded btn-download-invitation"
+        @click="downloadInvitation"
+      >
+        Unduh Undangan
       </button>
     </div>
     <div class="body" v-if="showContent">
@@ -329,6 +335,10 @@ const openInvitation = () => {
   }, 200);
 };
 
+const downloadInvitation = () => {
+  window.location.href = `/pdf?code=${router.currentRoute.value.query.code}`;
+};
+
 const playAudio = () => {
   soundPlay.value = true;
   if (audioElement.value) {
@@ -379,7 +389,15 @@ useSeoMeta({
   border-radius: 10px;
   width: 200px;
   position: absolute;
-  bottom: 80px;
+  bottom: 110px;
+  color: #000;
+}
+.btn-download-invitation {
+  background-color: #dda853 !important;
+  border-radius: 10px;
+  width: 200px;
+  position: absolute;
+  bottom: 30px;
   color: #000;
 }
 .dateplace-section {
@@ -429,5 +447,6 @@ useSeoMeta({
   margin-top: 20px;
   color: #15755f;
   font-weight: 600;
+  font-size: 10.5px;
 }
 </style>
