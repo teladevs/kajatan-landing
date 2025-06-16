@@ -369,8 +369,10 @@ useSeoMeta({
   margin-bottom: 20px;
 }
 .text-section {
-  margin-bottom: 150px;
-  color: #fff;
+  background-color: #fff9;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
 }
 .btn-open-invitation {
   background-color: #dda853 !important;

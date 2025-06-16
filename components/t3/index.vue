@@ -22,7 +22,9 @@
         </div>
       </div>
       <div class="text-section flex flex-col p-5">
-        <div class="text-4xl font-bold mb-2">{{ eventDescribe?.title }}</div>
+        <div class="text-4xl font-bold mb-2 text-center">
+          {{ eventDescribe?.title }}
+        </div>
         <img
           src="../../public/unisma/bg-2.png"
           alt="image-1"
@@ -427,7 +429,7 @@ useSeoMeta({
 }
 .logo-section {
   position: absolute;
-  top: 90px;
+  top: 50px;
 }
 .logo-text {
   background-color: rgb(255 255 255 / 60%);

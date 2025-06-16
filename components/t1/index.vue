@@ -407,7 +407,7 @@ useSeoMeta({
   background-color: rgb(255 255 255 / 60%);
   border-radius: 10px;
   margin-top: 20px;
-  color: #15755f;
+  color: #b83b5e;
   font-weight: 600;
 }
 </style>
