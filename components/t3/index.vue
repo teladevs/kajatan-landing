@@ -110,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div
+          <!-- <div
             class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg"
           >
             <div
@@ -132,7 +132,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="rundown-section mx-5 rounded-xl">
@@ -171,7 +171,7 @@
           Lihat Undangan
         </button>
       </div>
-      <div class="cs-section mx-5 rounded-xl mb-5">
+      <!-- <div class="cs-section mx-5 rounded-xl mb-5">
         <div class="rounded-lg p-6">
           <h3 class="text-xl">Kontak Informasi</h3>
           <p class="mt-3 mb-5">
@@ -186,7 +186,7 @@
             >{{ eventDescribe?.contact_person }}</a
           >
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="footer">
       <div
