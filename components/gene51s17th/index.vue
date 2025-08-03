@@ -240,64 +240,72 @@ loadData();
 loadListPhoneCode();
 
 const submitHandler = async (formData) => {
-  let timerInterval;
-  isLoading.value = true;
-  let payload = { ...formData };
-  let payloadDetail = {
-    nrp: formData.nrp,
-    kehadiran: kehadiran.value.value,
-    dewasa: String(dewasa.value.value),
-    anak: String(anak.value.value),
-    bayi: String(bayi.value.value),
-  };
-  delete payload.nrp;
-  delete payload.dewasa;
-  delete payload.anak;
-  delete payload.bayi;
-  payload.phone_code = phone_code.value.Phonecode;
-  payload.detail = payloadDetail;
-  payload.event_id = 36;
-  setTimeout(async () => {
-    let response = await useCustomFetch(
-      "api/contact/register-invitation",
-      "post",
-      payload,
-      true
-    );
-    setTimeout(() => {
-      if (response.data.value.status == false) {
-        let message = response.data.value.message;
-        isLoading.value = false;
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: message,
-        });
-      } else {
-        Swal.fire({
-          title: "Success",
-          html: "Thankyou for your registration, we will send message to your Whatsapp number",
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: () => {
-            Swal.showLoading();
-            const timer = Swal.getPopup().querySelector("b");
-            timerInterval = setInterval(() => {
-              timer.textContent = `${Swal.getTimerLeft()}`;
-            }, 100);
-          },
-          willClose: () => {
-            clearInterval(timerInterval);
-          },
-        }).then((result) => {
-          if (result.dismiss === Swal.DismissReason.timer) {
-          }
-        });
-        isLoading.value = false;
-        router.push("/landing");
-      }
-    }, 1000);
-  }, 500);
+  if (kehadiran.value.value != undefined) {
+    let timerInterval;
+    isLoading.value = true;
+    let payload = { ...formData };
+    let payloadDetail = {
+      nrp: formData.nrp,
+      kehadiran: kehadiran.value.value,
+      dewasa: String(dewasa.value.value),
+      anak: String(anak.value.value),
+      bayi: String(bayi.value.value),
+    };
+    delete payload.nrp;
+    delete payload.dewasa;
+    delete payload.anak;
+    delete payload.bayi;
+    payload.phone_code = phone_code.value.Phonecode;
+    payload.detail = payloadDetail;
+    payload.event_id = 36;
+    setTimeout(async () => {
+      let response = await useCustomFetch(
+        "api/contact/register-invitation",
+        "post",
+        payload,
+        true
+      );
+      setTimeout(() => {
+        if (response.data.value.status == false) {
+          let message = response.data.value.message;
+          isLoading.value = false;
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: message,
+          });
+        } else {
+          Swal.fire({
+            title: "Success",
+            html: "Thankyou for your registration, we will send message to your Whatsapp number",
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading();
+              const timer = Swal.getPopup().querySelector("b");
+              timerInterval = setInterval(() => {
+                timer.textContent = `${Swal.getTimerLeft()}`;
+              }, 100);
+            },
+            willClose: () => {
+              clearInterval(timerInterval);
+            },
+          }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+            }
+          });
+          isLoading.value = false;
+          router.push("/landing");
+        }
+      }, 1000);
+    }, 500);
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Kehadiran wajib di isi",
+    });
+  }
 };
 
 useHead({
