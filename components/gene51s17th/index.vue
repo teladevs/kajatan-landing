@@ -48,7 +48,6 @@
             label="NRP"
             autocomplete="off"
             placeholder="Masukkan NRP anda"
-            validation="required"
           />
           <FormKit
             type="email"
@@ -56,6 +55,7 @@
             name="email"
             autocomplete="off"
             placeholder="xxx@gmail.com"
+            validation="required"
           />
           <div class="grid grid-cols-1">
             <div
@@ -124,6 +124,7 @@
                 autocomplete="off"
                 placeholder="Input your phone number"
                 validation-visibility="dirty"
+                validation="required"
               />
             </div>
           </div>
