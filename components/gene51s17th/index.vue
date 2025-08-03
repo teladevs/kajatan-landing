@@ -22,8 +22,16 @@
         />
       </div>
       <div class="container bg-slate-800 p-5 rounded-2xl mt-10">
-        <div class="text-2xl mt-2 mb-5 text-center font-bold">
-          Form Registrasi
+        <div class="text-2xl mt-2 mb-5 flex justify-between font-bold">
+          <div>Form Registrasi</div>
+          <a href="/list">
+            <button
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-2 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Lihat Daftar Registrasi
+            </button>
+          </a>
         </div>
         <FormKit
           type="form"
