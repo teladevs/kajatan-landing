@@ -16,7 +16,7 @@ const componentName = computed(() => {
     case "siepncatar.kajatan.telanusa.id":
       return "sipencatar";
     default:
-      return "mmw24";
+      return "caaip-17";
   }
 });
 
