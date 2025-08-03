@@ -260,8 +260,7 @@ const submitHandler = async (formData) => {
       if (response.data.value.status == false) {
         let message = response.data.value.message;
         isLoading.value = false;
-        const joinedString = message.join(" ");
-        toast.error(joinedString);
+        toast.error(message);
       } else {
         Swal.fire({
           title: "Success",
