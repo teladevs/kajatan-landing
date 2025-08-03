@@ -2,9 +2,6 @@
   <NuxtLayout name="blank">
     <div class="mx-auto px-7 py-5 mt-10 main-content">
       <Spinner v-if="isLoading" />
-      <div class="mt-5 mb-5 text-slate-800 text-2xl font-bold text-center">
-        Ulang Tahun GENE51S ke 17 & Birthday Toast
-      </div>
       <div class="flex items-center justify-center mb-5">
         <img
           src="/public/caaip/banner-GENE51S.png"
