@@ -2,7 +2,7 @@
 const listRegistrasi = ref([]);
 const loadData = async () => {
   let response = await useCustomFetch(
-    `api/invitations/by-event/36`,
+    `api/invitations/by-event/36?is_paginate=false`,
     "get",
     {},
     true
