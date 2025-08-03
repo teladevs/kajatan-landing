@@ -13,10 +13,10 @@ const componentName = computed(() => {
   switch (url.host) {
     case "mmw24.kajatan.telanusa.id":
       return "mmw24";
-    case "siepncatar.kajatan.telanusa.id":
+    case "sipencatar.kajatan.telanusa.id":
       return "sipencatar";
     default:
-      return "mmw24";
+      return "gene51s17th";
   }
 });
 
