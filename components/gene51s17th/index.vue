@@ -109,9 +109,9 @@
             <div
               class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
             >
-              Phone Number
+              Nomor Whatsapp
             </div>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 gap-3">
               <v-select
                 value="phone_code"
                 label="phone_name"
