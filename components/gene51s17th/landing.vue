@@ -50,6 +50,16 @@
           class="logo-instansi"
         />
         <img
+          src="/public/caaip/logo-rakuta.png"
+          alt="image-kemenhub"
+          class="logo-instansi bg-slate-900"
+        />
+        <img
+          src="/public/caaip/logo-doyan.jpg"
+          alt="image-kemenhub"
+          class="logo-instansi"
+        />
+        <img
           src="/public/caaip/pelindo.jpeg"
           alt="image-kemenhub"
           class="logo-instansi"
@@ -70,10 +80,16 @@
           class="logo-instansi"
         />
       </div>
-      <div class="w-full text-center mt-[50px]">
+      <div
+        class="w-full text-center flex flex-col justify-center items-center mt-[50px]"
+      >
         <div class="text-md text-slate-800 font-semibold">Organized by</div>
-        <div class="text-md">Harmoni Organizer</div>
-        <div class="text-md">PT Manawa Cipta Harmoni</div>
+        <div class="text-md">Harmoni Event Organizer</div>
+        <img
+          src="/public/caaip/logo-mch.png"
+          alt="image-kemenhub"
+          class="logo-instansi"
+        />
       </div>
     </div>
   </NuxtLayout>
