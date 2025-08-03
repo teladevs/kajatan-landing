@@ -77,30 +77,60 @@
           </div>
           <div class="w-full mb-2">Jumlah Kehadiran</div>
           <div class="grid grid-cols-3 gap-5">
-            <FormKit
-              type="number"
-              name="dewasa"
-              label="Dewasa > 10 Tahun"
-              autocomplete="off"
-              v-model="dewasa"
-              placeholder="Dewasa"
-            />
-            <FormKit
-              type="number"
-              name="anak"
-              label="Anak (2-10 Tahun)"
-              autocomplete="off"
-              v-model="anak"
-              placeholder="Anak"
-            />
-            <FormKit
-              type="number"
-              name="bayi"
-              label="Bayi < 2 Tahun"
-              autocomplete="off"
-              v-model="bayi"
-              placeholder="Bayi"
-            />
+            <div class="w-full">
+              <div
+                class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
+              >
+                Dewasa > 10 Tahun
+              </div>
+              <div class="grid grid-cols-1">
+                <v-select
+                  value="value"
+                  label="label"
+                  name="dewasa"
+                  v-model="dewasa"
+                  placeholder="Dewasa"
+                  :options="listJumlahKehadiran"
+                  class="rounded rounded-md mb-4 select-custom"
+                ></v-select>
+              </div>
+            </div>
+            <div class="w-full">
+              <div
+                class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
+              >
+                Anak (2-10 Tahun)
+              </div>
+              <div class="grid grid-cols-1">
+                <v-select
+                  value="value"
+                  label="label"
+                  name="anak"
+                  v-model="anak"
+                  placeholder="Anak"
+                  :options="listJumlahKehadiran"
+                  class="rounded rounded-md mb-4 select-custom"
+                ></v-select>
+              </div>
+            </div>
+            <div class="w-full">
+              <div
+                class="block text-neutral-700 text-sm font-bold !inline-flex mb-1 text-slate-100 formkit-label"
+              >
+                Bayi < 2 Tahun
+              </div>
+              <div class="grid grid-cols-1">
+                <v-select
+                  value="value"
+                  label="label"
+                  name="bayi"
+                  v-model="bayi"
+                  placeholder="bayi"
+                  :options="listJumlahKehadiran"
+                  class="rounded rounded-md mb-4 select-custom"
+                ></v-select>
+              </div>
+            </div>
           </div>
           <div class="grid grid-cols-1">
             <div
@@ -155,14 +185,27 @@ const phone_code = ref("");
 const listPhoneCode = ref([]);
 const url = useRequestURL();
 const kehadiran = ref("");
-const dewasa = ref(0);
-const anak = ref(0);
-const bayi = ref(0);
+const dewasa = ref({ value: 0, label: 0 });
+const anak = ref({ value: 0, label: 0 });
+const bayi = ref({ value: 0, label: 0 });
 
 const listKehadiran = [
   { value: "Hadir", label: "Hadir" },
   { value: "Tidak Hadir", label: "Tidak Hadir" },
   { value: "Mungkin Hadir", label: "Mungkin Hadir" },
+];
+
+const listJumlahKehadiran = [
+  { value: 0, label: 0 },
+  { value: 1, label: 1 },
+  { value: 2, label: 2 },
+  { value: 3, label: 3 },
+  { value: 4, label: 4 },
+  { value: 5, label: 5 },
+  { value: 6, label: 6 },
+  { value: 7, label: 7 },
+  { value: 8, label: 8 },
+  { value: 9, label: 9 },
 ];
 
 const loadData = async () => {
@@ -195,9 +238,9 @@ const submitHandler = async (formData) => {
   let payloadDetail = {
     nrp: formData.nrp,
     kehadiran: kehadiran.value.value,
-    dewasa: String(formData.dewasa),
-    anak: String(formData.anak),
-    bayi: String(formData.bayi),
+    dewasa: String(dewasa.value.value),
+    anak: String(anak.value.value),
+    bayi: String(bayi.value.value),
   };
   delete payload.nrp;
   delete payload.dewasa;
