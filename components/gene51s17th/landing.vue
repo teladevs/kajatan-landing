@@ -70,7 +70,7 @@
           class="logo-instansi"
         />
         <img
-          src="/public/caaip/sbgm.jpg"
+          src="/public/caaip/logo-global.png"
           alt="image-kemenhub"
           class="logo-instansi"
         />
