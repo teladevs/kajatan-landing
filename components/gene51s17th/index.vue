@@ -260,7 +260,11 @@ const submitHandler = async (formData) => {
       if (response.data.value.status == false) {
         let message = response.data.value.message;
         isLoading.value = false;
-        toast.error(message);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: message,
+        });
       } else {
         Swal.fire({
           title: "Success",
