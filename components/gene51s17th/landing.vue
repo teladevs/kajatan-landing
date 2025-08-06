@@ -79,6 +79,11 @@
           alt="image-kemenhub"
           class="logo-instansi"
         />
+        <img
+          src="/public/caaip/logo-stempel.png"
+          alt="image-kemenhub"
+          class="logo-instansi"
+        />
       </div>
       <div
         class="w-full text-center flex flex-col justify-center items-center mt-[50px]"
