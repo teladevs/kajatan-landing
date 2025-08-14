@@ -126,14 +126,15 @@
 <script setup>
 const eventDetail = ref(null);
 const loadData = async () => {
-  if (router.currentRoute.value.query.id != undefined) {
-    eventDetail.value = await useCustomFetch(
-      `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
-      "get",
-      {},
-      true
-    );
-  }
+  eventDetail.value = await useCustomFetch(
+    `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
+    "get",
+    {},
+    true
+  );
+  setTimeout(() => {
+    loadAllSectorsInQueue();
+  }, 1500);
 };
 
 const sectorAll = [
@@ -282,7 +283,7 @@ const checkAlphabet = (number, seat, sector) => {
 
 const loadDataSector = async (sector) => {
   let response = await useCustomFetch(
-    `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.id}/${sector}`,
+    `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.data.id}/${sector}`,
     "get",
     {},
     true
@@ -313,7 +314,6 @@ const loadAllSectorsInQueue = async () => {
 };
 
 loadData();
-loadAllSectorsInQueue();
 setInterval(() => {
   loadAllSectorsInQueue();
 }, 5000);
