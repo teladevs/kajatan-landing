@@ -499,7 +499,7 @@ const detailContact = ref("Politeknik Pelayaran Surabaya");
 const loadData = async () => {
   if (router.currentRoute.value.query.id != undefined) {
     let eventDetail = await useCustomFetch(
-      `api/event/domain/${"wisuda52poltekpelsby.telanusa.com"}`,
+      `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
       "get",
       {},
       true

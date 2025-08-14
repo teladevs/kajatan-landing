@@ -1,54 +1,30 @@
 <template>
   <div class="seat-container">
-    <div class="grid grid-cols-10 gap-10 text-center py-10 px-10">
-      <div v-for="(valSec, idxSec) in sectorAll">
+    <div class="sector-block text-center py-10 px-10">
+      <div
+        v-for="(valSec, idxSec) in sectorAll"
+        :class="valSec.column == 3 ? 'grid-sector-3' : 'grid-sector'"
+      >
         <div class="text-center text-2xl font-bold text-slate-100 my-10">
           {{ valSec.name }}
         </div>
-        <div
-          class="grid grid-cols-10 gap-2"
-          v-if="valSec.sector !== 5 && valSec.sector !== 6"
-        >
+        <div :class="`grid grid-cols-${valSec.column} gap-2`">
           <div
             class="seat flex items-center justify-center"
             :id="`sector-${valSec.sector}-${checkAlphabet(
-              10 * parseInt(idxSeat / 10),
-              idxSeat + 1 - 10 * parseInt(idxSeat / 10),
+              valSec.column * parseInt(idxSeat / valSec.column),
+              idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
               valSec.sector
             )}`"
             v-for="(valSeat, idxSeat) in valSec.total"
           >
             {{
               checkAlphabet(
-                10 * parseInt(idxSeat / 10),
-                idxSeat + 1 - 10 * parseInt(idxSeat / 10),
+                valSec.column * parseInt(idxSeat / valSec.column),
+                idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
                 valSec.sector
               )
             }}
-          </div>
-        </div>
-        <div class="text-center flex justify-center">
-          <div
-            class="grid grid-cols-3 gap-2"
-            v-if="valSec.sector === 5 || valSec.sector === 6"
-          >
-            <div
-              class="seat flex items-center justify-center"
-              :id="`sector-${valSec.sector}-${checkAlphabet(
-                3 * parseInt(idxSeat / 3),
-                idxSeat + 1 - 3 * parseInt(idxSeat / 3),
-                valSec.sector
-              )}`"
-              v-for="(valSeat, idxSeat) in valSec.total"
-            >
-              {{
-                checkAlphabet(
-                  3 * parseInt(idxSeat / 3),
-                  idxSeat + 1 - 3 * parseInt(idxSeat / 3),
-                  valSec.sector
-                )
-              }}
-            </div>
           </div>
         </div>
       </div>
@@ -56,13 +32,28 @@
   </div>
 </template>
 <style scoped>
+.sector-block {
+  display: flex;
+  flex-direction: row;
+}
+.grid-sector {
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.grid-sector-3 {
+  width: 110px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .seat-container {
   width: 3500px;
+  height: 110vh;
   background-color: #429ac0;
 }
 .seat {
-  width: 30px;
-  height: 25px;
+  width: 25px;
+  height: 20px;
   border-radius: 10px 10px 0px 0px;
   background-color: white;
   color: black;
@@ -127,27 +118,37 @@
   background-color: #008080;
   color: white;
 }
+.seat.booked.DP-ETO {
+  background-color: #156541;
+  color: white;
+}
 </style>
 <script setup>
-import { useRouter } from "vue-router";
-const router = useRouter();
-console.log(router);
+const loadData = async () => {
+  if (router.currentRoute.value.query.id != undefined) {
+    let eventDetail = await useCustomFetch(
+      `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
+      "get",
+      {},
+      true
+    );
+  }
+};
+
 const sectorAll = [
-  { name: "Sektor 1", sector: 1, total: 160 },
-  { name: "Sektor 2", sector: 2, total: 160 },
-  { name: "Sektor 3", sector: 3, total: 160 },
-  { name: "Sektor 4", sector: 4, total: 160 },
-  { name: "Sektor 5", sector: 5, total: 48 },
-  { name: "Sektor 6", sector: 6, total: 48 },
-  { name: "Sektor 7", sector: 7, total: 160 },
-  { name: "Sektor 8", sector: 8, total: 160 },
-  { name: "Sektor 9", sector: 9, total: 160 },
-  { name: "Sektor 10", sector: 10, total: 160 },
+  { name: "SEKTOR 1", sector: 1, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 2", sector: 2, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 3", sector: 3, total: 120, row: 12, column: 10 },
+  { name: "SEKTOR 4", sector: 4, total: 36, row: 12, column: 3 },
+  { name: "SEKTOR 5", sector: 5, total: 36, row: 12, column: 3 },
+  { name: "SEKTOR 6", sector: 6, total: 120, row: 12, column: 10 },
+  { name: "SEKTOR 7", sector: 7, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 8", sector: 8, total: 160, row: 16, column: 10 },
 ];
 
 const checkAlphabet = (number, seat, sector) => {
   let alphabet = "";
-  if (sector == 5 || sector == 6) {
+  if (sector == 4 || sector == 5) {
     switch (number) {
       case 0:
         alphabet = "A";
@@ -261,16 +262,16 @@ const checkAlphabet = (number, seat, sector) => {
     return alphabet + (seat + sector * 10 - 10);
   }
 
-  if (sector > 6) {
+  if (sector > 5) {
     return alphabet + (seat + (sector * 10 - 24));
   }
 
-  if (sector == 5) {
+  if (sector == 4) {
     return alphabet + (seat + 40);
   }
 
-  if (sector == 6) {
-    return alphabet + (seat + 43);
+  if (sector == 5) {
+    return alphabet + (seat + 33);
   }
 
   if (sector == 1) {
@@ -280,7 +281,7 @@ const checkAlphabet = (number, seat, sector) => {
 
 const loadDataSector = async (sector) => {
   let response = await useCustomFetch(
-    `/api/event-seat/detail-event-seat-sector/28/${sector}`,
+    `/api/event-seat/detail-event-seat-sector/${eventDetail.data.value.data.id}/${sector}`,
     "get",
     {},
     true
@@ -308,10 +309,9 @@ const loadAllSectorsInQueue = async () => {
   await loadDataSector("SEKTOR 6");
   await loadDataSector("SEKTOR 7");
   await loadDataSector("SEKTOR 8");
-  await loadDataSector("SEKTOR 9");
-  await loadDataSector("SEKTOR 10");
 };
 
+loadData();
 loadAllSectorsInQueue();
 setInterval(() => {
   loadAllSectorsInQueue();
