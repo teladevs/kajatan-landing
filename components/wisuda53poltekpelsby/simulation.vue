@@ -124,9 +124,10 @@
 }
 </style>
 <script setup>
+const eventDetail = ref(null);
 const loadData = async () => {
   if (router.currentRoute.value.query.id != undefined) {
-    let eventDetail = await useCustomFetch(
+    eventDetail.value = await useCustomFetch(
       `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
       "get",
       {},
@@ -281,7 +282,7 @@ const checkAlphabet = (number, seat, sector) => {
 
 const loadDataSector = async (sector) => {
   let response = await useCustomFetch(
-    `/api/event-seat/detail-event-seat-sector/${eventDetail.data.value.data.id}/${sector}`,
+    `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.value.data.id}/${sector}`,
     "get",
     {},
     true
