@@ -4,12 +4,12 @@ const loadComponent = ref<any>(null);
 
 const doLoadComponent = async (componentName: string) => {
   loadComponent.value = defineAsyncComponent(
-    () => import(`@/components/wisuda52poltekpelsby/seat.vue`)
+    () => import(`@/components/${componentName}/index.vue`)
   );
 };
 
 const loadData = async () => {
-  if (url.host === "kajatan.telanusa.id" || url.host === "localhost:3000") {
+  if (url.host === "landing.kajatan.com" || url.host === "localhost:3000") {
     doLoadComponent("default");
   } else {
     let response = await useCustomFetch(
