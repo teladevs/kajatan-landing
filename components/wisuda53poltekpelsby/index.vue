@@ -483,7 +483,7 @@
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
 import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.webp";
 import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/layout-seat.webp";
-import denahParkir from "@/public/wisuda52poltekpelsby/denah-parkir.webp";
+import denahParkir from "@/public/wisuda53poltekpelsby/w53-denah_parkir.webp";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
 
