@@ -6,7 +6,7 @@
 :root {
   --52primary: #770808;
   --52primaryDarker: #5a0808;
-  --53primary: #151992;
-  --53primaryDarker: #0d105b;
+  --53primary: #941b20;
+  --53primaryDarker: #941b20;
 }
 </style>

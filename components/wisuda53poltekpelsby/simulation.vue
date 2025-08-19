@@ -140,10 +140,10 @@ const loadData = async () => {
 const sectorAll = [
   { name: "SEKTOR 1", sector: 1, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 2", sector: 2, total: 160, row: 16, column: 10 },
-  { name: "SEKTOR 3", sector: 3, total: 120, row: 12, column: 10 },
-  { name: "SEKTOR 4", sector: 4, total: 36, row: 12, column: 3 },
-  { name: "SEKTOR 5", sector: 5, total: 36, row: 12, column: 3 },
-  { name: "SEKTOR 6", sector: 6, total: 120, row: 12, column: 10 },
+  { name: "SEKTOR 3", sector: 3, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 4", sector: 4, total: 48, row: 16, column: 3 },
+  { name: "SEKTOR 5", sector: 5, total: 48, row: 16, column: 3 },
+  { name: "SEKTOR 6", sector: 6, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 7", sector: 7, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 8", sector: 8, total: 160, row: 16, column: 10 },
 ];
@@ -268,17 +268,11 @@ const checkAlphabet = (number, seat, sector) => {
     return alphabet + (seat + (sector * 10 - 24));
   }
 
-  if (sector == 4) {
-    return alphabet + (seat + 40);
-  }
-
   if (sector == 5) {
     return alphabet + (seat + 33);
   }
 
-  if (sector == 1) {
-    return alphabet + seat;
-  }
+  return alphabet + seat;
 };
 
 const loadDataSector = async (sector) => {

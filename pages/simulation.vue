@@ -10,7 +10,7 @@ const doLoadComponent = async (componentName: string) => {
 
 const loadData = async () => {
   if (url.host === "landing.kajatan.com" || url.host === "localhost:3000") {
-    doLoadComponent("default");
+    doLoadComponent("wisuda53poltekpelsby");
   } else {
     let response = await useCustomFetch(
       `api/event/domain/${url.host}`,

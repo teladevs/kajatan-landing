@@ -622,7 +622,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda52poltekpelsby/background-web-2.webp");
+  background-image: url("../../public/wisuda53poltekpelsby/wisuda53-main-banner-mobile.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
