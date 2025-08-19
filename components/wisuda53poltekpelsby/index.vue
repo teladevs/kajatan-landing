@@ -520,7 +520,6 @@ setTimeout(() => {
 }, 1000);
 
 const openInvitation = () => {
-  console.log("running");
   playAudio();
   showContent.value = true;
   buttonInvitation.value = false;
