@@ -109,7 +109,7 @@ const sectorAll = [
 
 const checkAlphabet = (number, seat, sector) => {
   let alphabet = "";
-  if (sector == 4 || sector == 5) {
+  if (sector == 5 || sector == 6) {
     switch (number) {
       case 0:
         alphabet = "A";
