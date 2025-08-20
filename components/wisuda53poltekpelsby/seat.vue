@@ -63,20 +63,7 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  <div v-if="detailContact?.kode_sektor == 'TROK'">
-                    SEKTOR 3,4,5 & 6
-                  </div>
-                  <div v-if="detailContact?.kode_sektor == 'TRPK'">
-                    SEKTOR 6 & 7
-                  </div>
-                  <div
-                    v-if="
-                      detailContact?.kode_sektor != 'TROK' &&
-                      detailContact?.kode_sektor != 'TRPK'
-                    "
-                  >
-                    {{ detailContact?.nama_sektor }}
-                  </div>
+                  <div>Sektor {{ detailContact?.nama_sektor }}</div>
                 </dd>
               </div>
             </dl>
@@ -225,55 +212,55 @@ setTimeout(() => {
   color: black;
 }
 .seat.booked.DP-I {
-  background-color: #0000ff;
-  color: white;
+  background-color: #b3d5e7;
+  color: black;
 }
 .seat.booked.DP-II {
-  background-color: #000080;
-  color: white;
+  background-color: #b3d5e7;
+  color: black;
 }
 .seat.booked.DP-III {
-  background-color: #ff0000;
-  color: white;
+  background-color: #b3d5e7;
+  color: black;
 }
 .seat.booked.DP-IV {
-  background-color: #add8e6;
+  background-color: #fac1cf;
   color: black;
 }
 .seat.booked.DP-V {
-  background-color: #00ff00;
+  background-color: #fac1cf;
   color: black;
 }
 .seat.booked.TROK {
-  background-color: #ffff00;
-  color: black;
+  background-color: #6b3063;
+  color: white;
 }
 .seat.booked.TRPK {
-  background-color: #ffa500;
+  background-color: #6b3063;
   color: white;
 }
 .seat.booked.TRKK {
-  background-color: #800080;
+  background-color: #6b3063;
   color: white;
 }
 .seat.booked.TRANSLA {
-  background-color: #ffc0cb;
-  color: black;
+  background-color: #6b3063;
+  color: white;
 }
 .seat.booked.D-III-NAUTIKA {
-  background-color: #8b4513;
+  background-color: #6b3063;
   color: white;
 }
 .seat.booked.D-III-TEKNIKA {
-  background-color: #808080;
+  background-color: #6b3063;
   color: white;
 }
 .seat.booked.D-III-ETO {
-  background-color: #008080;
+  background-color: #6b3063;
   color: white;
 }
 .seat.booked.DP-ETO {
-  background-color: #156541;
-  color: white;
+  background-color: #fac1cf;
+  color: black;
 }
 </style>
