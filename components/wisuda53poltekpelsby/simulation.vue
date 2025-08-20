@@ -55,12 +55,9 @@
   width: 25px;
   height: 20px;
   border-radius: 10px 10px 0px 0px;
-  background-color: white;
-  color: black;
+  background-color: rgb(112, 109, 109);
+  color: white;
   font-size: 10px;
-}
-.seat.booked {
-  background-color: red;
 }
 .seat.booked.YATIM {
   background-color: #ffc0cb;
@@ -70,56 +67,16 @@
   background-color: #ffffff;
   color: black;
 }
-.seat.booked.DP-I {
-  background-color: #0000ff;
-  color: white;
-}
-.seat.booked.DP-II {
-  background-color: #000080;
-  color: white;
-}
-.seat.booked.DP-III {
-  background-color: #ff0000;
-  color: white;
-}
-.seat.booked.DP-IV {
-  background-color: #add8e6;
+.booked.left {
+  background-color: #b3d5e7;
   color: black;
 }
-.seat.booked.DP-V {
-  background-color: #00ff00;
+.booked.right {
+  background-color: #fac1cf;
   color: black;
 }
-.seat.booked.TROK {
-  background-color: #ffff00;
-  color: black;
-}
-.seat.booked.TRPK {
-  background-color: #ffa500;
-  color: white;
-}
-.seat.booked.TRKK {
-  background-color: #800080;
-  color: white;
-}
-.seat.booked.TRANSLA {
-  background-color: #ffc0cb;
-  color: black;
-}
-.seat.booked.D-III-NAUTIKA {
-  background-color: #8b4513;
-  color: white;
-}
-.seat.booked.D-III-TEKNIKA {
-  background-color: #808080;
-  color: white;
-}
-.seat.booked.D-III-ETO {
-  background-color: #008080;
-  color: white;
-}
-.seat.booked.DP-ETO {
-  background-color: #156541;
+.booked.center {
+  background-color: #6b3063;
   color: white;
 }
 </style>
@@ -141,11 +98,13 @@ const sectorAll = [
   { name: "SEKTOR 1", sector: 1, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 2", sector: 2, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 3", sector: 3, total: 160, row: 16, column: 10 },
-  { name: "SEKTOR 4", sector: 4, total: 48, row: 16, column: 3 },
+  { name: "SEKTOR 4", sector: 4, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 5", sector: 5, total: 48, row: 16, column: 3 },
-  { name: "SEKTOR 6", sector: 6, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 6", sector: 6, total: 48, row: 16, column: 3 },
   { name: "SEKTOR 7", sector: 7, total: 160, row: 16, column: 10 },
   { name: "SEKTOR 8", sector: 8, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 9", sector: 9, total: 160, row: 16, column: 10 },
+  { name: "SEKTOR 10", sector: 10, total: 160, row: 16, column: 10 },
 ];
 
 const checkAlphabet = (number, seat, sector) => {
@@ -264,12 +223,16 @@ const checkAlphabet = (number, seat, sector) => {
     return alphabet + (seat + sector * 10 - 10);
   }
 
-  if (sector > 5) {
+  if (sector > 6) {
     return alphabet + (seat + (sector * 10 - 24));
   }
 
   if (sector == 5) {
-    return alphabet + (seat + 33);
+    return alphabet + (seat + 40);
+  }
+
+  if (sector == 6) {
+    return alphabet + (seat + 43);
   }
 
   return alphabet + seat;
@@ -297,14 +260,16 @@ const loadDataSector = async (sector) => {
 };
 
 const loadAllSectorsInQueue = async () => {
-  await loadDataSector("SEKTOR 1");
-  await loadDataSector("SEKTOR 2");
-  await loadDataSector("SEKTOR 3");
-  await loadDataSector("SEKTOR 4");
-  await loadDataSector("SEKTOR 5");
-  await loadDataSector("SEKTOR 6");
-  await loadDataSector("SEKTOR 7");
-  await loadDataSector("SEKTOR 8");
+  await loadDataSector("1");
+  await loadDataSector("2");
+  await loadDataSector("3");
+  await loadDataSector("4");
+  await loadDataSector("5");
+  await loadDataSector("6");
+  await loadDataSector("7");
+  await loadDataSector("8");
+  await loadDataSector("9");
+  await loadDataSector("10");
 };
 
 loadData();
