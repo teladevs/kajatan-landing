@@ -140,7 +140,7 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda52poltekpelsby/layout-seat.webp";
+import imageDenahLapangan from "../../public/wisuda53poltekpelsby/w53-layout_seat_mobile";
 const url = useRequestURL();
 
 const router = useRouter();
