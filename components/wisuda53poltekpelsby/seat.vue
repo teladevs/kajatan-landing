@@ -148,7 +148,7 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"wisuda52poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
     "get",
     {},
     true
