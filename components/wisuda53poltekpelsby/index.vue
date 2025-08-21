@@ -268,45 +268,12 @@
                 </div>
               </div>
             </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">d.</div>
-                <div class="col-span-11">
-                  Pemasangan Samir oleh keluarga Perwira Transportasi Laut;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">e.</div>
-                <div class="col-span-11">
-                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
-                  Indonesia (NKRI);
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">f.</div>
-                <div class="col-span-11">
-                  Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">g.</div>
-                <div class="col-span-11">
-                  Penandatanganan kerjasama dengan Perusahaan Pelayaran;
-                </div>
-              </div>
-            </div>
             <div class="mt-2 mb-2">5. ACARA TAMBAHAN</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">a.</div>
                 <div class="col-span-11">
-                  Penyerahan Tali Asih kepada Panti Asuhan;
+                  Pemasangan Samir oleh keluarga Perwira Transportasi Laut
                 </div>
               </div>
             </div>
@@ -314,19 +281,75 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">b.</div>
                 <div class="col-span-11">
-                  Foto bersama Perwira Transportasi Laut;
+                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+                  Indonesia (NKRI)
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">c.</div>
-                <div class="col-span-11">Passing Out Parade;</div>
+                <div class="col-span-11">
+                  Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">d.</div>
+                <div class="col-span-11">
+                  Penandatanganan kerjasama dengan Perusahaan Pelayaran, UNESA,
+                  Universitas Kuala Lumpur dan Serah Terima Aplikasi iStow
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">e.</div>
+                <div class="col-span-11">
+                  Penyerahan Tali Asih kepada Panti Asuhan
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">f.</div>
+                <div class="col-span-11">
+                  Foto bersama Perwira Transportasi Laut
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">g.</div>
+                <div class="col-span-11">Passing Out Parade</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">g.</div>
+                <div class="col-span-11">
+                  Yell Yell Taruna Poltekpel Surabaya
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">h.</div>
+                <div class="col-span-11">Tari Reog Ponorogo</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">i.</div>
+                <div class="col-span-11">
+                  Flash Mob Pacu Jalur dan Pica Pica
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">j.</div>
                 <div class="col-span-11">
                   Atraksi Marching Band GITA SWARA SAMUDRA;
                 </div>
@@ -334,7 +357,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">e.</div>
+                <div class="col-span-1">k.</div>
                 <div class="col-span-11">
                   Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
                   tamah;
