@@ -327,7 +327,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">g.</div>
+                <div class="col-span-1">h.</div>
                 <div class="col-span-11">
                   Yell Yell Taruna Poltekpel Surabaya
                 </div>
@@ -335,13 +335,13 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">h.</div>
+                <div class="col-span-1">i.</div>
                 <div class="col-span-11">Tari Reog Ponorogo</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">i.</div>
+                <div class="col-span-1">j.</div>
                 <div class="col-span-11">
                   Flash Mob Pacu Jalur dan Pica Pica
                 </div>
@@ -349,7 +349,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">j.</div>
+                <div class="col-span-1">k.</div>
                 <div class="col-span-11">
                   Atraksi Marching Band GITA SWARA SAMUDRA;
                 </div>
@@ -357,7 +357,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">k.</div>
+                <div class="col-span-1">l.</div>
                 <div class="col-span-11">
                   Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
                   tamah;
