@@ -207,9 +207,7 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">n.</div>
-                <div class="col-span-11">
-                  Lagu Bagimu Negeri dan Mars Perhubungan;
-                </div>
+                <div class="col-span-11">Lagu Bagimu Negeri;</div>
               </div>
             </div>
             <div class="ms-3">
@@ -298,8 +296,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">d.</div>
                 <div class="col-span-11">
-                  Penandatanganan kerjasama dengan Perusahaan Pelayaran, UNESA,
-                  Universitas Kuala Lumpur dan Serah Terima Aplikasi iStow
+                  Penandatanganan kerjasama Kerjasama dengan PELINDO, MERATUS
+                  dan Program Studi Insinyur Universitas Widya Mandala Surabaya
                 </div>
               </div>
             </div>
@@ -315,7 +313,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">f.</div>
                 <div class="col-span-11">
-                  Foto bersama Perwira Transportasi Laut
+                  Foto bersama Perwira Transportasi Laut dan Hat Tos
                 </div>
               </div>
             </div>
@@ -328,36 +326,20 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">h.</div>
-                <div class="col-span-11">
-                  Yell Yell Taruna Poltekpel Surabaya
-                </div>
+                <div class="col-span-11">Tari Kecak dan Sparko</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">i.</div>
-                <div class="col-span-11">Tari Reog Ponorogo</div>
+                <div class="col-span-11">
+                  Atraksi Marching Band GITA SWARA SAMUDRA
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">j.</div>
-                <div class="col-span-11">
-                  Flash Mob Pacu Jalur dan Pica Pica
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">k.</div>
-                <div class="col-span-11">
-                  Atraksi Marching Band GITA SWARA SAMUDRA;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">l.</div>
                 <div class="col-span-11">
                   Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
                   tamah;
@@ -525,14 +507,14 @@ const loadData = async () => {
       `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
       "get",
       {},
-      true
+      true,
     );
 
     let response = await useCustomFetch(
       `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
       "get",
       {},
-      true
+      true,
     );
     detailContact.value = response?.data?.value?.data;
   }

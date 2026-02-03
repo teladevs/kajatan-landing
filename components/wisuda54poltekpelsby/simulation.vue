@@ -52,12 +52,11 @@
   background-color: #429ac0;
 }
 .seat {
-  width: 25px;
+  width: 24px;
   height: 20px;
-  border-radius: 10px 10px 0px 0px;
-  background-color: rgb(112, 109, 109);
-  color: white;
-  font-size: 10px;
+  border-radius: 6px 6px 0 0;
+  font-size: 9px;
+  line-height: 1;
 }
 .booked.YATIM {
   background-color: #ffc0cb;
