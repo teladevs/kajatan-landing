@@ -2,7 +2,7 @@
   <div class="container">
     <audio ref="audioElement" loop>
       <source
-        src="/wisuda52poltekpelsby/mars-perhubungan.mp3"
+        src="/wisuda54poltekpelsby/mars-perhubungan.mp3"
         type="audio/mpeg"
       />
     </audio>
@@ -627,7 +627,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda53poltekpelsby/wisuda53-main-banner-mobile.webp");
+  background-image: url("../../public/wisuda54poltekpelsby/wisuda54-main-banner-mobile.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
