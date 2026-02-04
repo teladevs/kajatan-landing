@@ -171,7 +171,7 @@ const loadDataSector = async (sector) => {
   getData.forEach((val, idx) => {
     if (val.status == 1) {
       const element = document.querySelector(
-        `#sector-${val.code_sector}-${val.seat_number}`,
+        `#sector-${val.code_sector}-${val.number}`,
       );
       if (element) {
         element.classList.add("booked");
