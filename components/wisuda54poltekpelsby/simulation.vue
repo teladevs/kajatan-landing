@@ -47,6 +47,7 @@
   border-radius: 6px 6px 0 0;
   font-size: 9px;
   line-height: 1;
+  background-color: #ededed;
 }
 .booked.YATIM {
   background-color: #ffc0cb;
@@ -197,5 +198,5 @@ const loadAllSectorsInQueue = async () => {
 loadData();
 setInterval(() => {
   loadAllSectorsInQueue();
-}, 5000);
+}, 10000);
 </script>
