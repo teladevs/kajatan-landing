@@ -135,17 +135,17 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
     "get",
     {},
-    true
+    true,
   );
 
   let response = await useCustomFetch(
     `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
     "get",
     {},
-    true
+    true,
   );
   detailContact.value = response?.data?.value?.data;
 };

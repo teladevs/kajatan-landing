@@ -14,7 +14,7 @@
             :id="`sector-${valSec.sector}-${checkAlphabet(
               valSec.column * parseInt(idxSeat / valSec.column),
               idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
-              valSec.sector
+              valSec.sector,
             )}`"
             v-for="(valSeat, idxSeat) in valSec.total"
           >
@@ -22,7 +22,7 @@
               checkAlphabet(
                 valSec.column * parseInt(idxSeat / valSec.column),
                 idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
-                valSec.sector
+                valSec.sector,
               )
             }}
           </div>
@@ -135,10 +135,10 @@
 const eventDetail = ref(null);
 const loadData = async () => {
   eventDetail.value = await useCustomFetch(
-    `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
     "get",
     {},
-    true
+    true,
   );
   setTimeout(() => {
     loadAllSectorsInQueue();
@@ -239,13 +239,13 @@ const loadDataSector = async (sector) => {
     `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.data.id}/${sector}`,
     "get",
     {},
-    true
+    true,
   );
   let getData = response.data.value.data;
   getData.forEach((val, idx) => {
     if (val.status == 1) {
       const element = document.querySelector(
-        `#sector-${val.code_sector}-${val.seat_number}`
+        `#sector-${val.code_sector}-${val.seat_number}`,
       );
       if (element) {
         element.classList.add("booked");
