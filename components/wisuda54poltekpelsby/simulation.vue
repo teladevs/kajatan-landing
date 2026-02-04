@@ -12,8 +12,9 @@
           <div
             class="seat flex items-center justify-center"
             :id="`sector-${valSec.sector}-${checkAlphabet(
-              valSec.column * parseInt(idxSeat / valSec.column),
-              idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
+              valSec.column * idxSeat +
+                1 -
+                valSec.column * parseInt(idxSeat / valSec.column),
               valSec.sector,
             )}`"
             v-for="(valSeat, idxSeat) in valSec.total"
@@ -158,80 +159,16 @@ const sectorAll = [
   { name: "SEKTOR 10", sector: 10, total: 170, row: 15, column: 10 },
 ];
 
-const checkAlphabet = (number, seat, sector) => {
-  let alphabet = "";
-  switch (number) {
-    case 0:
-      alphabet = "A";
-      break;
-    case 10:
-      alphabet = "B";
-      break;
-    case 20:
-      alphabet = "C";
-      break;
-    case 30:
-      alphabet = "D";
-      break;
-    case 40:
-      alphabet = "E";
-      break;
-    case 50:
-      alphabet = "F";
-      break;
-    case 60:
-      alphabet = "G";
-      break;
-    case 70:
-      alphabet = "H";
-      break;
-    case 80:
-      alphabet = "I";
-      break;
-    case 90:
-      alphabet = "J";
-      break;
-    case 100:
-      alphabet = "K";
-      break;
-    case 110:
-      alphabet = "L";
-      break;
-    case 120:
-      alphabet = "M";
-      break;
-    case 130:
-      alphabet = "N";
-      break;
-    case 140:
-      alphabet = "O";
-      break;
-    case 150:
-      alphabet = "P";
-      break;
-    case 160:
-      alphabet = "Q";
-      break;
-    case 170:
-      alphabet = "R";
-      break;
-    case 180:
-      alphabet = "S";
-      break;
-
-    default:
-      break;
-  }
-
+const checkAlphabet = (seat, sector) => {
   if (sector >= 2) {
-    return alphabet + (seat + sector * 10 - 10);
+    return seat + sector * 10 - 10;
   }
 
   if (sector == 1) {
-    return alphabet + seat;
+    return seat;
   }
 
-  return alphabet + seat;
+  return seat;
 };
 
 const loadDataSector = async (sector) => {
