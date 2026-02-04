@@ -11,20 +11,10 @@
         <div :class="`grid grid-cols-${valSec.column} gap-2`">
           <div
             class="seat flex items-center justify-center"
-            :id="`sector-${valSec.sector}-${checkAlphabet(
-              valSec.column * idxSeat +
-                1 -
-                valSec.column * parseInt(idxSeat / valSec.column),
-              valSec.sector,
-            )}`"
+            :id="`sector-${valSec.sector}-${idxSeat}`"
             v-for="(valSeat, idxSeat) in valSec.total"
           >
-            {{
-              checkAlphabet(
-                idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
-                valSec.sector,
-              )
-            }}
+            {{ idxSeat + 1 }}
           </div>
         </div>
       </div>
