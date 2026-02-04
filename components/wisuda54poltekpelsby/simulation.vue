@@ -21,7 +21,6 @@
           >
             {{
               checkAlphabet(
-                valSec.column * parseInt(idxSeat / valSec.column),
                 idxSeat + 1 - valSec.column * parseInt(idxSeat / valSec.column),
                 valSec.sector,
               )
