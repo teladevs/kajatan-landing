@@ -1,27 +1,35 @@
-import type { UseFetchOptions } from 'nuxt/app'
-import { defu } from 'defu'
+import type { UseFetchOptions } from "nuxt/app";
+import { defu } from "defu";
 
-export function useCustomFetch<T> (url: string, getMethod: string = '', payload: any, withToast: boolean = false) {
-  const getToken = useCookie('token')
-  const router = useRouter()
-  const config = useRuntimeConfig()
+export function useCustomFetch<T>(
+  url: string,
+  getMethod: string = "",
+  payload: any,
+  withToast: boolean = false,
+) {
+  const getToken = useCookie("token");
+  const router = useRouter();
+  const config = useRuntimeConfig();
 
-  var options = {}
+  var options = {};
 
-  if (getMethod == 'get'){
+  if (getMethod == "get") {
     options = {
       method: `${getMethod}`,
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'Same-Origin',
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "Same-Origin",
       },
-    }
+    };
   } else {
     options = {
       method: `${getMethod}`,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*' },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: payload,
-    }
+    };
   }
 
   const defaults: UseFetchOptions<T> = {
@@ -32,22 +40,22 @@ export function useCustomFetch<T> (url: string, getMethod: string = '', payload:
       ? { Authorization: `Bearer ${getToken.value}` }
       : {},
 
-    onResponse (_ctx) {
+    onResponse(_ctx) {
       let responseStatus = _ctx.response.status;
       let message = _ctx.response._data.message;
 
-      if (responseStatus == 200 && withToast){
+      if (responseStatus == 200 && withToast) {
       }
     },
 
-    onResponseError (_ctx) {
-      if (_ctx.response.status == 401){
-        router.push('/auth/signin');
+    onResponseError(_ctx) {
+      if (_ctx.response.status == 401) {
+        router.push("/auth/signin");
       }
-    }
-  }
+    },
+  };
 
-  const params = defu(options, defaults)
+  const params = defu(options, defaults);
 
-  return useFetch(url, params)
+  return useFetch(url, params);
 }

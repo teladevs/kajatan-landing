@@ -11,7 +11,7 @@
         <div :class="`grid grid-cols-${valSec.column} gap-2`">
           <div
             class="seat flex items-center justify-center"
-            :id="`sector-${valSec.sector}-${idxSeat}`"
+            :id="`sector-${valSec.sector}-${idxSeat + 1}`"
             v-for="(valSeat, idxSeat) in valSec.total"
           >
             {{ idxSeat + 1 }}
@@ -78,27 +78,27 @@
   color: white;
 }
 .booked.DP-III {
-  background-color: #ff0000;
+  background-color: #a51010;
   color: white;
 }
 .booked.DP-IV {
   background-color: #add8e6;
-  color: black;
+  color: white;
 }
 .booked.DP-V {
-  background-color: #00ff00;
-  color: black;
+  background-color: #0a790a;
+  color: white;
 }
-.booked.DP-ETO {
-  background-color: #e98a07;
-  color: black;
+.booked.ETO-PTRN {
+  background-color: #8d570b;
+  color: white;
 }
 .booked.TROK {
-  background-color: #ffff00;
+  background-color: #ecec09;
   color: black;
 }
 .booked.TRPK {
-  background-color: #ffa500;
+  background-color: #ce8704;
   color: white;
 }
 .booked.TRKK {
@@ -106,14 +106,10 @@
   color: white;
 }
 .booked.TRANSLA {
-  background-color: #ffc0cb;
+  background-color: #df909d;
   color: black;
 }
-.booked.D-III-NAUTIKA {
-  background-color: #8b4513;
-  color: white;
-}
-.booked.D-III-TEKNIKA {
+.booked.D-III {
   background-color: #a00e5a;
   color: white;
 }
@@ -172,7 +168,7 @@ const loadDataSector = async (sector) => {
   getData.forEach((val, idx) => {
     if (val.status == 1) {
       const element = document.querySelector(
-        `#sector-${val.code_sector}-${val.number}`,
+        `#sector-${val.code_sector}-${val.seat_number}`,
       );
       if (element) {
         element.classList.add("booked");

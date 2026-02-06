@@ -4,19 +4,19 @@ const loadComponent = ref<any>(null);
 
 const doLoadComponent = async (componentName: string) => {
   loadComponent.value = defineAsyncComponent(
-    () => import(`@/components/${componentName}/simulation.vue`)
+    () => import(`@/components/${componentName}/simulation.vue`),
   );
 };
 
 const loadData = async () => {
   if (url.host === "landing.kajatan.com" || url.host === "localhost:3000") {
-    doLoadComponent("wisuda53poltekpelsby");
+    doLoadComponent("wisuda54poltekpelsby");
   } else {
     let response = await useCustomFetch(
       `api/event/domain/${url.host}`,
       "get",
       {},
-      true
+      true,
     );
     if (response.data.value.status) {
       var template = response.data.value.data.feature.value.landing_template;
@@ -26,7 +26,7 @@ const loadData = async () => {
       doLoadComponent(template);
     } else {
       loadComponent.value = defineAsyncComponent(
-        () => import(`@/components/error.vue`)
+        () => import(`@/components/error.vue`),
       );
     }
   }
