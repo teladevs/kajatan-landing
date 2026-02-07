@@ -49,9 +49,33 @@
           />
         </svg>
       </a>
+      <div class="flex flex-col justify-center items-center logo-section mb-10">
+        <div class="flex justify-center">
+          <img
+            src="../../public/bonvoyagebanten/logo.png"
+            alt="logo-2"
+            class="img-logo w-1/4"
+          />
+          <!-- <img
+            src="../../public/unisma/logo-ft.png"
+            alt="logo-1"
+            class="img-logo"
+          /> -->
+        </div>
+      </div>
+      <div class="text-section flex flex-col justify-center items-center">
+        <div class="text-2xl mb-3 mx-5 text-center text-slate-100">
+          UPACARA PELEPASAN (BON VOYAGE) PERWIRA SISWA DIKLAT PELAUT PENINGKATAN
+          <br />
+          TINGKAT II, III, IV DAN V
+        </div>
+        <div class="text-2xl text-slate-100">
+          POLITEKNIK PELAYARAN BANTEN TAHUN 2026
+        </div>
+      </div>
       <div class="text-center text-top-welcome">
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
+          class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
           v-if="buttonInvitation"
           @click="openInvitation()"
         >
@@ -347,7 +371,7 @@
               </div>
             </div>
           </div>
-          <div class="section-layout-denah text-center px-5">
+          <!-- <div class="section-layout-denah text-center px-5">
             <img :src="denahParkir" alt="denah" class="img-fluid" />
           </div>
           <div class="section-layout-lapangan text-center">
@@ -355,25 +379,11 @@
           </div>
           <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
-          </div>
+          </div> -->
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
-              v-if="detailContact.gate == 'A'"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5505797809205!2d112.79250048772934!3d-7.342536181283759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2ssg!4v1740317025524!5m2!1sid!2ssg"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <iframe
-              v-if="
-                detailContact.gate == 'B' ||
-                detailContact == 'Politeknik Pelayaran Surabaya'
-              "
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5387315413402!2d112.7934721179081!3d-7.345198382956895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbebcd81e647%3A0x20a1a151eabcedfe!2sPoltekpel%20Surabaya!5e0!3m2!1sid!2ssg!4v1740316827069!5m2!1sid!2ssg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.7252604615237!2d106.564792574749!3d-6.032392793953149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a070e31381713%3A0xd7ecd75837ebe62!2sPoliteknik%20Pelayaran%20Banten!5e0!3m2!1sen!2sid!4v1770456314329!5m2!1sen!2sid"
               width="100%"
               height="450"
               style="border: 0"
@@ -391,11 +401,11 @@
       v-if="showContent"
     >
       <h2 class="text-center">Follow Sosial Media</h2>
-      <h2 class="text-center">Politeknik Pelayaran Surabaya</h2>
+      <h2 class="text-center">Politeknik Pelayaran Banten</h2>
       <div class="grid grid-cols-2 gap-5 mt-5">
         <div class="sosial-media-list">
           <a
-            href="https://www.instagram.com/poltekpel_sby/?hl=id"
+            href="https://www.instagram.com/politeknikpelayaranbanten/"
             target="_blank"
           >
             <div class="flex flex-col justify-center items-center">
@@ -411,12 +421,12 @@
                   d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
                 />
               </svg>
-              <div class="text-xs">poltekpel_sby</div>
+              <div class="text-xs">politeknikpelayaranbanten</div>
             </div>
           </a>
         </div>
         <div class="sosial-media-list">
-          <a href="https://twitter.com/poltekpel_sby" target="_blank">
+          <a href="https://x.com/poltekpelbanten" target="_blank">
             <div class="flex flex-col justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -430,13 +440,13 @@
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
                 />
               </svg>
-              <div class="text-xs">@poltekpel_sby</div>
+              <div class="text-xs">@poltekpelbanten</div>
             </div>
           </a>
         </div>
         <div class="sosial-media-list">
           <a
-            href="https://www.facebook.com/poltekpelsurabaya/?locale=id_ID"
+            href="https://www.facebook.com/PoliteknikPelayaranBanten/?locale=id_ID"
             target="_blank"
           >
             <div class="flex flex-col justify-center items-center">
@@ -452,15 +462,13 @@
                   d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
                 />
               </svg>
-              <div class="text-xs text-center">
-                Politeknik Pelayaran Surabaya
-              </div>
+              <div class="text-xs text-center">BP2IP Tangerang (Official)</div>
             </div>
           </a>
         </div>
         <div class="sosial-media-list">
           <a
-            href="https://www.tiktok.com/@poltekpel_sby?lang=id-ID"
+            href="https://www.tiktok.com/@poltekpelbantenofficial"
             target="_blank"
           >
             <div class="flex flex-col justify-center items-center">
@@ -476,7 +484,7 @@
                   d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
                 />
               </svg>
-              <div class="text-xs">poltekpel_sby</div>
+              <div class="text-xs">poltekpelbantenofficial</div>
             </div>
           </a>
         </div>
@@ -593,7 +601,7 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 30px 40px 30px;
-  background-color: #770808;
+  background-color: #1d138a;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white !important;
@@ -617,7 +625,7 @@ html {
 }
 
 .section-social-media {
-  background-color: #770808;
+  background-color: #1d138a;
   color: white !important;
   margin-top: 50px;
   text-decoration: none;
@@ -627,7 +635,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda54poltekpelsby/wisuda54-main-banner-mobile.webp");
+  background-image: url("../../public/bonvoyagebanten/bg-darker.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
@@ -663,7 +671,7 @@ html {
 .btn-invitation {
   position: absolute;
   top: 830px;
-  background-color: #770808;
+  background-color: #1d138a;
 }
 @media (max-width: 576px) {
   .page-welcome {
