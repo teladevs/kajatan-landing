@@ -65,13 +65,20 @@
       </div>
       <div class="text-section flex flex-col justify-center items-center">
         <div class="text-2xl mb-3 mx-5 text-center text-slate-100">
-          UPACARA PELEPASAN (BON VOYAGE) PERWIRA SISWA DIKLAT PELAUT PENINGKATAN
+          <span class="text-3xl font-bold">UPACARA</span> <br />PELEPASAN (BON
+          VOYAGE) <br />
+        </div>
+        <div class="text-center text-slate-100 text-2xl mb-5">
+          PERWIRA SISWA DIKLAT PELAUT PENINGKATAN
           <br />
           TINGKAT II, III, IV DAN V
         </div>
-        <div class="text-2xl text-slate-100">
-          POLITEKNIK PELAYARAN BANTEN TAHUN 2026
+        <div
+          class="bg-blue-800 p-1 rounded-2xl mb-3 text-2xl text-slate-100 px-3"
+        >
+          POLITEKNIK PELAYARAN BANTEN
         </div>
+        <div class="text-center text-slate-100 text-2xl">TAHUN 2026</div>
       </div>
       <div class="text-center text-top-welcome">
         <button
