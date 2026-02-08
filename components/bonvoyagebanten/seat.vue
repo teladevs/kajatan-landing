@@ -73,21 +73,6 @@
     <div
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow bg-seat"
     >
-      <div class="seat-block pb-5">
-        <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
-          DENAH TEMPAT DUDUK
-        </div>
-        <div class="grid grid-cols-1 gap-5">
-          <div
-            class="seat booked block-sector flex justify-center flex-col p-2"
-            :class="detailContact?.kategori"
-          >
-            <div class="text-base font-bold w-full text-center mb-2">
-              {{ detailContact?.jurusan }}
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="section-lokasi text-center">
         <h2 class="text-section text-lg font-bold text-slate-100 mt-2 mb-4">
           Lokasi
@@ -138,7 +123,7 @@ setTimeout(() => {
   padding-bottom: 50px;
 }
 .bg-seat {
-  background-color: var(--53primary);
+  background-color: #1d138a;
 }
 .text-column {
   color: #ffdab9 !important;
