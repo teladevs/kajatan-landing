@@ -297,6 +297,9 @@
           <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div> -->
+          <div class="section-layout-lapangan text-center">
+            <img :src="layoutUpacara" alt="layout" class="img-fluid" />
+          </div>
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
@@ -411,7 +414,7 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import layoutUpacara from "@/public/wisuda53poltekpelsby/w53-lapangan_upacara_mobile.webp";
+import layoutUpacara from "@/public/bonvoyagebanten/p2b-denah-upacara-01.webp";
 import layoutTempatDuduk from "@/public/wisuda53poltekpelsby/w53-layout_seat_mobile.webp";
 import denahParkir from "@/public/wisuda53poltekpelsby/w53-denah_parkir.webp";
 import AudioPlayer from "@/components/audio";
