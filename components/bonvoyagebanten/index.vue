@@ -49,37 +49,6 @@
           />
         </svg>
       </a>
-      <div class="flex flex-col justify-center items-center logo-section mb-10">
-        <div class="flex justify-center">
-          <img
-            src="../../public/bonvoyagebanten/logo.png"
-            alt="logo-2"
-            class="img-logo w-1/4"
-          />
-          <!-- <img
-            src="../../public/unisma/logo-ft.png"
-            alt="logo-1"
-            class="img-logo"
-          /> -->
-        </div>
-      </div>
-      <div class="text-section flex flex-col justify-center items-center">
-        <div class="text-2xl mb-3 mx-5 text-center text-slate-100">
-          <span class="text-3xl font-bold">UPACARA</span> <br />PELEPASAN (BON
-          VOYAGE) <br />
-        </div>
-        <div class="text-center text-slate-100 text-2xl mb-5">
-          PERWIRA SISWA DIKLAT PELAUT PENINGKATAN
-          <br />
-          TINGKAT II, III, IV DAN V
-        </div>
-        <div
-          class="bg-blue-800 p-1 rounded-2xl mb-3 text-2xl text-slate-100 px-3"
-        >
-          POLITEKNIK PELAYARAN BANTEN
-        </div>
-        <div class="text-center text-slate-100 text-2xl">TAHUN 2026</div>
-      </div>
       <div class="text-center text-top-welcome">
         <button
           class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
@@ -455,12 +424,12 @@ const soundPlay = ref(null);
 const audioElement = ref(null);
 const sectionRundown = ref(null);
 const router = useRouter();
-const detailContact = ref("Politeknik Pelayaran Surabaya");
+const detailContact = ref("Politeknik Pelayaran Bantent");
 
 const loadData = async () => {
   if (router.currentRoute.value.query.id != undefined) {
     let eventDetail = await useCustomFetch(
-      `api/event/domain/${"wisuda53poltekpelsby.telanusa.com"}`,
+      `api/event/domain/${"bonvoyagepoltekpelbanten.telanusa.com"}`,
       "get",
       {},
       true,
@@ -583,7 +552,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/bonvoyagebanten/bg-darker.webp");
+  background-image: url("../../public/bonvoyagebanten/p2b-bg.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
