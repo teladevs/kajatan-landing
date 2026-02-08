@@ -32,7 +32,6 @@
                 <dd
                   class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
                 >
-                  <!-- {{ detailContact.study }} -->
                   {{ detailContact.jurusan }}
                 </dd>
               </div>
@@ -89,45 +88,25 @@
           </div>
         </div>
       </div>
-      <div class="w-full my-10">
-        <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
-          Layout Tempat Duduk Lapangan
-        </div>
-        <img :src="imageDenahLapangan" alt="" />
-      </div>
       <div class="section-lokasi text-center">
         <h2 class="text-section text-lg font-bold text-slate-100 mt-2 mb-4">
           Lokasi
         </h2>
-        <div class="maps" v-if="detailContact?.gate == 'A'">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5505797809205!2d112.79250048772934!3d-7.342536181283759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab3d7416aad%3A0xf0e5a59bb2199674!2sPoliteknik%20Pelayaran%20Surabaya!5e0!3m2!1sid!2ssg!4v1740317025524!5m2!1sid!2ssg"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="maps" v-if="detailContact?.gate == 'B'">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5387315413402!2d112.7934721179081!3d-7.345198382956895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbebcd81e647%3A0x20a1a151eabcedfe!2sPoltekpel%20Surabaya!5e0!3m2!1sid!2ssg!4v1740316827069!5m2!1sid!2ssg"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.7252604615237!2d106.564792574749!3d-6.032392793953149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a070e31381713%3A0xd7ecd75837ebe62!2sPoliteknik%20Pelayaran%20Banten!5e0!3m2!1sen!2sid!4v1770456314329!5m2!1sen!2sid"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda53poltekpelsby/w53-layout_seat_mobile.webp";
 const url = useRequestURL();
 
 const router = useRouter();
@@ -135,7 +114,7 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"bonvoyagepoltekpelbanten.telanusa.com"}`,
     "get",
     {},
     true,
