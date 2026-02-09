@@ -70,15 +70,15 @@
   color: white;
 } */
 .booked.DP-I {
-  background-color: #0000ff;
+  background-color: #3252a5;
   color: white;
 }
 .booked.DP-II {
-  background-color: #000080;
+  background-color: #2a2877;
   color: white;
 }
 .booked.DP-III {
-  background-color: #a51010;
+  background-color: #f01e24;
   color: white;
 }
 .booked.DP-IV {
@@ -86,35 +86,39 @@
   color: white;
 }
 .booked.DP-V {
-  background-color: #0a790a;
+  background-color: #63bc4c;
   color: white;
 }
 .booked.ETO-PTRN {
-  background-color: #8d570b;
+  background-color: #00a9e2;
   color: white;
 }
 .booked.TROK {
-  background-color: #ecec09;
+  background-color: #f4f000;
   color: black;
 }
 .booked.TRPK {
-  background-color: #ce8704;
+  background-color: #f6a71a;
   color: white;
 }
 .booked.TRKK {
-  background-color: #800080;
+  background-color: #752c77;
   color: white;
 }
 .booked.TRANSLA {
   background-color: #df909d;
   color: black;
 }
-.booked.D-III {
-  background-color: #a00e5a;
+.booked.D-III-NAUTIKA {
+  background-color: #752c77;
+  color: white;
+}
+.booked.D-III-TEKNIKA {
+  background-color: #7e7f7d;
   color: white;
 }
 .booked.D-III-ETO {
-  background-color: #008080;
+  background-color: #07807d;
   color: white;
 }
 </style>
