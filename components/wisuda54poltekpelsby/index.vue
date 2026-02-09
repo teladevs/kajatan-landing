@@ -353,9 +353,9 @@
           <div class="section-layout-lapangan text-center">
             <img :src="layoutUpacara" alt="layout" class="img-fluid" />
           </div>
-          <div class="section-layout-lapangan text-center">
+          <!-- <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
-          </div>
+          </div> -->
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
