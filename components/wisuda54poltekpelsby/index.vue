@@ -488,7 +488,7 @@
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
 import layoutUpacara from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
 import layoutTempatDuduk from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
-import denahParkir from "@/public/wisuda54poltekpelsby/p2s-w54-denah_parkir.pngp2s-w54-denah_parkir.png";
+import denahParkir from "@/public/wisuda54poltekpelsby/p2s-w54-denah_parkir.png";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
 
