@@ -133,16 +133,16 @@ const loadData = async () => {
 };
 
 const sectorAll = [
-  { name: "SEKTOR 1", sector: 1, total: 170, row: 15, column: 10 },
-  { name: "SEKTOR 2", sector: 2, total: 170, row: 15, column: 10 },
-  { name: "SEKTOR 3", sector: 3, total: 170, row: 15, column: 10 },
-  { name: "SEKTOR 4", sector: 4, total: 100, row: 10, column: 10 },
-  { name: "SEKTOR 5", sector: 5, total: 100, row: 10, column: 10 },
-  { name: "SEKTOR 6", sector: 6, total: 100, row: 10, column: 10 },
-  { name: "SEKTOR 7", sector: 7, total: 100, row: 10, column: 10 },
-  { name: "SEKTOR 8", sector: 8, total: 170, row: 15, column: 10 },
-  { name: "SEKTOR 9", sector: 9, total: 170, row: 15, column: 10 },
-  { name: "SEKTOR 10", sector: 10, total: 170, row: 15, column: 10 },
+  { name: "SEKTOR 1", sector: 1, total: 120, column: 10 },
+  { name: "SEKTOR 2", sector: 2, total: 120, column: 10 },
+  { name: "SEKTOR 3", sector: 3, total: 120, column: 10 },
+  { name: "SEKTOR 4", sector: 4, total: 110, column: 10 },
+  { name: "SEKTOR 5", sector: 5, total: 30, column: 3 },
+  { name: "SEKTOR 6", sector: 6, total: 30, column: 3 },
+  { name: "SEKTOR 7", sector: 7, total: 110, column: 10 },
+  { name: "SEKTOR 8", sector: 8, total: 120, column: 10 },
+  { name: "SEKTOR 9", sector: 9, total: 120, column: 10 },
+  { name: "SEKTOR 10", sector: 10, total: 120, column: 10 },
 ];
 
 const checkAlphabet = (seat, sector) => {
