@@ -212,35 +212,35 @@ setTimeout(() => {
   color: black;
 }
 .seat.booked.DP-I {
-  background-color: #b3d5e7;
-  color: black;
+  background-color: #3252a5;
+  color: white;
 }
 .seat.booked.DP-II {
-  background-color: #b3d5e7;
-  color: black;
+  background-color: #2a2877;
+  color: white;
 }
 .seat.booked.DP-III {
-  background-color: #b3d5e7;
-  color: black;
+  background-color: #f01e24;
+  color: white;
 }
 .seat.booked.DP-IV {
   background-color: #fac1cf;
   color: black;
 }
 .seat.booked.DP-V {
-  background-color: #fac1cf;
-  color: black;
-}
-.seat.booked.TROK {
-  background-color: #6b3063;
+  background-color: #63bc4c;
   color: white;
 }
+.seat.booked.TROK {
+  background-color: #f4f000;
+  color: black;
+}
 .seat.booked.TRPK {
-  background-color: #6b3063;
+  background-color: #f6a71a;
   color: white;
 }
 .seat.booked.TRKK {
-  background-color: #6b3063;
+  background-color: #752c77;
   color: white;
 }
 .seat.booked.TRANSLA {
@@ -248,19 +248,19 @@ setTimeout(() => {
   color: white;
 }
 .seat.booked.D-III-NAUTIKA {
-  background-color: #6b3063;
+  background-color: #752c77;
   color: white;
 }
 .seat.booked.D-III-TEKNIKA {
-  background-color: #6b3063;
+  background-color: #7e7f7d;
   color: white;
 }
 .seat.booked.D-III-ETO {
-  background-color: #6b3063;
+  background-color: #07807d;
   color: white;
 }
-.seat.booked.DP-ETO {
-  background-color: #fac1cf;
+.seat.booked.ETO-PTRN {
+  background-color: #00a9e2;
   color: black;
 }
 </style>
