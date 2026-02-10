@@ -35,7 +35,7 @@
                   {{ detailContact.jurusan }}
                 </dd>
               </div>
-              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <!-- <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-column">
                   Zona Parkir
                 </dt>
@@ -44,8 +44,8 @@
                 >
                   ZONA {{ detailContact.zona }}
                 </dd>
-              </div>
-              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              </div> -->
+              <!-- <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-column">
                   Pintu Masuk
                 </dt>
@@ -54,8 +54,8 @@
                 >
                   PINTU {{ detailContact.gate }}
                 </dd>
-              </div>
-              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              </div> -->
+              <!-- <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt class="text-sm font-medium leading-6 text-column">
                   Tempat Duduk
                 </dt>
@@ -64,7 +64,7 @@
                 >
                   <div>Sektor {{ detailContact?.nama_sektor }}</div>
                 </dd>
-              </div>
+              </div> -->
             </dl>
           </div>
         </div>
