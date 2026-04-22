@@ -6,7 +6,7 @@
         type="audio/mpeg"
       />
     </audio>
-    <div class="page-welcome">
+    <div class="page-welcome" :style="bgStyle">
       <a
         class="btn-play btn-audio"
         @click="playAudio()"
@@ -71,17 +71,14 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Seluruh peserta Upacara menempati Daerah Persiapan;
+                  Seluruh peserta Upacara menempati Tempat Upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
-                <div class="col-span-11">
-                  Sangkakala pertama (seluruh peserta upacara siap di daerah
-                  persiapan);
-                </div>
+                <div class="col-span-11">Sangkakala pertama;</div>
               </div>
             </div>
             <div class="ms-3">
@@ -113,22 +110,22 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara tiba di mimbar kehormatan;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">2.</div>
-                <div class="col-span-11">
                   Komandan upacara Memasuki Tempat Upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">3.</div>
+                <div class="col-span-1">2.</div>
                 <div class="col-span-11">Upacara dimulai.</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">3.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara tiba di mimbar kehormatan;
+                </div>
               </div>
             </div>
 
@@ -143,7 +140,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara memasuki Tempat Upacara;
+                  Inspektur Upacara memasuki Mimbar Upacara;
                 </div>
               </div>
             </div>
@@ -151,8 +148,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Lagu Indonesia Raya dan Hymne Perhubungan); (Paduan Suara)/
-                  Musik
+                  Menyanyikan lagu Kebangsaan “Indonesia Raya” dan “Hymne
+                  Perhubungan”
                 </div>
               </div>
             </div>
@@ -173,64 +170,72 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">6.</div>
-                <div class="col-span-11">Pembacaan Laporan Pendidikan;</div>
+                <div class="col-span-11">
+                  Panji Perhubungan memasuki Lapangan Upacara ;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">7.</div>
-                <div class="col-span-11">Pernyataan Pelepasan;</div>
+                <div class="col-span-11">
+                  Penghormatan Kepada Panji Perhubungan ;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">8.</div>
                 <div class="col-span-11">
-                  Prosesi Pelepasan; (Pengalungan Samir dan penyerahan Ijazah)
+                  Pernyataan Pelepasan dan Pelantikan Oleh Inspektur Upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">9.</div>
-                <div class="col-span-11">Pembacaan Ikrar;</div>
+                <div class="col-span-11">
+                  Prosesi Pelepasan dan Pelantikan oleh Inspektur upacara;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">10.</div>
-                <div class="col-span-11">Amanat Inspektur Upacara;</div>
+                <div class="col-span-11">
+                  Pembacaan Ikrar Perwira Transportasi;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">11.</div>
-                <div class="col-span-11">Pembacaan Do'a;</div>
+                <div class="col-span-11">Sambutan Inspektur Upacara ;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">12.</div>
-                <div class="col-span-11">Bagimu Negri; (Paduan Suara)</div>
+                <div class="col-span-11">Pembacaan Do'a</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">13.</div>
-                <div class="col-span-11">Mars Perhubungan; (Paduan Suara)</div>
+                <div class="col-span-11">Andhika Bhayangkari</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">14.</div>
-                <div class="col-span-11">Laporan Komandan Upacara;</div>
+                <div class="col-span-11">Mars Perhubungan ;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">15.</div>
                 <div class="col-span-11">
-                  Penghormatan Umum kepada Inspektur Upacara;
+                  Penghormatan Kepada Panji Perhubungan;
                 </div>
               </div>
             </div>
@@ -238,7 +243,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">16.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara kembali ke mimbar kehormatan;
+                  Panji Perhubungan meninggalkan lapangan upacara.;
                 </div>
               </div>
             </div>
@@ -250,32 +255,135 @@
                 </div>
               </div>
             </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">18.</div>
+                <div class="col-span-11">Laporan Komandan Upacara.</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">19.</div>
+                <div class="col-span-11">Penghormatan Pasukan.</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">20.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara kembali ke mimbar Kehormatan.
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">21.</div>
+                <div class="col-span-11">Laporan Perwira Upacara</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">22.</div>
+                <div class="col-span-11">
+                  Upacara selesai, komandan upacara meninggalkan lapangan
+                  upacara
+                </div>
+              </div>
+            </div>
 
             <div class="mt-2 mb-2">4. ACARA TAMBAHAN</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Pengalungan Samir oleh keluarga Perwira Siswa;
+                  Pengalungan Samir oleh keluarga Perwira Transportasi Laut ;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
-                <div class="col-span-11">Hat Toss Celebration;</div>
+                <div class="col-span-11">
+                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+                  Indonesia;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
-                <div class="col-span-11">Foto Bersama;</div>
+                <div class="col-span-11">
+                  Penyerahan Wisudawan Kepada Korps Alumni Bumi Karang Serang ;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">4.</div>
                 <div class="col-span-11">Rangkaian Upacara selesai.</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">5.</div>
+                <div class="col-span-11">
+                  Penandatanganan MoU dengan Perusahaan pelayaran .
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">6.</div>
+                <div class="col-span-11">
+                  Penyerahan Lulusan Poltekpel Banten ke Stakholder .
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">7.</div>
+                <div class="col-span-11">
+                  Pemberian Tali Asih kepada Ananda Yatim oleh darma Wanita
+                  persatuan Politeknik Pelayaran Banten .
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">8.</div>
+                <div class="col-span-11">Foto Bersama</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">9.</div>
+                <div class="col-span-11">Hat Toss Celebration</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">10.</div>
+                <div class="col-span-11">Passing Out Parade</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">11.</div>
+                <div class="col-span-11">Tarian Kolosal</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">12.</div>
+                <div class="col-span-11">Marching Band Gempita swara Bahar</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">13.</div>
+                <div class="col-span-11">
+                  Joget Massal seluruh peserta upacara dan tamu Undangan
+                </div>
               </div>
             </div>
             <div class="mt-2 mb-2">5. ACARA RAMAH TAMAH</div>
@@ -297,8 +405,37 @@
           <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div> -->
-          <div class="section-layout-lapangan text-center">
-            <img :src="layoutUpacara" alt="layout" class="img-fluid" />
+          <div
+            class="section-layout-lapangan text-center"
+            v-if="eventDetailLanding.image_denah_upacara"
+          >
+            <div
+              class="w-full text-center font-bold text-xl"
+              v-if="eventDetailLanding.text_denah_upacara"
+            >
+              {{ eventDetailLanding.text_denah_upacara }}
+            </div>
+            <img
+              :src="eventDetailLanding.image_denah_upacara"
+              alt="layout"
+              class="img-fluid"
+            />
+          </div>
+          <div
+            class="section-layout-lapangan text-center"
+            v-if="eventDetailLanding.image_denah_parkir"
+          >
+            <div
+              class="w-full text-center font-bold text-xl"
+              v-if="eventDetailLanding.text_denah_parkir"
+            >
+              {{ eventDetailLanding.text_denah_parkir }}
+            </div>
+            <img
+              :src="eventDetailLanding.image_denah_parkir"
+              alt="layout"
+              class="img-fluid"
+            />
           </div>
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
@@ -427,24 +564,34 @@ const soundPlay = ref(null);
 const audioElement = ref(null);
 const sectionRundown = ref(null);
 const router = useRouter();
-const detailContact = ref("Politeknik Pelayaran Bantent");
+const detailContact = ref("Politeknik Pelayaran Banten");
+const eventDetailLanding = ref({});
+
+const bgStyle = computed(() => ({
+  backgroundImage: eventDetailLanding.value.image_backdrop
+    ? `url(${eventDetailLanding.value.image_backdrop})`
+    : "none",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}));
 
 const loadData = async () => {
-  if (router.currentRoute.value.query.id != undefined) {
-    let eventDetail = await useCustomFetch(
-      `api/event/domain/${"bonvoyagepoltekpelbanten.telanusa.com"}`,
+  let eventDetail = await useCustomFetch(
+    `api/event/domain/${"bonvoyagepoltekpelbanten.telanusa.com"}`,
+    "get",
+    {},
+    true,
+  );
+  if (eventDetail.data.value.data.id) {
+    let getDataLanding = await useCustomFetch(
+      `api/event-config/item/${eventDetail.data.value.data.id}/landing`,
       "get",
       {},
       true,
     );
-
-    let response = await useCustomFetch(
-      `api/event-seat/detail-contact-seat/${eventDetail.data.value.data.id}/${router.currentRoute.value.query.id}`,
-      "get",
-      {},
-      true,
+    eventDetailLanding.value = await JSON.parse(
+      getDataLanding.data.value.data.value,
     );
-    detailContact.value = response?.data?.value?.data;
   }
 };
 
@@ -555,7 +702,6 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/bonvoyagebanten/p2b-bg.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
