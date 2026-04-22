@@ -736,7 +736,7 @@ html {
 }
 .btn-invitation {
   position: absolute;
-  top: 830px;
+  top: 790px;
   background-color: #1d138a;
 }
 @media (max-width: 576px) {
