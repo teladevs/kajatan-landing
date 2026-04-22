@@ -668,7 +668,7 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 30px 40px 30px;
-  background-color: #1d138a;
+  background-color: #112e4b;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white !important;
@@ -692,7 +692,7 @@ html {
 }
 
 .section-social-media {
-  background-color: #1d138a;
+  background-color: #112e4b;
   color: white !important;
   margin-top: 50px;
   text-decoration: none;
@@ -737,7 +737,7 @@ html {
 .btn-invitation {
   position: absolute;
   top: 790px;
-  background-color: #1d138a;
+  background-color: #112e4b;
 }
 @media (max-width: 576px) {
   .page-welcome {
