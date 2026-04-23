@@ -84,7 +84,7 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
-                <div class="col-span-11">Pembukaan MC.</div>
+                <div class="col-span-11">Pembukaan MC;</div>
               </div>
             </div>
             <div class="ms-3">
@@ -100,7 +100,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">5.</div>
                 <div class="col-span-11">
-                  Pemberitahuan tanda upacara dimulai
+                  Pemberitahuan tanda upacara dimulai;
                 </div>
               </div>
             </div>
@@ -117,14 +117,14 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
-                <div class="col-span-11">Upacara dimulai.</div>
+                <div class="col-span-11">Upacara dimulai;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara tiba di mimbar kehormatan;
+                  Inspektur Upacara tiba di mimbar kehormatan.
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
                   Menyanyikan lagu Kebangsaan “Indonesia Raya” dan “Hymne
-                  Perhubungan”
+                  Perhubungan”;
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">6.</div>
                 <div class="col-span-11">
-                  Panji Perhubungan memasuki Lapangan Upacara ;
+                  Panji Perhubungan memasuki Lapangan Upacara;
                 </div>
               </div>
             </div>
@@ -179,7 +179,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">7.</div>
                 <div class="col-span-11">
-                  Penghormatan Kepada Panji Perhubungan ;
+                  Penghormatan Kepada Panji Perhubungan;
                 </div>
               </div>
             </div>
@@ -216,24 +216,30 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">12.</div>
-                <div class="col-span-11">Pembacaan Do'a</div>
+                <div class="col-span-11">Pembacaan Do'a;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">13.</div>
-                <div class="col-span-11">Andhika Bhayangkari</div>
+                <div class="col-span-11">Andhika Bhayangkari;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">14.</div>
-                <div class="col-span-11">Mars Perhubungan ;</div>
+                <div class="col-span-11">Lagu Bagimu Negeri;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">15.</div>
+                <div class="col-span-11">Mars Perhubungan;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">16.</div>
                 <div class="col-span-11">
                   Penghormatan Kepada Panji Perhubungan;
                 </div>
@@ -241,44 +247,36 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">16.</div>
-                <div class="col-span-11">
-                  Panji Perhubungan meninggalkan lapangan upacara.;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
                 <div class="col-span-1">17.</div>
                 <div class="col-span-11">
-                  Upacara selesai, komandan upacara meninggalkan Tempat upacara.
+                  Panji Perhubungan meninggalkan lapangan upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">18.</div>
-                <div class="col-span-11">Laporan Komandan Upacara.</div>
+                <div class="col-span-11">Laporan Komandan Upacara;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">19.</div>
-                <div class="col-span-11">Penghormatan Pasukan.</div>
+                <div class="col-span-11">Penghormatan Pasukan;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">20.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara kembali ke mimbar Kehormatan.
+                  Inspektur Upacara kembali ke mimbar Kehormatan;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">21.</div>
-                <div class="col-span-11">Laporan Perwira Upacara</div>
+                <div class="col-span-11">Laporan Perwira Upacara;</div>
               </div>
             </div>
             <div class="ms-3">
@@ -286,17 +284,17 @@
                 <div class="col-span-1">22.</div>
                 <div class="col-span-11">
                   Upacara selesai, komandan upacara meninggalkan lapangan
-                  upacara
+                  upacara.
                 </div>
               </div>
             </div>
 
-            <div class="mt-2 mb-2">4. ACARA TAMBAHAN</div>
+            <div class="mt-2 mb-2">D. ACARA TAMBAHAN</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Pengalungan Samir oleh keluarga Perwira Transportasi Laut ;
+                  Pengalungan Samir oleh keluarga Perwira Transportasi Laut;
                 </div>
               </div>
             </div>
@@ -313,21 +311,23 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Penyerahan Wisudawan Kepada Korps Alumni Bumi Karang Serang ;
+                  Penyerahan Wisudawan Kepada Korps Alumni Bumi Karang Serang;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">4.</div>
-                <div class="col-span-11">Rangkaian Upacara selesai.</div>
+                <div class="col-span-11">
+                  Penandatanganan MoU dengan Perusahaan pelayaran;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">5.</div>
                 <div class="col-span-11">
-                  Penandatanganan MoU dengan Perusahaan pelayaran .
+                  Penyerahan Lulusan Poltekpel Banten ke Stakholder;
                 </div>
               </div>
             </div>
@@ -335,58 +335,52 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">6.</div>
                 <div class="col-span-11">
-                  Penyerahan Lulusan Poltekpel Banten ke Stakholder .
+                  Pemberian Tali Asih kepada Ananda Yatim oleh darma Wanita
+                  persatuan Politeknik Pelayaran Banten;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">7.</div>
-                <div class="col-span-11">
-                  Pemberian Tali Asih kepada Ananda Yatim oleh darma Wanita
-                  persatuan Politeknik Pelayaran Banten .
-                </div>
+                <div class="col-span-11">Foto Bersama;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">8.</div>
-                <div class="col-span-11">Foto Bersama</div>
+                <div class="col-span-11">Hat Toss Celebration;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">9.</div>
-                <div class="col-span-11">Hat Toss Celebration</div>
+                <div class="col-span-11">Passing Out Parade;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">10.</div>
-                <div class="col-span-11">Passing Out Parade</div>
+                <div class="col-span-11">Penampilan Barongsai;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">11.</div>
-                <div class="col-span-11">Tarian Kolosal</div>
+                <div class="col-span-11">
+                  Marching Band Gempita Swara Bahari;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">12.</div>
-                <div class="col-span-11">Marching Band Gempita swara Bahar</div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">13.</div>
                 <div class="col-span-11">
-                  Joget Massal seluruh peserta upacara dan tamu Undangan
+                  Joget Massal seluruh peserta upacara.
                 </div>
               </div>
             </div>
-            <div class="mt-2 mb-2">5. ACARA RAMAH TAMAH</div>
+            <div class="mt-2 mb-2">E. ACARA RAMAH TAMAH</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-11">
