@@ -2,25 +2,6 @@
   <NuxtLayout name="blank">
     <div class="mx-auto px-7 py-5 mt-10 main-content">
       <Spinner v-if="isLoading" />
-      <div class="flex items-center justify-center mb-5">
-        <img
-          src="/public/caaip/banner-GENE51S.png"
-          class="w-[300px]"
-          alt="image-kemenhub"
-        />
-      </div>
-      <div class="flex items-center justify-center">
-        <img
-          src="/public/caaip/caaip-logo.jpg"
-          alt="image-kemenhub"
-          class="logo-instansi"
-        />
-        <img
-          src="/public/caaip/genesis-logo.jpg"
-          alt="image-kemenhub"
-          class="logo-instansi"
-        />
-      </div>
       <div class="container bg-slate-800 p-5 rounded-2xl mt-10">
         <div class="text-2xl mt-2 mb-5 flex justify-between font-bold">
           <div>Form Registrasi</div>

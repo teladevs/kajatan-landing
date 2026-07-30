@@ -4,7 +4,7 @@ const loadComponent = ref<any>(null);
 
 const doLoadComponent = async (componentName: string) => {
   loadComponent.value = defineAsyncComponent(
-    () => import(`@/components/${componentName}/seat.vue`)
+    () => import(`@/components/${componentName}/seat.vue`),
   );
 };
 
@@ -16,13 +16,13 @@ const loadData = async () => {
       `api/event/domain/${url.host}`,
       "get",
       {},
-      true
+      true,
     );
     if (response.data.value.status) {
       doLoadComponent(response.data.value.data.config.value.name);
     } else {
       loadComponent.value = defineAsyncComponent(
-        () => import(`@/components/error.vue`)
+        () => import(`@/components/error.vue`),
       );
     }
   }

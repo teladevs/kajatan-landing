@@ -1,198 +1,224 @@
 <template>
   <div class="seat-container">
+    <div class="text-center text-3xl font-bold pt-10">
+      SKEMA LAYOUT KURSI <br />
+      PELANTIKAN DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
+    </div>
+
     <div class="sector-block text-center py-10 px-10">
       <div
         v-for="(valSec, idxSec) in sectorAll"
-        :class="valSec.column == 3 ? 'grid-sector-3' : 'grid-sector'"
+        :key="idxSec"
+        class="grid-sector"
       >
         <div class="text-center text-2xl font-bold text-slate-100 my-10">
           {{ valSec.name }}
         </div>
+
         <div :class="`grid grid-cols-${valSec.column} gap-2`">
           <div
-            class="seat flex items-center justify-center"
-            :id="`sector-${valSec.sector}-${idxSeat + 1}`"
             v-for="(valSeat, idxSeat) in valSec.total"
+            :key="idxSeat"
+            class="seat flex items-center justify-center"
+            :class="getSeatClass(valSec.sector, idxSeat)"
           >
             {{ idxSeat + 1 }}
           </div>
         </div>
       </div>
     </div>
+
+    <!-- LEGEND -->
+    <div class="container ml-20 mt-5">
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 booked DIPLOMA-III"></div>
+          <div class="text-xl font-bold">DIPLOMA III = 266</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 booked DP-III"></div>
+          <div class="text-xl font-bold">DP-III = 64</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 booked DP-II"></div>
+          <div class="text-xl font-bold">DP-II = 342</div>
+        </div>
+
+        <div class="flex items-center mt-3">
+          <div class="w-5 h-5 mr-3 vip"></div>
+          <div class="text-xl font-bold">VVIP</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 inspektur"></div>
+          <div class="text-xl font-bold">Inspektur Upacara</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 perwira"></div>
+          <div class="text-xl font-bold">Perwira Upacara</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 dw"></div>
+          <div class="text-xl font-bold">DW</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 anak-yatim"></div>
+          <div class="text-xl font-bold">Anak Yatim</div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-5 h-5 mr-3 steril"></div>
+          <div class="text-xl font-bold">Steril</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <style scoped>
 .sector-block {
   display: flex;
-  flex-direction: row;
 }
+
 .grid-sector {
   width: 250px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
-.grid-sector-3 {
-  width: 110px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
+
 .seat-container {
-  width: 3500px;
-  height: 110vh;
+  width: 2050px;
+  height: 100vh;
   background-color: #429ac0;
 }
+
 .seat {
   width: 24px;
   height: 20px;
   border-radius: 6px 6px 0 0;
   font-size: 9px;
-  line-height: 1;
   background-color: #ededed;
 }
-.booked.YATIM {
-  background-color: #ffc0cb;
-  color: black;
-}
-.booked.VIP-VVIP {
+
+/* DEFAULT GROUP COLORS */
+.booked.DIPLOMA-III {
   background-color: #ffffff;
   color: black;
 }
-/* .booked.DP-I {
-  background-color: #b3d5e7;
-  color: black;
-}
-.booked.right {
-  background-color: #fac1cf;
-  color: black;
-}
-.booked.center {
-  background-color: #6b3063;
-  color: white;
-} */
-.booked.DP-I {
-  background-color: #0000ff;
-  color: white;
-}
-.booked.DP-II {
-  background-color: #000080;
-  color: white;
-}
+
 .booked.DP-III {
-  background-color: #a51010;
-  color: white;
-}
-.booked.DP-IV {
-  background-color: #add8e6;
-  color: white;
-}
-.booked.DP-V {
-  background-color: #0a790a;
-  color: white;
-}
-.booked.ETO-PTRN {
-  background-color: #8d570b;
-  color: white;
-}
-.booked.TROK {
-  background-color: #ecec09;
+  background-color: #ffffff;
   color: black;
 }
-.booked.TRPK {
-  background-color: #ce8704;
-  color: white;
-}
-.booked.TRKK {
-  background-color: #800080;
-  color: white;
-}
-.booked.TRANSLA {
-  background-color: #df909d;
+
+.booked.DP-II {
+  background-color: #ffffff;
   color: black;
 }
-.booked.D-III {
-  background-color: #a00e5a;
+
+/* VVIP */
+.vip {
+  background-color: #ffffff;
+  border: 2px solid #000;
+}
+
+/* SPECIAL */
+.inspektur {
+  background-color: gold;
+  color: black;
+}
+
+.perwira {
+  background-color: orange;
+  color: black;
+}
+
+.dw {
+  background-color: purple;
   color: white;
 }
-.booked.D-III-ETO {
-  background-color: #008080;
-  color: white;
+
+.anak-yatim {
+  background-color: pink;
+  color: black;
+}
+
+.steril {
+  background-color: #ccc;
 }
 </style>
-<script setup>
-const eventDetail = ref(null);
-const loadData = async () => {
-  eventDetail.value = await useCustomFetch(
-    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
-    "get",
-    {},
-    true,
-  );
-  setTimeout(() => {
-    loadAllSectorsInQueue();
-  }, 1500);
-};
 
+<script setup>
 const sectorAll = [
-  { name: "SEKTOR 1", sector: 1, total: 100, column: 10 },
-  { name: "SEKTOR 2", sector: 2, total: 100, column: 10 },
-  { name: "SEKTOR 3", sector: 3, total: 100, column: 10 },
-  { name: "SEKTOR 4", sector: 4, total: 100, column: 10 },
-  { name: "SEKTOR 5", sector: 5, total: 100, column: 10 },
-  { name: "SEKTOR 6", sector: 6, total: 100, column: 10 },
-  { name: "SEKTOR 7", sector: 7, total: 100, column: 10 },
-  { name: "SEKTOR 8", sector: 8, total: 100, column: 10 },
-  { name: "SEKTOR 9", sector: 9, total: 100, column: 10 },
-  { name: "SEKTOR 10", sector: 10, total: 100, column: 10 },
+  { name: "S1", sector: 1, total: 100, column: 10 },
+  { name: "S2", sector: 2, total: 100, column: 10 },
+  { name: "S3", sector: 3, total: 120, column: 10 },
+  { name: "S4", sector: 4, total: 120, column: 10 },
+  { name: "S5", sector: 5, total: 120, column: 10 },
+  { name: "S6", sector: 6, total: 100, column: 10 },
+  { name: "S7", sector: 7, total: 100, column: 10 },
 ];
 
-const checkAlphabet = (seat, sector) => {
-  if (sector >= 2) {
-    return seat + sector * 10 - 10;
+let diplomaQuota = 266;
+let dp3Quota = 64;
+
+const seatMap = new Map();
+
+const getSeatClass = (sector, idxSeat) => {
+  const key = `${sector}-${idxSeat}`;
+  if (seatMap.has(key)) return seatMap.get(key);
+
+  let result = "";
+  const seatNumber = idxSeat + 1;
+
+  // =========================
+  // 1. VVIP
+  // =========================
+  if ([3, 4, 5].includes(sector) && idxSeat < 20) {
+    result = "vip";
   }
 
-  if (sector == 1) {
-    return seat;
+  // =========================
+  // 2. SPECIAL RULES
+  // =========================
+  else if (sector === 4 && seatNumber === 6) {
+    result = "inspektur";
+  } else if (sector === 6 && seatNumber === 1) {
+    result = "perwira";
+  } else if (sector === 3 && seatNumber >= 21 && seatNumber <= 40) {
+    result = "dw";
+  } else if (sector === 5 && seatNumber >= 21 && seatNumber <= 40) {
+    result = "anak-yatim";
+  } else if (sector === 4 && seatNumber >= 21) {
+    result = "steril";
   }
 
-  return seat;
-};
-
-const loadDataSector = async (sector) => {
-  let response = await useCustomFetch(
-    `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.data.id}/${sector}`,
-    "get",
-    {},
-    true,
-  );
-  let getData = response.data.value.data;
-  getData.forEach((val, idx) => {
-    if (val.status == 1) {
-      const element = document.querySelector(
-        `#sector-${val.code_sector}-${val.seat_number}`,
-      );
-      if (element) {
-        element.classList.add("booked");
-        element.classList.add(val.category);
-      }
+  // =========================
+  // 3. QUOTA LOGIC
+  // =========================
+  else if (sector >= 1 && sector <= 3) {
+    if (diplomaQuota > 0) {
+      result = "booked DIPLOMA-III";
+      diplomaQuota--;
+    } else {
+      result = "booked DP-II";
     }
-  });
-};
+  } else if (sector === 4) {
+    if (dp3Quota > 0) {
+      result = "booked DP-III";
+      dp3Quota--;
+    } else {
+      result = "booked DP-II";
+    }
+  } else {
+    result = "booked DP-II";
+  }
 
-const loadAllSectorsInQueue = async () => {
-  await loadDataSector("1");
-  await loadDataSector("2");
-  await loadDataSector("3");
-  await loadDataSector("4");
-  await loadDataSector("5");
-  await loadDataSector("6");
-  await loadDataSector("7");
-  await loadDataSector("8");
-  await loadDataSector("9");
-  await loadDataSector("10");
+  seatMap.set(key, result);
+  return result;
 };
-
-loadData();
-setInterval(() => {
-  loadAllSectorsInQueue();
-}, 10000);
 </script>
