@@ -56,9 +56,10 @@
         >
           <div
             style="
-              color: white;
+              color: #024497;
               font-size: 25px;
               width: 100%;
+              font-weight: 500;
               margin-bottom: 50px;
             "
             ;
@@ -68,18 +69,18 @@
           </div>
           <div
             style="
-              color: white;
+              color: #024497;
               font-size: 25px;
               width: 100%;
               font-style: italic;
-              font-weight: 600;
+              font-weight: 700;
             "
           >
             "GREEN SAILS, BRIGHT FUTURES"
           </div>
           <div
             style="
-              color: white;
+              color: #024497;
               font-size: 15px;
               width: 100%;
               margin-bottom: 40px;
@@ -89,7 +90,7 @@
           </div>
           <div
             style="
-              color: white;
+              color: #024497;
               font-size: 18px;
               width: 100%;
               font-weight: 600;
@@ -604,10 +605,11 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 30px 40px 30px;
-  background-color: #112e4b;
+  background-color: #88d1ef;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: white !important;
+  color: #024497;
+  font-weight: 500;
 }
 .text-section {
   margin-top: 20px;
@@ -628,14 +630,16 @@ html {
 }
 
 .section-social-media {
-  background-color: #112e4b;
-  color: white !important;
+  background-color: #88d1ef;
+  color: #024497;
   margin-top: 50px;
   text-decoration: none;
   padding: 15px 15px 40px 15px;
+  font-weight: 500;
 }
 .section-social-media a {
-  color: #fff !important;
+  font-weight: 500;
+  color: #024497 !important;
 }
 .page-welcome {
   background-position: center;
@@ -671,7 +675,7 @@ html {
   bottom: -70%;
 }
 .btn-invitation {
-  background-color: #112e4b;
+  background-color: #024497;
 }
 @media (max-width: 576px) {
   .page-welcome {
