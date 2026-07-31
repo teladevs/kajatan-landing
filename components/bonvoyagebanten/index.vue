@@ -49,14 +49,66 @@
           />
         </svg>
       </a>
-      <div class="text-center text-top-welcome">
-        <button
-          class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
-          v-if="buttonInvitation"
-          @click="openInvitation()"
+      <div class="relative w-full h-screen">
+        <div
+          class="text-center"
+          style="position: absolute; top: 35%; width: 100%"
         >
-          Buka Undangan
-        </button>
+          <div
+            style="
+              color: white;
+              font-size: 25px;
+              width: 100%;
+              margin-bottom: 50px;
+            "
+            ;
+          >
+            PERWIRA SISWA DIKLAT PELAUT PENINGKATAN <br />
+            TINGKAT II, III, IV DAN V
+          </div>
+          <div
+            style="
+              color: white;
+              font-size: 25px;
+              width: 100%;
+              font-style: italic;
+              font-weight: 600;
+            "
+          >
+            "GREEN SAILS, BRIGHT FUTURES"
+          </div>
+          <div
+            style="
+              color: white;
+              font-size: 15px;
+              width: 100%;
+              margin-bottom: 40px;
+            "
+          >
+            Berlayar Ramah Lingkungan, Mengemban Tugas Bangsa
+          </div>
+          <div
+            style="
+              color: white;
+              font-size: 18px;
+              width: 100%;
+              font-weight: 600;
+              margin-bottom: 50px;
+            "
+          >
+            POLITEKNIK PELAYARAN BANTEN <br />
+            Rabu, 5 Agustus 2026
+          </div>
+          <div class="text-center">
+            <button
+              class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-xl btn-invitation"
+              v-if="buttonInvitation"
+              @click="openInvitation()"
+            >
+              Buka Undangan
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container-fluid d-none" id="content-page" v-if="showContent">
@@ -619,8 +671,6 @@ html {
   bottom: -70%;
 }
 .btn-invitation {
-  position: absolute;
-  top: 790px;
   background-color: #112e4b;
 }
 @media (max-width: 576px) {
