@@ -52,7 +52,7 @@
       <div class="relative w-full h-screen">
         <div
           class="text-center"
-          style="position: absolute; top: 35%; width: 100%"
+          style="position: absolute; top: 38%; width: 100%"
         >
           <div
             style="
