@@ -10,7 +10,7 @@ const doLoadComponent = async (componentName: string) => {
 
 const loadData = async () => {
   if (url.host === "landing.kajatan.com" || url.host === "localhost:3000") {
-    doLoadComponent("default");
+    doLoadComponent("bonvoyagebanten");
   } else {
     let response = await useCustomFetch(
       `api/event/domain/${url.host}`,
@@ -23,7 +23,7 @@ const loadData = async () => {
       if (template == null || template == undefined) {
         template = response.data.value.data.config.value.name;
       }
-      doLoadComponent(template);
+      doLoadComponent("bonvoyagebanten");
     } else {
       loadComponent.value = defineAsyncComponent(
         () => import(`@/components/error.vue`),
