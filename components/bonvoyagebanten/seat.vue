@@ -78,9 +78,7 @@
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow bg-seat"
     >
       <div class="section-lokasi text-center">
-        <h2
-          class="text-section text-lg font-bold text-slate-100 mt-2 mb-4 text-[#024497]"
-        >
+        <h2 class="text-section text-lg font-bold mt-2 mb-4 text-black">
           Lokasi
         </h2>
         <iframe
