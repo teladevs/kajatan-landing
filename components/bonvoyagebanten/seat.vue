@@ -123,7 +123,7 @@ setTimeout(() => {
   padding-bottom: 50px;
 }
 .bg-seat {
-  background-color: #112e4b;
+  background-color: #88d1ef;
 }
 .text-column {
   color: #ffdab9 !important;
