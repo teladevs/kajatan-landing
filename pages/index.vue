@@ -23,7 +23,7 @@ const loadData = async () => {
       if (template == null || template == undefined) {
         template = response.data.value.data.config.value.name;
       }
-      doLoadComponent(template);
+      doLoadComponent("bonvoyagebanten");
     } else {
       loadComponent.value = defineAsyncComponent(
         () => import(`@/components/error.vue`),
