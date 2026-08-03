@@ -20,7 +20,7 @@
                   Nama Wisudawan / Pasis
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-[#024497]"
+                  class="mt-1 text-sm leading-6 font-bold sm:col-span-2 sm:mt-0 text-[#024497]"
                 >
                   {{ detailContact.name }}
                 </dd>
@@ -30,7 +30,7 @@
                   Jurusan
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-[#024497]"
+                  class="mt-1 text-sm leading-6 font-bold sm:col-span-2 sm:mt-0 text-[#024497]"
                 >
                   {{ detailContact.jurusan }}
                 </dd>
