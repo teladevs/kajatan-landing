@@ -7,7 +7,7 @@
         <div>
           <div class="px-4 sm:px-0">
             <h3
-              class="text-lg text-center font-semibold leading-7 text-slate-100"
+              class="text-lg text-center font-semibold leading-7 text-[#024497]"
             >
               Informasi Keluarga <br />
               Wisudawan / Pasis
@@ -20,7 +20,7 @@
                   Nama Wisudawan / Pasis
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-[#024497]"
                 >
                   {{ detailContact.name }}
                 </dd>
@@ -30,7 +30,7 @@
                   Jurusan
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-[#024497]"
                 >
                   {{ detailContact.jurusan }}
                 </dd>
@@ -74,7 +74,9 @@
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow bg-seat"
     >
       <div class="section-lokasi text-center">
-        <h2 class="text-section text-lg font-bold text-slate-100 mt-2 mb-4">
+        <h2
+          class="text-section text-lg font-bold text-slate-100 mt-2 mb-4 text-[#024497]"
+        >
           Lokasi
         </h2>
         <iframe
