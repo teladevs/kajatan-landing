@@ -16,9 +16,7 @@
           <div class="mt-6 border-gray-300">
             <dl class="divide-y divide-gray-100">
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt
-                  class="text-sm font-medium leading-6 text-column text-black"
-                >
+                <dt class="text-sm font-medium leading-6 text-black">
                   Nama Wisudawan / Pasis
                 </dt>
                 <dd
@@ -28,9 +26,7 @@
                 </dd>
               </div>
               <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt
-                  class="text-sm font-medium leading-6 text-column text-black"
-                >
+                <dt class="text-sm font-medium leading-6 text-black">
                   Jurusan
                 </dt>
                 <dd
