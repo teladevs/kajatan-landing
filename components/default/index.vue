@@ -19,10 +19,11 @@
               <p
                 class="jos slide-from-bottom mb-11 max-w-[700px] text-lg font-semibold sm:text-xl xl:max-w-[980px]"
               >
-                Welcome to Kajatan, your one-stop solution for modern, efficient, and
-                eco-friendly digital invitations. Whether you're hosting a wedding,
-                corporate event, or private party, our platform makes it easy to create,
-                send, and manage your invitations.
+                Welcome to Kajatan, your one-stop solution for modern,
+                efficient, and eco-friendly digital invitations. Whether you're
+                hosting a wedding, corporate event, or private party, our
+                platform makes it easy to create, send, and manage your
+                invitations.
               </p>
               <div
                 class="jos flex flex-wrap justify-center gap-6"
@@ -56,11 +57,13 @@
             </div>
             <!-- Hero Image -->
 
-            <div class="my-10 h-[1px] w-full bg-[#DBD6CF] lg:my-16 xl:my-20"></div>
+            <div
+              class="my-10 h-[1px] w-full bg-[#DBD6CF] lg:my-16 xl:my-20"
+            ></div>
             <div class="jos mx-auto mb-12 max-w-[715px] text-center lg:mb-16">
               <p class="text-lg">
-                Empowering Companies of All Sizes with Digital Invitation Solutions for
-                Unmatched Growth and Innovation
+                Empowering Companies of All Sizes with Digital Invitation
+                Solutions for Unmatched Growth and Innovation
               </p>
             </div>
             <!-- Slider main container -->

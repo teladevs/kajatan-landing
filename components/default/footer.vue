@@ -64,12 +64,16 @@
         <!-- Footer Widget -->
         <div class="flex flex-col gap-y-6">
           <a href="index.html" class="inline-block"
-            ><img src="/images/home/th-1/logo.png" alt="logo" width="96" height="24"
+            ><img
+              src="/images/home/th-1/logo.png"
+              alt="logo"
+              width="96"
+              height="24"
           /></a>
           <p>
-            Our mission is to harness the power of AI to solve complex business challenges
-            & decision-makers with data-driven insights, and enhance user experiences
-            across digital platforms.
+            Our mission is to harness the power of AI to solve complex business
+            challenges & decision-makers with data-driven insights, and enhance
+            user experiences across digital platforms.
           </p>
           <p>Website: <a href="https://www.example.com">www.example.com</a></p>
         </div>
@@ -78,7 +82,9 @@
         <!-- Footer Widget -->
         <div class="flex flex-col gap-y-6">
           <!-- Footer Title -->
-          <h4 class="text-[21px] font-semibold capitalize text-black">Primary Pages</h4>
+          <h4 class="text-[21px] font-semibold capitalize text-black">
+            Primary Pages
+          </h4>
           <!-- Footer Title -->
 
           <!-- Footer Navbar -->
@@ -125,7 +131,9 @@
         <!-- Footer Widget -->
         <div class="flex flex-col gap-y-6">
           <!-- Footer Title -->
-          <h4 class="text-[21px] font-semibold capitalize text-black">Utility pages</h4>
+          <h4 class="text-[21px] font-semibold capitalize text-black">
+            Utility pages
+          </h4>
           <!-- Footer Title -->
 
           <!-- Footer Navbar -->
@@ -184,10 +192,14 @@
                 type="submit"
                 class="absolute right-[5px] top-[50%] inline-block h-10 -translate-y-[50%] rounded-[50px] bg-black px-6 transition-all hover:bg-orange-500"
               >
-                <img src="/images/home/th-1/arrow-right-large.svg" alt="newsletter" />
+                <img
+                  src="/images/home/th-1/arrow-right-large.svg"
+                  alt="newsletter"
+                />
               </button>
             </div>
           </form>
+          <div>Active users : {{ visitors }}</div>
           <!-- Footer Subscriber Form -->
         </div>
         <!-- Footer Widget -->
@@ -196,7 +208,9 @@
       <div class="h-[1px] w-full bg-[#DBD6CF]"></div>
       <!-- Footer Bottom -->
       <div class="py-9 text-center">
-        <p>&copy; Copyright 2023, All Rights Reserved by Digital Invitation Team</p>
+        <p>
+          &copy; Copyright 2023, All Rights Reserved by Digital Invitation Team
+        </p>
       </div>
       <!-- Footer Bottom -->
     </div>
@@ -214,5 +228,5 @@
   <!--...::: Footer Section End :::... -->
 </template>
 <script>
-export default {};
+const { visitors } = useVisitors();
 </script>
