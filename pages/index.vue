@@ -18,7 +18,9 @@ const loadData = async () => {
       {},
       true,
     );
+    console.log(response);
     if (response.data.value.status) {
+      console.log(response.data.value);
       var template = response.data.value.data.feature.value.landing_template;
       if (template == null || template == undefined) {
         template = response.data.value.data.config.value.name;
