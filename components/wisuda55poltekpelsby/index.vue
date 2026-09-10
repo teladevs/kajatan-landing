@@ -84,7 +84,8 @@
           <div class="font-bold with-shadow">
             "Shaping The Future of Maritime Safety Through Competency"
           </div>
-          <div class="mt-5 font-bold">Together To Give The Best</div>
+          <div class="mt-3 font-bold">Together To Give The Best</div>
+          <div class="mt-5 font-bold">SURABAYA, 16 SEPTEMBER 2026</div>
         </div>
         <button
           class="text-white font-bold py-2 px-4 rounded-xl btn-invitation"
