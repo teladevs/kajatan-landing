@@ -75,8 +75,8 @@
             UPACARA WISUDA KE-55 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
           </div>
           <div class="mb-5 font-bold text-black text-lg">
-            PROGRAM SARJANA TERAPAN, DIPLOMA-III, RPL DAN PELAUT PENINGKATAN
-            I,II, III, IV, V
+            PROGRAM SARJANA TERAPAN, DIPLOMA-III, RPL DAN PROGRAM DIKLAT PELAUT
+            PENINGKATAN I,II, III, IV, V
           </div>
           <div class="mb-5 bg-[#f5ce11] rounded-xl text-[#024497] font-bold">
             POLITEKNIK PELAYARAN SURABAYA
