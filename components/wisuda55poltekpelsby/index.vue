@@ -436,12 +436,12 @@
               </div>
             </div>
           </div>
-          <div class="section-layout-denah text-center px-5">
+          <!-- <div class="section-layout-denah text-center px-5">
             <img :src="denahParkir" alt="denah" class="img-fluid" />
           </div>
           <div class="section-layout-lapangan text-center">
             <img :src="layoutUpacara" alt="layout" class="img-fluid" />
-          </div>
+          </div> -->
           <!-- <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div> -->
