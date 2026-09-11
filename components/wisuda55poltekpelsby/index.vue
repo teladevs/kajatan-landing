@@ -75,7 +75,9 @@
             UPACARA WISUDA KE-55 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
           </div>
           <div class="mb-5 font-bold text-black text-lg">
-            PROGRAM SARJANA TERAPAN, DIPLOMA-III, RPL DAN PROGRAM DIKLAT PELAUT
+            PROGRAM SARJANA TERAPAN <br />
+            DIPLOMA-III, RPL DIPLOMA-III <br />
+            DAN PROGRAM DIKLAT PELAUT <br />
             PENINGKATAN I,II, III, IV, V
           </div>
           <div class="mb-5 bg-[#f5ce11] rounded-xl text-[#024497] font-bold">
@@ -716,7 +718,7 @@ html {
   color: #000 !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda55poltekpelsby/w55-main-bg.png");
+  background-image: url("../../public/wisuda55poltekpelsby/w55-main-bg-resize.png");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
@@ -760,7 +762,7 @@ html {
     background-size: 100% 100%;
   }
   .btn-invitation {
-    top: 600px;
+    top: 650px;
   }
   .section-layout-welcome {
     position: relative;
