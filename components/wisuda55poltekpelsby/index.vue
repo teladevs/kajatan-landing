@@ -465,9 +465,19 @@
               <img :src="layoutUpacara" alt="layout" class="img-fluid" />
             </div>
           </div>
-          <!-- <div class="section-layout-lapangan text-center">
-            <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
-          </div> -->
+          <div class="section-layout-lapangan text-center">
+                        <div
+              class="p-10 rounded font-bold overflow-hidden shadow-lg border-sky-100"
+            >
+                          <div class="tetx-lg">DENAH PARKIR</div>
+              <div class="text-lg">
+                WISUDA KE-55 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
+              </div>
+              <div class="text-md mt-2">POLITEKNIK PELAYARAN SURABAYA</div>
+              <div class="text-md mb-5">TAHUN 2026</div>
+              </div>
+            <img :src="denahParkir" alt="layout" class="img-fluid" />
+          </div>
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
@@ -599,8 +609,7 @@
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
 import layoutUpacara from "@/public/wisuda55poltekpelsby/layout-lapangan.png";
-import layoutTempatDuduk from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
-import denahParkir from "@/public/wisuda54poltekpelsby/p2s-w54-denah_parkir.png";
+import denahParkir from "@/public/wisuda55poltekpelsby/p2s-w55-denah_parkir.png";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
 
