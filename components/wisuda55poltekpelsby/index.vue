@@ -391,11 +391,18 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">d.</div>
                 <div class="col-span-11">
-                  Penandatanganan Kerjasama dengan ASDP, PELNI, CITRA BARU ABDI
-                  NUSANTARA (CBA), PT. DELI, DINAS PENDIDIKAN PROVINSI JAWA
-                  TIMUR DAN DINAS KEBUDAYAAN, KEPEMUDAAN DAN OLAHRAGA SERTA
-                  PARIWISATA (DISBUDPARPORA) KOTA SURABAYA. Kembali ke mimbar
-                  kehormatan;
+                  Penandatanganan Kerjasama dengan : <br />
+                  - Pusat Penerbangan TNI Angkatan Laut <br />
+                  - Dinas Pendidikan Provinsi Jawa Timur <br />
+                  - Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata
+                  Kota Surabaya <br />
+                  - PT. PELNI <br />
+                  - PT. ASDP INDONESIA FERRY <br />
+                  - PT. ASIA MARINE TEMAS <br />
+                  - PT. DELI PRATAMA ANGKUTAN LAUT <br />
+                  - PT. CITRABARU ADINUSANTARA <br />
+                  - PT. PELAYARAN NASIONAL EKALYA PURNAMASARI. <br />
+                  Kembali ke mimbar kehormatan;
                 </div>
               </div>
             </div>
