@@ -440,10 +440,20 @@
           </div>
           <!-- <div class="section-layout-denah text-center px-5">
             <img :src="denahParkir" alt="denah" class="img-fluid" />
-          </div>
-          <div class="section-layout-lapangan text-center">
-            <img :src="layoutUpacara" alt="layout" class="img-fluid" />
           </div> -->
+          <div class="section-layout-lapangan text-center">
+            <div
+              class="p-10 rounded font-bold overflow-hidden shadow-lg border-sky-100"
+            >
+              <div class="tetx-lg">DENAH LAPANGAN UPACARA</div>
+              <div class="text-lg">
+                WISUDA KE-55 DAN PELEPASAN PERWIRA TRANSPORTASI LAUT
+              </div>
+              <div class="text-md mt-2">POLITEKNIK PELAYARAN SURABAYA</div>
+              <div class="text-md mb-5">TAHUN 2026</div>
+              <img :src="layoutUpacara" alt="layout" class="img-fluid" />
+            </div>
+          </div>
           <!-- <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
           </div> -->
@@ -577,7 +587,7 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import layoutUpacara from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
+import layoutUpacara from "@/public/wisuda55poltekpelsby/layout-lapangan.png";
 import layoutTempatDuduk from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
 import denahParkir from "@/public/wisuda54poltekpelsby/p2s-w54-denah_parkir.png";
 import AudioPlayer from "@/components/audio";
@@ -687,7 +697,7 @@ useSeoMeta({
   background-color: #93d8f7;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: black !important;
+  color: #205397 !important;
 }
 .text-section {
   margin-top: 20px;
