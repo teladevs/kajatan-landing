@@ -391,9 +391,11 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">d.</div>
                 <div class="col-span-11">
-                  Penandatanganan Kerjasama dengan Pelindo, Meratus dan Program
-                  Studi Profesi insinyur Universitas Katolik Widya Mandala
-                  Surabaya
+                  Penandatanganan Kerjasama dengan ASDP, PELNI, CITRA BARU ABDI
+                  NUSANTARA (CBA), PT. DELI, DINAS PENDIDIKAN PROVINSI JAWA
+                  TIMUR DAN DINAS KEBUDAYAAN, KEPEMUDAAN DAN OLAHRAGA SERTA
+                  PARIWISATA (DISBUDPARPORA) KOTA SURABAYA. Kembali ke mimbar
+                  kehormatan;
                 </div>
               </div>
             </div>
@@ -401,7 +403,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">e.</div>
                 <div class="col-span-11">
-                  Pemberian santunan kepada anak yatim
+                  Pemberian santunan kepada anak yatim di serahkan oleh Ibu-Ibu
+                  DWP;
                 </div>
               </div>
             </div>
@@ -423,7 +426,8 @@
                 <div class="col-span-11">
                   Rangkaian Upacara selesai, ucapan terimakasih, dilanjutkan
                   dengan acara tambahan; 1) Penampilan Passing Out Parade 2)
-                  Tari Kolosal Reog Ponorogo 3) Penampilan Marching Band
+                  Abandon Ship 3) Tari Kolosal Reog Ponorogo 4) Penampilan
+                  Marching Band
                 </div>
               </div>
             </div>
