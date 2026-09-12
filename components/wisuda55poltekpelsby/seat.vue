@@ -127,7 +127,7 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
+import imageDenahLapangan from "../../public/wisuda55poltekpelsby/layout-lapangan.png";
 const url = useRequestURL();
 
 const router = useRouter();
@@ -135,7 +135,7 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda55poltekpelsby.telanusa.com"}`,
     "get",
     {},
     true,
