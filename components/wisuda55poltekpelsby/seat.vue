@@ -7,7 +7,7 @@
         <div>
           <div class="px-4 sm:px-0">
             <h3
-              class="text-lg text-center font-semibold leading-7 text-slate-100"
+              class="text-lg text-center font-semibold leading-7 text-slate-900"
             >
               Informasi Keluarga <br />
               Wisudawan / Pasis
@@ -20,7 +20,7 @@
                   Nama Wisudawan / Pasis
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-800 sm:col-span-2 sm:mt-0"
                 >
                   {{ detailContact.name }}
                 </dd>
@@ -30,7 +30,7 @@
                   Jurusan
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-800 sm:col-span-2 sm:mt-0"
                 >
                   <!-- {{ detailContact.study }} -->
                   {{ detailContact.jurusan }}
@@ -41,7 +41,7 @@
                   Zona Parkir
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-800 sm:col-span-2 sm:mt-0"
                 >
                   {{ detailContact.zona == "ZONA 2" ? "ZONA 2 & 3" : "ZONA 1" }}
                 </dd>
@@ -51,7 +51,7 @@
                   Pintu Masuk
                 </dt>
                 <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0 text-capitalize"
+                  class="mt-1 text-sm leading-6 font-bold text-gray-800 sm:col-span-2 sm:mt-0 text-capitalize"
                 >
                   PINTU {{ detailContact.gate }}
                 </dd>
@@ -65,13 +65,13 @@
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow bg-seat"
     >
       <div class="w-full my-10">
-        <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
+        <div class="w-full text-center text-slate-900 mb-5 text-md font-bold">
           Layout Lapangan Upacara
         </div>
         <img :src="imageDenahLapangan" alt="" />
       </div>
       <div class="section-lokasi text-center">
-        <h2 class="text-section text-lg font-bold text-slate-100 mt-2 mb-4">
+        <h2 class="text-section text-lg font-bold text-slate-900 mt-2 mb-4">
           Lokasi
         </h2>
         <div class="maps" v-if="detailContact?.gate == 'A'">
@@ -137,7 +137,7 @@ setTimeout(() => {
   background-color: #93d8f7;
 }
 .text-column {
-  color: #ffdab9 !important;
+  color: #0e4eb7 !important;
 }
 .container {
   max-width: 600px !important;
