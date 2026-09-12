@@ -56,16 +56,6 @@
                   PINTU {{ detailContact.gate }}
                 </dd>
               </div>
-              <div class="px-1 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="text-sm font-medium leading-6 text-column">
-                  Tempat Duduk
-                </dt>
-                <dd
-                  class="mt-1 text-sm leading-6 font-bold text-gray-100 sm:col-span-2 sm:mt-0"
-                >
-                  <div>Sektor {{ detailContact?.nama_sektor }}</div>
-                </dd>
-              </div>
             </dl>
           </div>
         </div>
@@ -74,24 +64,9 @@
     <div
       class="w-full p-3 bg-white border border-gray-200 rounded-lg shadow bg-seat"
     >
-      <div class="seat-block pb-5">
-        <div class="text-md w-full text-center mb-2 font-bold text-slate-100">
-          DENAH TEMPAT DUDUK
-        </div>
-        <div class="grid grid-cols-1 gap-5">
-          <div
-            class="seat booked block-sector flex justify-center flex-col p-2"
-            :class="detailContact?.kategori"
-          >
-            <div class="text-base font-bold w-full text-center mb-2">
-              {{ detailContact?.jurusan }}
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="w-full my-10">
         <div class="w-full text-center text-slate-100 mb-5 text-md font-bold">
-          Layout Tempat Duduk Lapangan
+          Layout Lapangan Upacara
         </div>
         <img :src="imageDenahLapangan" alt="" />
       </div>
@@ -159,7 +134,7 @@ setTimeout(() => {
   padding-bottom: 50px;
 }
 .bg-seat {
-  background-color: var(--53primary);
+  background-color: #93d8f7;
 }
 .text-column {
   color: #ffdab9 !important;
