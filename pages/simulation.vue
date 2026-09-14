@@ -1,40 +1,206 @@
-<script setup lang="ts">
-const url = useRequestURL();
-const loadComponent = ref<any>(null);
-
-const doLoadComponent = async (componentName: string) => {
-  loadComponent.value = defineAsyncComponent(
-    () => import(`@/components/${componentName}/simulation.vue`),
+<template>
+  <div class="seat-container">
+    <div class="sector-block text-center py-10 px-10">
+      <div
+        v-for="(valSec, idxSec) in sectorAll"
+        :class="valSec.column == 3 ? 'grid-sector-3' : 'grid-sector'"
+      >
+        <div class="text-center text-2xl font-bold text-slate-100 my-10">
+          {{ valSec.name }}
+        </div>
+        <div :class="`grid grid-cols-${valSec.column} gap-2`">
+          <div
+            class="seat flex items-center justify-center"
+            :id="`sector-${valSec.sector}-${idxSeat + 1}`"
+            v-for="(valSeat, idxSeat) in valSec.total"
+          >
+            {{ idxSeat + 1 }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped>
+.sector-block {
+  display: flex;
+  flex-direction: row;
+}
+.grid-sector {
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.grid-sector-3 {
+  width: 110px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.seat-container {
+  width: 3500px;
+  height: 110vh;
+  background-color: #429ac0;
+}
+.seat {
+  width: 24px;
+  height: 20px;
+  border-radius: 6px 6px 0 0;
+  font-size: 9px;
+  line-height: 1;
+  background-color: #ededed;
+}
+.booked.YATIM {
+  background-color: #ffc0cb;
+  color: black;
+}
+.booked.VIP-VVIP {
+  background-color: #ffffff;
+  color: black;
+}
+/* .booked.DP-I {
+  background-color: #b3d5e7;
+  color: black;
+}
+.booked.right {
+  background-color: #fac1cf;
+  color: black;
+}
+.booked.center {
+  background-color: #6b3063;
+  color: white;
+} */
+.booked.DP-I {
+  background-color: #232e73;
+  color: white;
+}
+.booked.DP-II {
+  background-color: #3758ac;
+  color: white;
+}
+.booked.DP-III {
+  background-color: #496bb4;
+  color: white;
+}
+.booked.DP-IV {
+  background-color: #84ceef;
+  color: #000;
+}
+.booked.DP-V {
+  background-color: #e5f4f6;
+  color: #000;
+}
+.booked.ETO-PTRN {
+  background-color: #4a2a7e;
+  color: white;
+}
+.booked.ETO-PNKT {
+  background-color: #d7a4ce;
+  color: white;
+}
+.booked.TROK {
+  background-color: #0a602d;
+  color: white;
+}
+.booked.TRPK {
+  background-color: #128d43;
+  color: white;
+}
+.booked.TRKK {
+  background-color: #4bb749;
+  color: white;
+}
+.booked.TRANSLA {
+  background-color: #a4d588;
+  color: black;
+}
+.booked.D-III-NAUTIKA {
+  background-color: #72221d;
+  color: white;
+}
+.booked.D-III-TEKNIKA {
+  background-color: #ef151e;
+  color: white;
+}
+.booked.D-III-ETO {
+  background-color: #ffa516;
+  color: white;
+}
+</style>
+<script setup>
+const eventDetail = ref(null);
+const loadData = async () => {
+  eventDetail.value = await useCustomFetch(
+    `api/event/domain/${"wisuda55poltekpelsby.telanusa.com"}`,
+    "get",
+    {},
+    true,
   );
+  setTimeout(() => {
+    loadAllSectorsInQueue();
+  }, 1500);
 };
 
-const loadData = async () => {
-  if (url.host === "landing.kajatan.com" || url.host === "localhost:3000") {
-    doLoadComponent("bonvoyagebanten");
-  } else {
-    let response = await useCustomFetch(
-      `api/event/domain/${url.host}`,
-      "get",
-      {},
-      true,
-    );
-    if (response.data.value.status) {
-      var template = response.data.value.data.feature.value.landing_template;
-      if (template == null || template == undefined) {
-        template = response.data.value.data.config.value.name;
-      }
-      doLoadComponent(template);
-    } else {
-      loadComponent.value = defineAsyncComponent(
-        () => import(`@/components/error.vue`),
-      );
-    }
+const sectorAll = [
+  { name: "SEKTOR 1", sector: 1, total: 120, column: 10 },
+  { name: "SEKTOR 2", sector: 2, total: 120, column: 10 },
+  { name: "SEKTOR 3", sector: 3, total: 120, column: 10 },
+  { name: "SEKTOR 4", sector: 4, total: 110, column: 10 },
+  { name: "SEKTOR 5", sector: 5, total: 30, column: 3 },
+  { name: "SEKTOR 6", sector: 6, total: 30, column: 3 },
+  { name: "SEKTOR 7", sector: 7, total: 110, column: 10 },
+  { name: "SEKTOR 8", sector: 8, total: 120, column: 10 },
+  { name: "SEKTOR 9", sector: 9, total: 120, column: 10 },
+  { name: "SEKTOR 10", sector: 10, total: 120, column: 10 },
+];
+
+const checkAlphabet = (seat, sector) => {
+  if (sector >= 2) {
+    return seat + sector * 10 - 10;
   }
+
+  if (sector == 1) {
+    return seat;
+  }
+
+  return seat;
+};
+
+const loadDataSector = async (sector) => {
+  let response = await useCustomFetch(
+    `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.data.id}/${sector}`,
+    "get",
+    {},
+    true,
+  );
+  let getData = response.data.value.data;
+  getData.forEach((val, idx) => {
+    if (val.status == 1) {
+      const element = document.querySelector(
+        `#sector-${val.code_sector}-${val.seat_number}`,
+      );
+      if (element) {
+        element.classList.add("booked");
+        element.classList.add(val.category);
+      }
+    }
+  });
+};
+
+const loadAllSectorsInQueue = async () => {
+  await loadDataSector("1");
+  await loadDataSector("2");
+  await loadDataSector("3");
+  await loadDataSector("4");
+  await loadDataSector("5");
+  await loadDataSector("6");
+  await loadDataSector("7");
+  await loadDataSector("8");
+  await loadDataSector("9");
+  await loadDataSector("10");
 };
 
 loadData();
+setInterval(() => {
+  loadAllSectorsInQueue();
+}, 10000);
 </script>
-
-<template>
-  <component :is="loadComponent" />
-</template>
