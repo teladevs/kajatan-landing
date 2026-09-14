@@ -135,6 +135,7 @@ const loadData = async () => {
     {},
     true,
   );
+  console.log("runing");
   setTimeout(() => {
     loadAllSectorsInQueue();
   }, 1500);
@@ -166,6 +167,7 @@ const checkAlphabet = (seat, sector) => {
 };
 
 const loadDataSector = async (sector) => {
+  console.log(eventDetail.value.data);
   let response = await useCustomFetch(
     `/api/event-seat/detail-event-seat-sector/${eventDetail.value.data.data.id}/${sector}`,
     "get",
