@@ -70,55 +70,59 @@
   color: white;
 } */
 .booked.DP-I {
-  background-color: #3252a5;
+  background-color: #232e73;
   color: white;
 }
 .booked.DP-II {
-  background-color: #2a2877;
+  background-color: #3758ac;
   color: white;
 }
 .booked.DP-III {
-  background-color: #f01e24;
+  background-color: #496bb4;
   color: white;
 }
 .booked.DP-IV {
-  background-color: #add8e6;
-  color: white;
+  background-color: #84ceef;
+  color: #000;
 }
 .booked.DP-V {
-  background-color: #63bc4c;
-  color: white;
+  background-color: #e5f4f6;
+  color: #000;
 }
 .booked.ETO-PTRN {
-  background-color: #00a9e2;
+  background-color: #4a2a7e;
+  color: white;
+}
+.booked.ETO-PNKT {
+  background-color: #d7a4ce;
   color: white;
 }
 .booked.TROK {
-  background-color: #f4f000;
-  color: black;
+  background-color: #0a602d;
+  color: white;
 }
 .booked.TRPK {
-  background-color: #f6a71a;
+  background-color: #128d43;
   color: white;
 }
 .booked.TRKK {
-  background-color: #752c77;
+  background-color: #4bb749;
   color: white;
 }
 .booked.TRANSLA {
-  background-color: #df909d;
+  background-color: #a4d588;
   color: black;
 }
 .booked.D-III-NAUTIKA {
-  background-color: #752c77;
+  background-color: #72221d;
   color: white;
 }
 .booked.D-III-TEKNIKA {
-  background-color: #7e7f7d;
+  background-color: #ef151e;
   color: white;
 }
 .booked.D-III-ETO {
-  background-color: #07807d;
+  background-color: #ffa516;
   color: white;
 }
 </style>
@@ -126,7 +130,7 @@
 const eventDetail = ref(null);
 const loadData = async () => {
   eventDetail.value = await useCustomFetch(
-    `api/event/domain/${"wisuda54poltekpelsby.telanusa.com"}`,
+    `api/event/domain/${"wisuda55poltekpelsby.telanusa.com"}`,
     "get",
     {},
     true,
