@@ -102,7 +102,7 @@
 </template>
 <script setup>
 import { useRouter } from "vue-router";
-import imageDenahLapangan from "../../public/wisuda55poltekpelsby/layout-lapangan.png";
+import imageDenahLapangan from "../../public/wisuda55poltekpelsby/layout-lapangan-upacara.webp";
 const url = useRequestURL();
 
 const router = useRouter();
