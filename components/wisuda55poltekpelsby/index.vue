@@ -608,7 +608,7 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import layoutUpacara from "@/public/wisuda55poltekpelsby/layout-lapangan.png";
+import layoutUpacara from "@/public/wisuda55poltekpelsby/layout-lapangan-upacara.webp";
 import denahParkir from "@/public/wisuda55poltekpelsby/p2s-w55-denah_parkir.png";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
