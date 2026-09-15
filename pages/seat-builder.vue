@@ -209,7 +209,7 @@ const isSeatSelected = (seatId) => {
 </script>
 <style>
 .scroll-seat {
-  width: 4500px;
+  width: 4900px;
   overflow-x: scroll;
 }
 </style>

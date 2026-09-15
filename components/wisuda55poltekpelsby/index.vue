@@ -202,12 +202,21 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">b.</div>
-                <div class="col-span-11">Laporan Perwira Upacara;</div>
+                <div class="col-span-11">
+                  Pembacaan doa untuk KMP Virgo Transport 8 dan untuk peserta
+                  Pelantikan;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">c.</div>
+                <div class="col-span-11">Laporan Perwira Upacara;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">d.</div>
                 <div class="col-span-11">
                   Inspektur Upacara memasuki tempat upacara.
                 </div>
@@ -291,32 +300,26 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">k.</div>
-                <div class="col-span-11">Do'a;</div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">l.</div>
                 <div class="col-span-11">Andhika Bhayangkari;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">m.</div>
-                <div class="col-span-11">Mars Perhubungan;</div>
+                <div class="col-span-1">l.</div>
+                <div class="col-span-11">Mars Perhubungan (Paduan Suara);</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">n.</div>
+                <div class="col-span-1">m.</div>
                 <div class="col-span-11">
-                  Penghoramatan Kepada Panji Perhubungan;
+                  Penghormatan Kepada Panji Perhubungan;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">o.</div>
+                <div class="col-span-1">n.</div>
                 <div class="col-span-11">
                   Panji Perhubungan Meninggalkan Lapangan Upacara;
                 </div>
@@ -324,13 +327,13 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">p.</div>
+                <div class="col-span-1">o.</div>
                 <div class="col-span-11">Laporan Komandan Upacara;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">q.</div>
+                <div class="col-span-1">p.</div>
                 <div class="col-span-11">
                   Penghormatan Umum kepada Inspektur Upacara;
                 </div>
@@ -374,8 +377,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">b.</div>
                 <div class="col-span-11">
-                  Perwujudan Tanda Kesetiaan Terhadap NKRI diiringi lagu bagimu
-                  negeri (disesuaikan dengan tempat upacara)
+                  Perwujudan Tanda Kesetiaan Terhadap NKRI diiringi lagu Tanah
+                  Airku (disesuaikan dengan tempat upacara)
                 </div>
               </div>
             </div>
@@ -383,7 +386,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">c.</div>
                 <div class="col-span-11">
-                  Penyerahan Lulusan Kepada Korps Alumni
+                  Penyerahan Lulusan Kepada Korps Alumni;
                 </div>
               </div>
             </div>
@@ -392,17 +395,15 @@
                 <div class="col-span-1">d.</div>
                 <div class="col-span-11">
                   Penandatanganan Kerjasama dengan : <br />
-                  - Pusat Penerbangan TNI Angkatan Laut <br />
-                  - Dinas Pendidikan Provinsi Jawa Timur <br />
                   - Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata
                   Kota Surabaya <br />
+                  - Akademi Penerbang Indonesia Banyuwangi <br />
                   - PT. PELNI <br />
-                  - PT. ASDP INDONESIA FERRY <br />
-                  - PT. ASIA MARINE TEMAS <br />
-                  - PT. DELI PRATAMA ANGKUTAN LAUT <br />
-                  - PT. CITRABARU ADINUSANTARA <br />
-                  - PT. PELAYARAN NASIONAL EKALYA PURNAMASARI. <br />
-                  Kembali ke mimbar kehormatan;
+                  - PT. ASDP Indonesia Ferry <br />
+                  - PT. Asia Marine Temas <br />
+                  - PT. Deli Pratama Angkutan Laut <br />
+                  - PT. Citra Baru Adi Nusantara <br />
+                  - PT. Pelayaran Nasional Ekalya Purnamasari
                 </div>
               </div>
             </div>
@@ -433,8 +434,7 @@
                 <div class="col-span-11">
                   Rangkaian Upacara selesai, ucapan terimakasih, dilanjutkan
                   dengan acara tambahan; 1) Penampilan Passing Out Parade 2)
-                  Abandon Ship 3) Tari Kolosal Reog Ponorogo 4) Penampilan
-                  Marching Band
+                  Tari Kolosal Reog Ponorogo 3) Penampilan Marching Band
                 </div>
               </div>
             </div>
