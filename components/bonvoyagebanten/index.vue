@@ -124,7 +124,9 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Seluruh peserta Upacara menempati Tempat Upacara;
+                  Jajar Kehormatan kepada Inspektur Upacara beserta Para Kepala
+                  UPT bersiap. Seluruh peserta Upacara menempati Daerah
+                  Persiapan;
                 </div>
               </div>
             </div>
@@ -132,8 +134,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
                 <div class="col-span-11">
-                  2. Sangkakala pertama (seluruh peserta upacara siap di daerah
-                  persiapan);
+                  Instrumen bunyi sangkakala pertama, seluruh peserta upacara
+                  siap di daerah persiapan;
                 </div>
               </div>
             </div>
@@ -147,8 +149,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">4.</div>
                 <div class="col-span-11">
-                  Sangkakala kedua (seluruh komponen upacara memasuki tempat
-                  upacara);
+                  Sangkakala kedua, seluruh komponen upacara memasuki tempat
+                  upacara;
                 </div>
               </div>
             </div>
@@ -166,22 +168,22 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara tiba di mimbar kehormatan;
+                  Komandan upacara Memasuki Lapangan Upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
-                <div class="col-span-11">
-                  Komandan upacara Memasuki Tempat Upacara;
-                </div>
+                <div class="col-span-11">Upacara dimulai;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
-                <div class="col-span-11">Upacara dimulai.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara tiba di mimbar kehormatan.
+                </div>
               </div>
             </div>
 
@@ -204,8 +206,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Menyanyikan lagu Kebangsaan “Indonesia Raya” dan “Hymne
-                  Perhubungan”;
+                  Menyanyikan lagu (Indonesia Raya, Hymne Perhubungan);
                 </div>
               </div>
             </div>
@@ -226,80 +227,85 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">6.</div>
-                <div class="col-span-11">Pembacaan Laporan Pendidikan;</div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">7.</div>
-                <div class="col-span-11">Pernyataan Pelepasan;</div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">8.</div>
                 <div class="col-span-11">
-                  Prosesi Pelepasan; (Pengalungan Samir dan penyerahan Ijazah)
+                  Panji Perhubungan memasuki Lapangan Upacara;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
+                <div class="col-span-1">7.</div>
+                <div class="col-span-11">
+                  Penghormatan kepada Panji Perhubungan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">8.</div>
+                <div class="col-span-11">Pembacaan Laporan Pendidikan;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
                 <div class="col-span-1">9.</div>
-                <div class="col-span-11">Pembacaan Ikrar;</div>
+                <div class="col-span-11">
+                  Pernyataan Pelepasan dan Pelantikan;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">10.</div>
                 <div class="col-span-11">
-                  Kesan dan pesan PASIS (Perwira Siswa);
+                  Prosesi Pelepasan dan Pelantikan; (Pengalungan Samir untuk
+                  perwakilan terbaik oleh irup);
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">11.</div>
-                <div class="col-span-11">Amanat Inspektur Upacara ;</div>
+                <div class="col-span-11">
+                  Pembacaan Ikrar Perwira Transportasi ;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">12.</div>
-                <div class="col-span-11">Pembacaan Do'a;</div>
+                <div class="col-span-11">Sambutan Inspektur Upacara;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">13.</div>
-                <div class="col-span-11">Bagimu Negri;</div>
+                <div class="col-span-11">Pembacaan Do'a;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">14.</div>
-                <div class="col-span-11">Mars Perhubungan;</div>
+                <div class="col-span-11">Andhika Bhayangkari;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">15.</div>
-                <div class="col-span-11">Laporan Komandan Upacara;</div>
+                <div class="col-span-11">Lagu Bagimu Negeri;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">16.</div>
-                <div class="col-span-11">
-                  Penghormatan Umum kepada Inspektur Upacara;
-                </div>
+                <div class="col-span-11">Mars Perhubungan;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">17.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara kembali ke mimbar kehormatan;
+                  Penghormatan Kepada Panji Perhubungan;
                 </div>
               </div>
             </div>
@@ -307,7 +313,38 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">18.</div>
                 <div class="col-span-11">
-                  Upacara Selesai, komandan upacara meninggalkan Tempat Upacara;
+                  Panji Perhubungan meninggalkan Lapangan Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">19.</div>
+                <div class="col-span-11">Laporan Komandan Upacara;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">20.</div>
+                <div class="col-span-11">
+                  Penghormatan Umum kepada Inspektur Upacara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">21.</div>
+                <div class="col-span-11">
+                  Inspektur Upacara kembali ke mimbar kehormatan;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">22.</div>
+                <div class="col-span-11">
+                  Upacara selesai, komandan upacara meninggalkan lapangan
+                  upacara;
                 </div>
               </div>
             </div>
@@ -316,20 +353,96 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">1.</div>
                 <div class="col-span-11">
-                  Foto Bersama; (Masing-masing Jurusan)
+                  Pengalungan Samir oleh keluarga Perwira Transportasi Laut;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">2.</div>
-                <div class="col-span-11">Band dari Taruna;</div>
+                <div class="col-span-11">
+                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+                  Indonesia;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
-                <div class="col-span-11">Rangkaian Upacara selesai;</div>
+                <div class="col-span-11">
+                  Penandatanganan PKS dengan PT. Jasindo Duta Segara;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">4.</div>
+                <div class="col-span-11">
+                  Penyerahan Lulusan Poltekpel Banten ke Stakeholder PT.
+                  Augustea Intcrews;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">5.</div>
+                <div class="col-span-11">
+                  Penyerahan Wisudawan kepada Korps Alumni Bumi Karang Serang;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">6.</div>
+                <div class="col-span-11">
+                  Pemberian Santunan Anak Yatim; (DWP)
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">7.</div>
+                <div class="col-span-11">Foto Bersama;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">8.</div>
+                <div class="col-span-11">Hat Toss Celebration;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">9.</div>
+                <div class="col-span-11">Passing Out Parade;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">10.</div>
+                <div class="col-span-11">Atraksi Barongsai Taruna;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">11.</div>
+                <div class="col-span-11">
+                  Penampilan Marching Band Gempita Swara Bahari;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">12.</div>
+                <div class="col-span-11">Joget Massal;</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">13.</div>
+                <div class="col-span-11">
+                  Rangkaian Upacara dan Acara Tambahan selesai;
+                </div>
               </div>
             </div>
             <div class="mt-2 mb-2">E. ACARA RAMAH TAMAH</div>
