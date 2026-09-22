@@ -182,7 +182,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Inspektur Upacara tiba di mimbar kehormatan.
+                  Inspektur Upacara tiba di mimbar kehormatan;
                 </div>
               </div>
             </div>
@@ -206,7 +206,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Menyanyikan lagu (Indonesia Raya, Hymne Perhubungan);
+                  Menyanyikan Lagu (Indonesia Raya, Hymne Perhubungan); (Paduan
+                  Suara)
                 </div>
               </div>
             </div>
@@ -259,7 +260,7 @@
                 <div class="col-span-1">10.</div>
                 <div class="col-span-11">
                   Prosesi Pelepasan dan Pelantikan; (Pengalungan Samir untuk
-                  perwakilan terbaik oleh irup);
+                  perwakilan terbaik oleh Irup);
                 </div>
               </div>
             </div>
@@ -267,7 +268,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">11.</div>
                 <div class="col-span-11">
-                  Pembacaan Ikrar Perwira Transportasi ;
+                  Pembacaan Ikrar Perwira Transportasi;
                 </div>
               </div>
             </div>
