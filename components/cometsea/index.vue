@@ -107,7 +107,6 @@ import { useRouter } from "vue-router";
 import Spinner from "~/components/spinner";
 import "vue-select/dist/vue-select.css";
 import vSelect from "vue-select";
-import { toast } from "vue3-toastify";
 import Swal from "sweetalert2";
 import "@/assets/css/mmw24.css";
 
@@ -164,8 +163,11 @@ const submitHandler = async (formData) => {
       if (response.data.value.status == false) {
         let message = response.data.value.message;
         isLoading.value = false;
-        const joinedString = message.join(" ");
-        toast.error(joinedString);
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: message,
+        });
       } else {
         Swal.fire({
           title: "Success",
