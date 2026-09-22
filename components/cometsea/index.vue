@@ -47,9 +47,9 @@
           <FormKit
             type="text"
             name="instansi"
-            label="Company / Organization"
+            label="Company / Institution"
             autocomplete="off"
-            placeholder="Input your company or organization"
+            placeholder="Input your company or institution"
             validation="required"
           />
           <FormKit
