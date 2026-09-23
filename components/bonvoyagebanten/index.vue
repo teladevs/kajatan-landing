@@ -60,11 +60,11 @@
           "
         >
           <div
+            class="font-bold"
             style="
               color: #024497;
               font-size: 18px;
               width: 100%;
-              font-weight: 500;
               margin-bottom: 50px;
             "
             ;
@@ -77,13 +77,8 @@
             TAHUN 2026
           </div>
           <div
-            style="
-              color: #024497;
-              font-size: 16px;
-              width: 100%;
-              font-style: italic;
-              font-weight: 700;
-            "
+            class="font-bold italic"
+            style="color: #024497; font-size: 16px; width: 100%"
           >
             "Safeguarding Maritime Safety and Security, Navigating Towards a
             Sustainable Future"
