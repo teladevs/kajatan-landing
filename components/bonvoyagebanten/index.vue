@@ -52,12 +52,17 @@
       <div class="relative w-full h-screen">
         <div
           class="text-center"
-          style="position: absolute; top: 25%; width: 100%"
+          style="
+            position: absolute;
+            top: 25%;
+            width: 100%;
+            padding: 0px 5px 0px 5px;
+          "
         >
           <div
             style="
               color: #024497;
-              font-size: 25px;
+              font-size: 18px;
               width: 100%;
               font-weight: 500;
               margin-bottom: 50px;
@@ -74,7 +79,7 @@
           <div
             style="
               color: #024497;
-              font-size: 25px;
+              font-size: 16px;
               width: 100%;
               font-style: italic;
               font-weight: 700;
@@ -86,7 +91,7 @@
           <div
             style="
               color: #024497;
-              font-size: 15px;
+              font-size: 14px;
               width: 100%;
               margin-bottom: 40px;
             "
