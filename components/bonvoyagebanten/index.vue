@@ -463,11 +463,13 @@
             </div>
           </div>
           <div
-            class="section-layout-lapangan text-center"
+            class="section-layout-lapangan text-center w-full rounded overflow-hidden shadow-lg p-3 mt-5"
+            style="background-color: #f8f8f8"
             v-if="eventDetailLanding.image_denah_upacara"
           >
             <div
-              class="w-full text-center font-bold text-xl"
+              class="w-full text-center font-bold text-xl mb-5"
+              style="color: #024497"
               v-if="eventDetailLanding.text_denah_upacara"
             >
               {{ eventDetailLanding.text_denah_upacara }}
