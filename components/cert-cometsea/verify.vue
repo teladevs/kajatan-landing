@@ -1,12 +1,19 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen text-slate-500">
+  <Error404
+    v-if="isExpired"
+    title="QR Expired"
+    description="Sorry, the QR session you scanned has expired"
+  />
+  <div
+    v-else
+    class="flex items-center justify-center min-h-screen text-slate-500"
+  >
     Verifying...
   </div>
 </template>
 
 <script setup>
 import { io } from "socket.io-client";
-import Swal from "sweetalert2";
 
 const route = useRoute();
 const REDIRECT_URL = "https://cert-cometsea2026.telanusa.com/";
@@ -18,6 +25,7 @@ const tokenCookie = useCookie("cert_cometsea_token", {
 });
 
 const config = useRuntimeConfig();
+const isExpired = ref(false);
 
 const EVENT_NAME = "check_qr_status";
 
@@ -40,13 +48,7 @@ onMounted(() => {
           window.location.href = REDIRECT_URL;
         }
       } else {
-        Swal.fire({
-          icon: "error",
-          title: "Expired",
-          text: "Token has expired",
-        }).then((result) => {
-          window.location.href = "https://qr.event.telanusa.com/";
-        });
+        isExpired.value = true;
       }
     }
   });
