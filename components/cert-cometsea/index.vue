@@ -178,6 +178,7 @@ const submitHandler = async (formData) => {
           text: message,
         });
       } else {
+        tokenCookie.value = null;
         Swal.fire({
           title: "Success",
           html: "Thankyou for your registration, we will redirect you to information page about Cometsea 2026",
