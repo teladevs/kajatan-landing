@@ -23,7 +23,7 @@
         Global Maritime Future: Innovation, Human Capital Development, Safety
         and Secure Ocean Governance
       </div>
-      <div class="container bg-slate-800 p-5 rounded-2xl mt-10">
+      <div v-if="allowed" class="container bg-slate-800 p-5 rounded-2xl mt-10">
         <div class="text-2xl mt-5 mb-5 text-center font-bold">
           Registration Form
         </div>
@@ -97,6 +97,18 @@
           <FormKit type="submit" label="Register" />
         </FormKit>
       </div>
+      <div
+        v-else-if="!isLoading"
+        class="container bg-slate-800 p-5 rounded-2xl mt-10 text-center"
+      >
+        <div class="text-2xl mt-5 mb-5 font-bold text-slate-100">
+          Link Expired
+        </div>
+        <div class="text-slate-300">
+          This registration link is no longer valid or has expired. Please
+          request a new link.
+        </div>
+      </div>
     </div>
   </NuxtLayout>
 </template>
@@ -111,6 +123,7 @@ import Swal from "sweetalert2";
 import "@/assets/css/mmw24.css";
 
 const isLoading = ref(false);
+const allowed = ref(false);
 const router = useRouter();
 const eventDetail = ref({});
 const phone_code = ref("");
@@ -138,8 +151,21 @@ const loadListPhoneCode = async () => {
   listPhoneCode.value = response.data.value.data;
 };
 
+const checkSession = async () => {
+  isLoading.value = true;
+  try {
+    const response = await $fetch("/api/cert/session");
+    allowed.value = response.valid;
+  } catch {
+    allowed.value = false;
+  } finally {
+    isLoading.value = false;
+  }
+};
+
 loadData();
 loadListPhoneCode();
+checkSession();
 
 const submitHandler = async (formData) => {
   let timerInterval;
