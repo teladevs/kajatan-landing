@@ -57,9 +57,12 @@ const parseMessage = (raw) => {
 
 onMounted(() => {
   const wsUrl = config.public.wsUrl;
+  console.log(wsUrl);
   if (!wsUrl) return;
 
   socket = io(wsUrl, { transports: ["websocket"] });
+
+  console.log("socket", socket);
 
   socket.on(EVENT_NAME, (payload) => {
     console.log("tes payload", payload);
