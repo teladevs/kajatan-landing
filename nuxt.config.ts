@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: import.meta.env.NUXT_API_BASE_URL,
+      wsUrl: import.meta.env.NUXT_WS_URL,
     },
   },
 });
