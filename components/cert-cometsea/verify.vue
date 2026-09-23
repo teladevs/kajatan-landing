@@ -6,6 +6,7 @@
 
 <script setup>
 import { io } from "socket.io-client";
+import Swal from "sweetalert2";
 
 const route = useRoute();
 const REDIRECT_URL = "https://cert-cometsea2026.telanusa.com/";
@@ -36,13 +37,15 @@ onMounted(() => {
       if (payload.valid) {
         if (token) {
           tokenCookie.value = token;
+          window.location.href = REDIRECT_URL;
         }
-        window.location.href = REDIRECT_URL;
       } else {
-        throw createError({
-          statusCode: 404,
-          statusMessage: "Token has expired",
-          fatal: true,
+        Swal.fire({
+          icon: "error",
+          title: "Expired",
+          text: "Token has expired",
+        }).then((result) => {
+          window.location.href = "https://qr.event.telanusa.com/";
         });
       }
     }
@@ -51,6 +54,5 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   socket?.disconnect();
-  clearInterval(timer);
 });
 </script>
