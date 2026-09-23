@@ -53,9 +53,10 @@
         <div
           class="text-center"
           style="
+            color: #024497;
             position: absolute;
-            top: 20%;
-            font-size: 20px;
+            top: 17%;
+            font-size: 22px;
             width: 100%;
             padding: 0px 5px 0px 5px;
             font-weight: 500;
