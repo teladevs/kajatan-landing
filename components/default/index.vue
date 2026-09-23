@@ -62,6 +62,7 @@ onMounted(() => {
   socket = io(wsUrl, { transports: ["websocket"] });
 
   socket.on(EVENT_NAME, (payload) => {
+    console.log("tes payload", payload);
     const value = parseMessage(payload);
     if (value) qrUrl.value = value.link;
   });
