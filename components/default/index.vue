@@ -15,13 +15,8 @@
       />
     </div>
     <div class="mt-5 text-slate-800 text-2xl font-bold text-center">
-      The Conference in Maritime Education and Training in Southeast Asia 2026
+      Scan For Certificate
     </div>
-    <div class="mt-5 text-slate-800 text-xl text-center">
-      Global Maritime Future: Innovation, Human Capital Development, Safety and
-      Secure Ocean Governance
-    </div>
-
     <div class="mt-10 flex flex-col items-center justify-center">
       <qrcode-vue v-if="qrUrl" :value="qrUrl" :size="260" level="M" />
       <div v-else class="text-slate-400">Menunggu data...</div>
@@ -40,34 +35,17 @@ const EVENT_NAME = "request_link";
 
 let socket = null;
 
-const parseMessage = (raw) => {
-  if (typeof raw === "string") {
-    try {
-      const data = JSON.parse(raw);
-      return data.url ?? data.qr ?? raw;
-    } catch {
-      return raw;
-    }
-  }
-  if (raw && typeof raw === "object") {
-    return raw.url ?? raw.qr ?? "";
-  }
-  return "";
-};
-
 onMounted(() => {
   const wsUrl = config.public.wsUrl;
-  console.log(wsUrl);
   if (!wsUrl) return;
 
-  socket = io(wsUrl, { transports: ["websocket"] });
+  socket = io(wsUrl);
 
-  console.log("socket", socket);
+  socket.emit(EVENT_NAME);
 
   socket.on(EVENT_NAME, (payload) => {
-    console.log("tes payload", payload);
-    const value = parseMessage(payload);
-    if (value) qrUrl.value = value.link;
+    if (payload) qrUrl.value = payload.link;
+    console.log(payload);
   });
 });
 

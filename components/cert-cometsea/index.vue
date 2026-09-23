@@ -110,6 +110,15 @@ import vSelect from "vue-select";
 import Swal from "sweetalert2";
 import "@/assets/css/mmw24.css";
 
+const tokenCookie = useCookie("cert_cometsea_token");
+if (!tokenCookie.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page Not Found",
+    fatal: true,
+  });
+}
+
 const isLoading = ref(false);
 const router = useRouter();
 const eventDetail = ref({});
