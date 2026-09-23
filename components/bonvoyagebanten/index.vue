@@ -53,21 +53,6 @@
         <div
           class="text-center"
           style="
-            color: #024497;
-            position: absolute;
-            top: 17%;
-            font-size: 22px;
-            width: 100%;
-            padding: 0px 5px 0px 5px;
-            font-weight: 500;
-          "
-        >
-          UPACARA PELANTIKAN DAN PELEPASAN <br />
-          PERWIRA TRANSPORTASI LAUT <br />
-        </div>
-        <div
-          class="text-center"
-          style="
             position: absolute;
             top: 23%;
             width: 100%;
@@ -84,6 +69,8 @@
             "
             ;
           >
+            UPACARA PELANTIKAN DAN PELEPASAN <br />
+            PERWIRA TRANSPORTASI LAUT <br />
             PROGRAM DIPLOMA-III PEMBENTUKAN <br />
             DIKLAT PELAUT- III PEMBENTUKAN <br />POLITEKNIK PELAYARAN BANTEN
             <br />
