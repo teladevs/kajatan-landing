@@ -36,7 +36,7 @@ import { io } from "socket.io-client";
 const config = useRuntimeConfig();
 const qrUrl = ref("https://cert-cometsea2026.telanusa.com?token=91jdHs27wdb");
 
-const EVENT_NAME = "url";
+const EVENT_NAME = "request_link";
 
 let socket = null;
 
