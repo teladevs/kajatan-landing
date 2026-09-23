@@ -52,7 +52,7 @@
       <div class="relative w-full h-screen">
         <div
           class="text-center"
-          style="position: absolute; top: 38%; width: 100%"
+          style="position: absolute; top: 25%; width: 100%"
         >
           <div
             style="
@@ -64,8 +64,12 @@
             "
             ;
           >
-            PERWIRA SISWA DIKLAT PELAUT PENINGKATAN <br />
-            TINGKAT II, III, IV DAN V
+            UPACARA PELANTIKAN DAN PELEPASAN <br />
+            PERWIRA TRANSPORTASI LAUT <br />
+            PROGRAM DIPLOMA-III PEMBENTUKAN <br />
+            DIKLAT PELAUT- III PEMBENTUKAN <br />POLITEKNIK PELAYARAN BANTEN
+            <br />
+            TAHUN 2026
           </div>
           <div
             style="
@@ -76,7 +80,8 @@
               font-weight: 700;
             "
           >
-            "GREEN SAILS, BRIGHT FUTURES"
+            "Safeguarding Maritime Safety and Security, Navigating Towards a
+            Sustainable Future"
           </div>
           <div
             style="
@@ -86,7 +91,8 @@
               margin-bottom: 40px;
             "
           >
-            Berlayar Ramah Lingkungan, Mengemban Tugas Bangsa
+            Bersama Menjaga Keselamatan dan Keamanan Pelayaran menuju masa depan
+            Maritim yang lebih maju
           </div>
           <div
             style="
@@ -98,7 +104,7 @@
             "
           >
             POLITEKNIK PELAYARAN BANTEN <br />
-            Rabu, 5 Agustus 2026
+            Selasa, 29 September 2026
           </div>
           <div class="text-center">
             <button
