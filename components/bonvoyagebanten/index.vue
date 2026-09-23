@@ -658,6 +658,17 @@ setTimeout(() => {
   loadData();
 }, 1000);
 
+useHead({
+  title: "Politeknik Pelayaran Banten 2026",
+  meta: [{ name: "description", content: "Poltekpel Banten 2026" }],
+  link: [
+    { rel: "icon", type: "image/x-icon", href: "/bonvoyagebanten/logo.png" },
+  ],
+  bodyAttrs: {
+    class: "test",
+  },
+});
+
 const openInvitation = () => {
   playAudio();
   showContent.value = true;
