@@ -34,7 +34,7 @@ import QrcodeVue from "qrcode.vue";
 import { io } from "socket.io-client";
 
 const config = useRuntimeConfig();
-const qrUrl = ref("https://cert-cometsea2026.telanusa.com?token=91jdHs27wdb");
+const qrUrl = ref("");
 
 const EVENT_NAME = "request_link";
 
@@ -63,7 +63,7 @@ onMounted(() => {
 
   socket.on(EVENT_NAME, (payload) => {
     const value = parseMessage(payload);
-    if (value) qrUrl.value = value;
+    if (value) qrUrl.value = value.link;
   });
 });
 
