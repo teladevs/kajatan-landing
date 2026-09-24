@@ -133,7 +133,12 @@ const listPhoneCode = ref([]);
 const url = useRequestURL();
 
 const loadData = async () => {
-  let response = await useCustomFetch(`api/event/domain/${url.host}`, "get", {}, true);
+  let response = await useCustomFetch(
+    `api/event/domain/${url.host}`,
+    "get",
+    {},
+    true,
+  );
   eventDetail.value = response.data.value.data;
 };
 
@@ -142,7 +147,7 @@ const loadListPhoneCode = async () => {
     `api/region/detail/search/country`,
     "get",
     {},
-    true
+    true,
   );
   listPhoneCode.value = response.data.value.data;
 };
@@ -166,7 +171,7 @@ const submitHandler = async (formData) => {
       "api/contact/register-invitation",
       "post",
       payload,
-      true
+      true,
     );
     setTimeout(() => {
       if (response.data.value.status == false) {
@@ -177,8 +182,7 @@ const submitHandler = async (formData) => {
       } else {
         Swal.fire({
           title: "Success",
-          html:
-            "Thankyou for your registration, we will redirect you to information page about Ministry of Transportation of the Republic of Indonesia",
+          html: "Thankyou for your registration, we will redirect you to information page about Ministry of Transportation of the Republic of Indonesia",
           timer: 3000,
           timerProgressBar: true,
           didOpen: () => {
