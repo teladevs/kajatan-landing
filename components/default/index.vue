@@ -18,12 +18,13 @@
       Scan For Certificate
     </div>
     <div class="mt-10 flex flex-col items-center justify-center">
-      <qrcode-vue v-if="qrUrl" :value="qrUrl" :size="260" level="M" />
+      <!-- <qrcode-vue v-if="qrUrl" :value="qrUrl" :size="260" level="M" />
       <div v-else class="text-slate-400">Menunggu data...</div>
       <div v-if="qrUrl" class="mt-4 text-slate-600 text-xl font-semibold">
         <span v-if="remaining > 0">QR expires in {{ formattedRemaining }}</span>
         <span v-else class="text-red-500">QR has expired</span>
-      </div>
+      </div> -->
+      <div class="text-slate-400">Event has already expired</div>
     </div>
   </div>
 </template>
