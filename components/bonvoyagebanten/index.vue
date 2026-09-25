@@ -155,7 +155,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">4.</div>
                 <div class="col-span-11">
-                  Sangkakala kedua, seluruh komponen upacara memasuki tempat
+                  Sangkakala kedua, seluruh komponen upacara memasuki lapangan
                   upacara;
                 </div>
               </div>
@@ -377,7 +377,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">3.</div>
                 <div class="col-span-11">
-                  Penandatanganan PKS dengan PT. Jasindo Duta Segara;
+                  Penyerahan Wisudawan kepada Korps Alumni Bumi Karang Serang;
                 </div>
               </div>
             </div>
@@ -394,7 +394,8 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">5.</div>
                 <div class="col-span-11">
-                  Penyerahan Wisudawan kepada Korps Alumni Bumi Karang Serang;
+                  Penandatangan Perjanjian Kerja Sama dengan PT. PELNI
+                  (Persero);
                 </div>
               </div>
             </div>
@@ -402,7 +403,7 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">6.</div>
                 <div class="col-span-11">
-                  Pemberian Santunan Anak Yatim; (DWP)
+                  Pemberian Santunan Anak Yatim (DWP);
                 </div>
               </div>
             </div>
@@ -421,27 +422,33 @@
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">9.</div>
-                <div class="col-span-11">Passing Out Parade;</div>
+                <div class="col-span-11">
+                  Passing Out Parade; (Penyanyi dan Puisi);
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">10.</div>
-                <div class="col-span-11">Atraksi Barongsai Taruna;</div>
+                <div class="col-span-11">
+                  Atraksi Barongsai dan Tari Kolosal Taruna/i;
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">11.</div>
                 <div class="col-span-11">
-                  Penampilan Marching Band Gempita Swara Bahari;
+                  Penampilan Kecakapan Bahari Taruna/i;
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">12.</div>
-                <div class="col-span-11">Joget Massal;</div>
+                <div class="col-span-11">
+                  Penampilan Marching Band Gempita Swara Bahari;
+                </div>
               </div>
             </div>
             <div class="ms-3">
