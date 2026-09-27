@@ -60,7 +60,7 @@
               color: #fff;
               font-size: 18px;
               width: 100%;
-              margin-bottom: 50px;
+              margin-bottom: 40px;
             "
             ;
           >
