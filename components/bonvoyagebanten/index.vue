@@ -810,7 +810,7 @@ html {
 }
 @media (max-width: 576px) {
   .text-main {
-    top: 35% !important;
+    top: 38% !important;
   }
   .page-welcome {
     height: 780px;
