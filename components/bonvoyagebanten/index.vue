@@ -51,26 +51,19 @@
       </a>
       <div class="relative w-full h-screen">
         <div
-          class="text-center"
-          style="
-            position: absolute;
-            top: 23%;
-            width: 100%;
-            padding: 0px 5px 0px 5px;
-          "
+          class="text-center text-main"
+          style="position: absolute; width: 100%; padding: 0px 5px 0px 5px"
         >
           <div
             class="font-bold"
             style="
-              color: #024497;
+              color: #fff;
               font-size: 18px;
               width: 100%;
               margin-bottom: 50px;
             "
             ;
           >
-            UPACARA PELANTIKAN DAN PELEPASAN <br />
-            PERWIRA TRANSPORTASI LAUT <br />
             PROGRAM DIPLOMA-III PEMBENTUKAN <br />
             DIKLAT PELAUT- III PEMBENTUKAN <br />POLITEKNIK PELAYARAN BANTEN
             <br />
@@ -78,14 +71,14 @@
           </div>
           <div
             class="font-bold italic"
-            style="color: #024497; font-size: 16px; width: 100%"
+            style="color: #fff; font-size: 16px; width: 100%"
           >
             "Safeguarding Maritime Safety and Security, Navigating Towards a
             Sustainable Future"
           </div>
           <div
             style="
-              color: #024497;
+              color: #fff;
               font-size: 14px;
               width: 100%;
               margin-bottom: 40px;
@@ -96,7 +89,7 @@
           </div>
           <div
             style="
-              color: #024497;
+              color: #fff;
               font-size: 18px;
               width: 100%;
               font-weight: 600;
@@ -634,7 +627,7 @@ const eventDetailLanding = ref({});
 const bgStyle = computed(() => ({
   backgroundImage: eventDetailLanding.value.image_backdrop
     ? `url(${eventDetailLanding.value.image_backdrop})`
-    : "none",
+    : "url(/bonvoyagebanten/bg-main.webp)",
   backgroundSize: "cover",
   backgroundPosition: "center",
 }));
@@ -816,6 +809,9 @@ html {
   background-color: #024497;
 }
 @media (max-width: 576px) {
+  .text-main {
+    top: 35% !important;
+  }
   .page-welcome {
     height: 780px;
     background-size: 100% 100%;
@@ -888,6 +884,10 @@ html {
   color: #29abe0;
   margin-top: 40px;
   margin-bottom: 15px;
+}
+
+.text-main {
+  top: 60%;
 }
 
 @keyframes fadeIn {
