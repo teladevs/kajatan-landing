@@ -477,9 +477,9 @@
             <div
               class="w-full text-center font-bold text-xl mb-5"
               style="color: #024497"
-              v-if="eventDetailLanding.text_denah_upacara"
             >
-              {{ eventDetailLanding.text_denah_upacara }}
+              Denah Lapangan Upacara <br />
+              Politeknik Pelayaran Banten
             </div>
             <img
               :src="eventDetailLanding.image_denah_upacara"
@@ -491,11 +491,9 @@
             class="section-layout-lapangan text-center"
             v-if="eventDetailLanding.image_denah_parkir"
           >
-            <div
-              class="w-full text-center font-bold text-xl"
-              v-if="eventDetailLanding.text_denah_parkir"
-            >
-              {{ eventDetailLanding.text_denah_parkir }}
+            <div class="w-full text-center font-bold text-xl">
+              Denah Parkir <br />
+              Politeknik Pelayaran Banten
             </div>
             <img
               :src="eventDetailLanding.image_denah_parkir"
