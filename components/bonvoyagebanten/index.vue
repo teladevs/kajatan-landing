@@ -60,7 +60,7 @@
               color: #fff;
               font-size: 18px;
               width: 100%;
-              margin-bottom: 40px;
+              margin-bottom: 30px;
             "
             ;
           >
@@ -81,7 +81,7 @@
               color: #fff;
               font-size: 14px;
               width: 100%;
-              margin-bottom: 40px;
+              margin-bottom: 25px;
             "
           >
             Bersama Menjaga Keselamatan dan Keamanan Pelayaran menuju masa depan
