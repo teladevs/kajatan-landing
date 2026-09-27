@@ -1,38 +1,39 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: "blank",
-});
-
-import { ref, computed, watch, defineAsyncComponent } from "vue";
-import { useRequestURL } from "#app";
-
 const url = useRequestURL();
 const loadComponent = ref<any>(null);
 
-const componentName = computed(() => {
-  switch (url.host) {
-    case "mmw24.kajatan.telanusa.id":
-      return "mmw24";
-    case "sipencatar.kajatan.telanusa.id":
-      return "sipencatar";
-    default:
-      return "gene51s17th";
-  }
-});
+const doLoadComponent = async (componentName: string) => {
+  loadComponent.value = defineAsyncComponent(
+    () => import(`@/components/${componentName}/landing.vue`),
+  );
+};
 
-watch(
-  componentName,
-  async () => {
-    loadComponent.value = defineAsyncComponent({
-      loader: () => import(`@/components/${componentName.value}/landing.vue`),
-      loadingComponent: () => import("@/components/spinner.vue"),
-      errorComponent: () => import("@/components/error.vue"),
-      delay: 200,
-      timeout: 30000,
-    });
-  },
-  { immediate: true }
-);
+const loadData = async () => {
+  if (url.host === "qr.event.telanusa.com" || url.host === "localhost:3000") {
+    doLoadComponent("mmw24");
+  } else {
+    let response = await useCustomFetch(
+      `api/event/domain/${url.host}`,
+      "get",
+      {},
+      true,
+    );
+    if (response.data.value.status) {
+      console.log(response.data.value);
+      var template = response.data.value.data.feature.value.landing_template;
+      if (template == null || template == undefined) {
+        template = response.data.value.data.config.value.name;
+      }
+      doLoadComponent(template);
+    } else {
+      loadComponent.value = defineAsyncComponent(
+        () => import(`@/components/error.vue`),
+      );
+    }
+  }
+};
+
+loadData();
 </script>
 
 <template>
