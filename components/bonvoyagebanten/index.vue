@@ -736,7 +736,7 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 30px 40px 30px;
-  background-color: #88d1ef;
+  background-color: #024497;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: #024497;
@@ -761,8 +761,8 @@ html {
 }
 
 .section-social-media {
-  background-color: #88d1ef;
-  color: #024497;
+  background-color: #024497;
+  color: #fff;
   margin-top: 50px;
   text-decoration: none;
   padding: 15px 15px 40px 15px;
@@ -770,7 +770,7 @@ html {
 }
 .section-social-media a {
   font-weight: 500;
-  color: #024497 !important;
+  color: #fff !important;
 }
 .page-welcome {
   background-position: center;
