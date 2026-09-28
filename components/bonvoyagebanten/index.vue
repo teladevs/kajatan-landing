@@ -378,6 +378,16 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">4.</div>
                 <div class="col-span-11">
+                  Penyerahan Buku Kode Etik Profesi Perwira Pelayaran Niaga dari
+                  Ikatan Korps Perwira Pelayaran Niaga Indonesia (IKKPNI) untuk
+                  Perguruan Tinggi Indonesia dan Alumni;
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">5.</div>
+                <div class="col-span-11">
                   Penyerahan Lulusan Poltekpel Banten ke Stakeholder PT.
                   Augustea Intcrews;
                 </div>
@@ -385,7 +395,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">5.</div>
+                <div class="col-span-1">6.</div>
                 <div class="col-span-11">
                   Penandatangan Perjanjian Kerja Sama dengan PT. PELNI
                   (Persero);
@@ -394,7 +404,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">6.</div>
+                <div class="col-span-1">7.</div>
                 <div class="col-span-11">
                   Pemberian Santunan Anak Yatim (DWP);
                 </div>
@@ -402,19 +412,19 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">7.</div>
+                <div class="col-span-1">8.</div>
                 <div class="col-span-11">Foto Bersama;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">8.</div>
+                <div class="col-span-1">9.</div>
                 <div class="col-span-11">Hat Toss Celebration;</div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">9.</div>
+                <div class="col-span-1">10.</div>
                 <div class="col-span-11">
                   Passing Out Parade; (Penyanyi dan Puisi);
                 </div>
@@ -422,7 +432,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">10.</div>
+                <div class="col-span-1">11.</div>
                 <div class="col-span-11">
                   Atraksi Barongsai dan Tari Kolosal Taruna/i;
                 </div>
@@ -430,7 +440,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">11.</div>
+                <div class="col-span-1">12.</div>
                 <div class="col-span-11">
                   Penampilan Kecakapan Bahari Taruna/i;
                 </div>
@@ -438,7 +448,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">12.</div>
+                <div class="col-span-1">13.</div>
                 <div class="col-span-11">
                   Penampilan Marching Band Gempita Swara Bahari;
                 </div>
@@ -446,7 +456,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">13.</div>
+                <div class="col-span-1">14.</div>
                 <div class="col-span-11">
                   Rangkaian Upacara dan Acara Tambahan selesai;
                 </div>
