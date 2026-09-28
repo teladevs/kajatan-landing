@@ -319,7 +319,7 @@ onBeforeUnmount(() => {
         class="relative h-full overflow-hidden flex items-center justify-center bg-[#e6f0fa]"
       >
         <img
-          src="/wedding/bg.png"
+          src="/wedding-assets/bg.png"
           class="absolute inset-0 w-full h-full object-cover will-change-transform"
           :style="{
             transform: `scale(${1 + progress * 0.15}) translateY(${
@@ -357,31 +357,31 @@ onBeforeUnmount(() => {
           }"
         >
           <img
-            src="/wedding/bg-shadow.png"
+            src="/wedding-assets/bg-shadow.png"
             class="absolute bottom-0 left-0 z-1 w-full h-[200px] object-contain"
             alt="Background-shadow"
           />
 
           <img
-            src="/wedding/mountain-up.png"
+            src="/wedding-assets/mountain-up.png"
             class="absolute bottom-0 left-0 z-3 w-full h-auto object-contain mountain-up-animation"
             alt="Background"
           />
 
           <img
-            src="/wedding/mountain-ground.png"
+            src="/wedding-assets/mountain-ground.png"
             class="absolute bottom-0 left-0 z-2 w-full h-auto object-contain mountain-animation"
             alt="Background"
           />
 
           <img
-            src="/wedding/tree.png"
+            src="/wedding-assets/tree.png"
             class="absolute bottom-0 left-0 z-5 w-25 h-auto object-contain tree-wind-sway"
             alt="Foreground Tree & Flowers"
           />
 
           <img
-            src="/wedding/tree.png"
+            src="/wedding-assets/tree.png"
             class="absolute bottom-0 right-0 z-5 w-25 h-auto object-contain tree-wind-sway"
             alt="Foreground Tree & Flowers"
           />
