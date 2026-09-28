@@ -9,7 +9,7 @@ const doLoadComponent = async (componentName: string) => {
 };
 
 const loadData = async () => {
-  if (url.host === "qr.event.telanusa.com" || url.host === "localhost:3000") {
+  if (url.host === "landing.telanusa.com" || url.host === "localhost:3000") {
     doLoadComponent("wedding");
   } else {
     let response = await useCustomFetch(
