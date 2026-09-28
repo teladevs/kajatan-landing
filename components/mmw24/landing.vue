@@ -438,7 +438,7 @@ const institutionGroups = [
       {
         short: "STIP Jakarta",
         name: "Jakarta Maritime Institute",
-        logo: "/images/institusi/stip-jakarta-1618368678.png",
+        logo: "/images/institusi/logo-stip.png",
         url: "https://stipjakarta.ac.id/",
         instagram: "https://instagram.com/stip_jakarta",
       },
