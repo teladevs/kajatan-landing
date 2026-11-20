@@ -268,45 +268,12 @@
                 </div>
               </div>
             </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">d.</div>
-                <div class="col-span-11">
-                  Pemasangan Samir oleh keluarga Perwira Transportasi Laut;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">e.</div>
-                <div class="col-span-11">
-                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
-                  Indonesia (NKRI);
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">f.</div>
-                <div class="col-span-11">
-                  Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni;
-                </div>
-              </div>
-            </div>
-            <div class="ms-3">
-              <div class="grid grid-cols-12">
-                <div class="col-span-1">g.</div>
-                <div class="col-span-11">
-                  Penandatanganan kerjasama dengan Perusahaan Pelayaran;
-                </div>
-              </div>
-            </div>
             <div class="mt-2 mb-2">5. ACARA TAMBAHAN</div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">a.</div>
                 <div class="col-span-11">
-                  Penyerahan Tali Asih kepada Panti Asuhan;
+                  Pemasangan Samir oleh keluarga Perwira Transportasi Laut
                 </div>
               </div>
             </div>
@@ -314,19 +281,75 @@
               <div class="grid grid-cols-12">
                 <div class="col-span-1">b.</div>
                 <div class="col-span-11">
-                  Foto bersama Perwira Transportasi Laut;
+                  Perwujudan Tanda Kesetiaan terhadap Negara Kesatuan Republik
+                  Indonesia (NKRI)
                 </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">c.</div>
-                <div class="col-span-11">Passing Out Parade;</div>
+                <div class="col-span-11">
+                  Penyerahan lulusan Poltekpel Surabaya kepada Korp Alumni
+                </div>
               </div>
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
                 <div class="col-span-1">d.</div>
+                <div class="col-span-11">
+                  Penandatanganan kerjasama dengan Perusahaan Pelayaran, UNESA,
+                  Universitas Kuala Lumpur dan Serah Terima Aplikasi iStow
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">e.</div>
+                <div class="col-span-11">
+                  Penyerahan Tali Asih kepada Panti Asuhan
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">f.</div>
+                <div class="col-span-11">
+                  Foto bersama Perwira Transportasi Laut
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">g.</div>
+                <div class="col-span-11">Passing Out Parade</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">h.</div>
+                <div class="col-span-11">
+                  Yell Yell Taruna Poltekpel Surabaya
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">i.</div>
+                <div class="col-span-11">Tari Reog Ponorogo</div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">j.</div>
+                <div class="col-span-11">
+                  Flash Mob Pacu Jalur dan Pica Pica
+                </div>
+              </div>
+            </div>
+            <div class="ms-3">
+              <div class="grid grid-cols-12">
+                <div class="col-span-1">k.</div>
                 <div class="col-span-11">
                   Atraksi Marching Band GITA SWARA SAMUDRA;
                 </div>
@@ -334,7 +357,7 @@
             </div>
             <div class="ms-3">
               <div class="grid grid-cols-12">
-                <div class="col-span-1">e.</div>
+                <div class="col-span-1">l.</div>
                 <div class="col-span-11">
                   Rangkaian upacara wisuda selesai, dilanjutkan dengan ramah
                   tamah;
@@ -481,9 +504,9 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import layoutUpacara from "@/public/wisuda52poltekpelsby/layout-lapangan.webp";
-import layoutTempatDuduk from "@/public/wisuda52poltekpelsby/layout-seat.webp";
-import denahParkir from "@/public/wisuda52poltekpelsby/denah-parkir.webp";
+import layoutUpacara from "@/public/wisuda53poltekpelsby/w53-lapangan_upacara_mobile.webp";
+import layoutTempatDuduk from "@/public/wisuda53poltekpelsby/w53-layout_seat_mobile.webp";
+import denahParkir from "@/public/wisuda53poltekpelsby/w53-denah_parkir.webp";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
 
@@ -542,7 +565,7 @@ const pauseAudio = () => {
 };
 
 useSeoMeta({
-  ogImage: "../../public/wisuda52poltekpelsby/logo.png",
+  ogImage: "../../public/wisuda53poltekpelsby/logo.png",
 });
 </script>
 <style scoped>
@@ -588,7 +611,7 @@ useSeoMeta({
   height: 100%;
   width: 100%;
   padding: 30px 30px 40px 30px;
-  background-color: var(--53primary);
+  background-color: #770808;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white !important;
@@ -612,7 +635,7 @@ html {
 }
 
 .section-social-media {
-  background-color: var(--53primary);
+  background-color: #770808;
   color: white !important;
   margin-top: 50px;
   text-decoration: none;
@@ -622,7 +645,7 @@ html {
   color: #fff !important;
 }
 .page-welcome {
-  background-image: url("../../public/wisuda52poltekpelsby/background-web-2.webp");
+  background-image: url("../../public/wisuda53poltekpelsby/wisuda53-main-banner-mobile.webp");
   background-position: center;
   height: 1100px;
   background-size: 100% 100%;
@@ -658,12 +681,7 @@ html {
 .btn-invitation {
   position: absolute;
   top: 830px;
-  background-color: var(--53primary);
-}
-.btn-invitation:hover {
-  position: absolute;
-  top: 830px;
-  background-color: var(--53primaryDarker);
+  background-color: #770808;
 }
 @media (max-width: 576px) {
   .page-welcome {

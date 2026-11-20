@@ -1,11 +1,19 @@
 <template>
   <!--...::: Header Start :::... -->
-  <header class="site-header site-header--absolute is--white py-3" id="sticky-menu">
+  <header
+    class="site-header site-header--absolute is--white py-3"
+    id="sticky-menu"
+  >
     <div class="global-container">
       <div class="flex items-center justify-between gap-x-8">
         <!-- Header Logo -->
         <nuxt-link href="/" class="">
-          <img src="/images/home/logo-dark.png" alt="AIMass" width="96" height="24" />
+          <img
+            src="/images/home/logo-dark.png"
+            alt="AIMass"
+            width="96"
+            height="24"
+          />
         </nuxt-link>
         <!-- Header Logo -->
 
@@ -28,7 +36,9 @@
             </div>
             <ul class="site-menu-main">
               <li class="nav-item">
-                <nuxt-link href="/" class="nav-link-item drop-trigger">Home</nuxt-link>
+                <nuxt-link href="/" class="nav-link-item drop-trigger"
+                  >Home</nuxt-link
+                >
               </li>
               <li class="nav-item">
                 <nuxt-link href="/about" class="nav-link-item">About</nuxt-link>
@@ -40,7 +50,7 @@
               </li> -->
               <li class="nav-item">
                 <nuxt-link href="/portfolio" class="nav-link-item drop-trigger"
-                  >Portofolio
+                  >Portfolio
                 </nuxt-link>
               </li>
             </ul>

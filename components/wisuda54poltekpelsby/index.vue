@@ -2,7 +2,7 @@
   <div class="container">
     <audio ref="audioElement" loop>
       <source
-        src="/wisuda53poltekpelsby/mars-perhubungan.mp3"
+        src="/wisuda54poltekpelsby/mars-perhubungan.mp3"
         type="audio/mpeg"
       />
     </audio>
@@ -353,9 +353,9 @@
           <div class="section-layout-lapangan text-center">
             <img :src="layoutUpacara" alt="layout" class="img-fluid" />
           </div>
-          <div class="section-layout-lapangan text-center">
+          <!-- <div class="section-layout-lapangan text-center">
             <img :src="layoutTempatDuduk" alt="layout" class="img-fluid" />
-          </div>
+          </div> -->
           <div class="section-lokasi text-center">
             <h2 class="text-section text-lg font-bold">Lokasi</h2>
             <iframe
@@ -486,9 +486,9 @@
 </template>
 <script setup>
 import marsPerhubungan from "@/public/wisuda52poltekpelsby/mars-perhubungan.mp3";
-import layoutUpacara from "@/public/wisuda53poltekpelsby/w53-lapangan_upacara_mobile.webp";
-import layoutTempatDuduk from "@/public/wisuda53poltekpelsby/w53-layout_seat_mobile.webp";
-import denahParkir from "@/public/wisuda53poltekpelsby/w53-denah_parkir.webp";
+import layoutUpacara from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
+import layoutTempatDuduk from "@/public/wisuda54poltekpelsby/p2s-w54-layout-upacara-inv.webp";
+import denahParkir from "@/public/wisuda54poltekpelsby/p2s-w54-denah_parkir.png";
 import AudioPlayer from "@/components/audio";
 import { useRouter } from "vue-router";
 

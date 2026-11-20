@@ -221,7 +221,7 @@ const loadData = async () => {
     `api/event/domain/${url.host}`,
     "get",
     {},
-    true
+    true,
   );
   eventDetail.value = response.data.value.data;
 };
@@ -231,7 +231,7 @@ const loadListPhoneCode = async () => {
     `api/region/detail/search/country`,
     "get",
     {},
-    true
+    true,
   );
   listPhoneCode.value = response.data.value.data;
 };
@@ -263,7 +263,7 @@ const submitHandler = async (formData) => {
         "api/contact/register-invitation",
         "post",
         payload,
-        true
+        true,
       );
       setTimeout(() => {
         if (response.data.value.status == false) {

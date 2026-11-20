@@ -35,7 +35,10 @@
           <!-- Section Content Block -->
 
           <!-- About Hero Image -->
-          <div class="jos overflow-hidden rounded-3xl" data-jos_animation="zoom">
+          <div
+            class="jos overflow-hidden rounded-3xl"
+            data-jos_animation="zoom"
+          >
             <img
               src="/images/home/th-1/about-hero-image.jpg"
               alt="about-hero-image"
@@ -107,7 +110,9 @@
             >
               <span class="start-number" data-countup-number="15">15</span>+
             </h3>
-            <span class="block text-lg font-normal text-black">Growth and Expansion</span>
+            <span class="block text-lg font-normal text-black"
+              >Growth and Expansion</span
+            >
           </li>
           <!-- Counter Items -->
         </ul>
@@ -149,13 +154,14 @@
               <!-- Section Content Block -->
               <div class="text-lg leading-[1.4] lg:text-[21px]">
                 <p class="mb-7 last:mb-0">
-                  Our mission is to empower businesses with digital solutions that
-                  increase productivity, improve decision-making and drive growth.
+                  Our mission is to empower businesses with digital solutions
+                  that increase productivity, improve decision-making and drive
+                  growth.
                 </p>
                 <p class="mb-7 last:mb-0">
-                  Since 2022 we have been passionate about helping our clients harness
-                  With a team of event and data scientists their full potential & stay
-                  competitive in an increasingly digital world.
+                  Since 2022 we have been passionate about helping our clients
+                  harness With a team of event and data scientists their full
+                  potential & stay competitive in an increasingly digital world.
                 </p>
                 <a
                   href="contact.html"
@@ -190,7 +196,9 @@
           <!-- Section Content Block -->
 
           <!-- Horizontal Separator -->
-          <div class="mb-6 h-[4px] w-full rounded bg-colorCodGray sm:mb-0"></div>
+          <div
+            class="mb-6 h-[4px] w-full rounded bg-colorCodGray sm:mb-0"
+          ></div>
           <!-- Core Value list -->
           <ul
             class="grid grid-cols-1 justify-between gap-6 md:grid-cols-2 xxl:flex xxl:flex-nowrap"
@@ -349,9 +357,16 @@
               <div
                 class="xl:h[300px] w-full overflow-hidden rounded-[20px] xxl:h-[400px]"
               >
-                <img
+                <!-- <img
                   src="/images/team/helmi.png"
                   alt="team-member-img-2"
+                  width="376"
+                  height="400"
+                  class="h-full w-full object-cover"
+                /> -->
+                <img
+                  src="/images/home/th-1/team-member-img-1.jpg"
+                  alt="team-member-img-1"
                   width="376"
                   height="400"
                   class="h-full w-full object-cover"
@@ -442,13 +457,17 @@
             <div class="jos order-1 md:order-2" data-jos_animation="fade-down">
               <!-- Section Content Block -->
               <div class="mb-6 md:max-w-max">
-                <h2 class="text-white">We always want to connect our clients</h2>
+                <h2 class="text-white">
+                  We always want to connect our clients
+                </h2>
               </div>
               <!-- Section Content Block -->
-              <div class="text-left text-lg leading-[1.4] text-white lg:text-[21px]">
+              <div
+                class="text-left text-lg leading-[1.4] text-white lg:text-[21px]"
+              >
                 <p class="mb-7 last:mb-0">
-                  Accessible and beneficial for organizations, and we look forward to
-                  partnering with businesses to achieve their goals.
+                  Accessible and beneficial for organizations, and we look
+                  forward to partnering with businesses to achieve their goals.
                 </p>
               </div>
 
@@ -472,15 +491,17 @@
                   <a
                     href="mailto:cs@kajatan.com"
                     class="text-white hover:text-colorOrangyRed"
-                    >cs@kajatan.com</a
+                    >wirmanda@gmail.com</a
                   >
                 </li>
                 <li
                   class="flex flex-col gap-x-2 leading-tight text-colorOrangyRed lg:flex-row lg:leading-normal"
                 >
                   Phone:
-                  <a href="tel:+1234567890" class="text-white hover:text-colorOrangyRed"
-                    >(62) 85 7070 62626</a
+                  <a
+                    href="tel:+1234567890"
+                    class="text-white hover:text-colorOrangyRed"
+                    >(62)81 333 645 444</a
                   >
                 </li>
               </ul>

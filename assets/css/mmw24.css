@@ -73,6 +73,18 @@ section {
   object-fit: contain;
 }
 .logo-prestasi{
-  width: 120px;
-  height: auto;
+  height: 120px;
+  width: auto;
+  max-width: 45vw;
+  object-fit: contain;
+}
+@media (max-width: 640px){
+  .logo-instansi{
+    width: 56px;
+    height: 56px;
+  }
+  .logo-prestasi{
+    height: 88px;
+    max-width: 42vw;
+  }
 }
