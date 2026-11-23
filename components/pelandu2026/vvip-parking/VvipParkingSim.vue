@@ -169,12 +169,13 @@
             />
             <g :clip-path="`url(#${ids.clip})`">
               <path :d="VVIP_LOT" fill="#7cc8f1" />
-              <path :d="VVIP_LOT" :fill="`url(#${ids.stallD})`" />
+              <path class="vv-hatch" :d="VVIP_LOT" :fill="`url(#${ids.stallD})`" />
               <path
                 d="M-5,1572.4646v311l248-94s-66.0857-75.8284-28.0428-156.9142l-219.9572-60.0858Z"
                 fill="#a6e3d7"
               />
               <path
+                class="vv-hatch"
                 d="M-5,1572.4646v311l248-94s-66.0857-75.8284-28.0428-156.9142l-219.9572-60.0858Z"
                 :fill="`url(#${ids.stallD})`"
               />
@@ -183,6 +184,7 @@
                 fill="#f6f082"
               />
               <path
+                class="vv-hatch"
                 d="M1078,1350.4646h173.0037c9.5456,0,18.6427,4.0515,25.0283,11.1467h0c5.2957,5.8841,8.3473,13.4387,8.6238,21.3501,1.4065,40.2387-15.4976,159.345-75.6558,219.5033-83,83-214,119-214,119l18-97-36-120s87-45,101-154Z"
                 :fill="`url(#${ids.stallD})`"
               />
@@ -203,6 +205,7 @@
                 stroke-linejoin="round"
               />
               <use
+                class="vv-hatch"
                 :href="`#${ids.roads}`"
                 fill="none"
                 stroke="#ffffff"
@@ -228,7 +231,7 @@
                 fill="#b0d697"
               />
               <path :d="FAMILY_LOT" fill="#fdcf6b" />
-              <path :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
+              <path class="vv-hatch" :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
               <!-- panah Pintu Masuk Timur -->
               <path
                 d="M977,1548.5 L995,1584.5 L1009,1587.4"
@@ -1067,6 +1070,8 @@ let autoTimer = 0;
 let hintTimer = 0;
 let ro = null;
 let io = null;
+let lastSk = "";
+let lastTs = "";
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const clamp01 = (v) => clamp(v, 0, 1);
@@ -1261,8 +1266,16 @@ function render() {
   };
   for (const it of ovItems) place(it.el, it.x, it.y, it.z);
   if (carTagEl.value) place(carTagEl.value, carPos.x, carPos.y, 30);
-  ovEl.value.style.setProperty("--sk", clamp(s * 0.6, 0.3, 0.9).toFixed(3));
-  ovEl.value.style.setProperty("--ts", s.toFixed(3));
+  const sk = clamp(s * 0.6, 0.3, 0.9).toFixed(3);
+  const ts = s.toFixed(3);
+  if (sk !== lastSk) {
+    lastSk = sk;
+    ovEl.value.style.setProperty("--sk", sk);
+  }
+  if (ts !== lastTs) {
+    lastTs = ts;
+    ovEl.value.style.setProperty("--ts", ts);
+  }
   carEl.value.style.transform = `translate3d(${carPos.x}px, ${carPos.y}px, 0)`;
   carHeadEl.value.style.transform = `rotateZ(${carPos.h}deg)`;
   progressEl.value.style.strokeDashoffset = `${G.total - sim.L}`;
@@ -2594,8 +2607,10 @@ defineExpose({ play, pause, restart, goToStep });
   .vv-decal.is-active {
     animation: none;
   }
-  .vv-scene {
-    will-change: auto;
+  /* Garis parkir (3px pada bidang 2380px) menyusut jadi sub-piksel di layar kecil,
+     sehingga berkedip/moiré tiap frame saat peta bergerak. Sembunyikan di mobile. */
+  .vv-hatch {
+    display: none;
   }
 }
 </style>
