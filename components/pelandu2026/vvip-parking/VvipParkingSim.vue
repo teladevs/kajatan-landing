@@ -947,12 +947,14 @@ const props = defineProps({
 });
 const emit = defineEmits(["step-change", "finished"]);
 
-// Layar kecil: kurangi lapisan 3D berukuran penuh agar memori GPU aman.
-const slabRings =
+// Layar kecil: kurangi beban kompositor (lapisan 3D & animasi kamera).
+const compact =
   typeof window !== "undefined" &&
-  window.matchMedia?.("(max-width: 880px)").matches
-    ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
-    : SLAB_RINGS;
+  (window.matchMedia?.("(max-width: 880px)").matches ||
+    window.matchMedia?.("(pointer: coarse)").matches);
+const slabRings = compact
+  ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
+  : SLAB_RINGS;
 
 // ── konstanta tampilan ─────────────────────────────────────────
 const VVIP_LOT =
@@ -1011,7 +1013,7 @@ let ovItems = [];
 const playing = ref(false);
 const phase = ref("idle"); // idle | drive | dwell | done
 const stepIdx = ref(0);
-const follow = ref(true);
+const follow = ref(!compact);
 const speedSel = ref(SPEEDS.includes(props.speed) ? props.speed : 1);
 const grabbing = ref(false);
 const showHint = ref(true);
@@ -1080,6 +1082,7 @@ let io = null;
 let lastSk = "";
 let lastTs = "";
 let lastFar = null;
+let lastPaint = 0;
 const segTf = [];
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1316,6 +1319,12 @@ function render() {
 
 function loop(now) {
   raf = 0;
+  // Mobile: cap at ~30fps to reduce compositor pressure (prevents flashing).
+  if (compact && now - lastPaint < 32) {
+    raf = requestAnimationFrame(loop);
+    return;
+  }
+  lastPaint = now;
   const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
   last = now;
   const keep = tick(dt);
