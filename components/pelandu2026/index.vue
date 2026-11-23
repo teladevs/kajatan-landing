@@ -885,9 +885,14 @@ useSeoMeta({
 }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 768px) {
+/* background-attachment: fixed + konten beranimasi menyebabkan layar berkedip di mobile. */
+@media (max-width: 1024px) {
   .page-body {
     background-attachment: scroll;
+  }
+}
+@media (max-width: 768px) {
+  .page-body {
     padding-top: 54px;
   }
   .timeline > li {

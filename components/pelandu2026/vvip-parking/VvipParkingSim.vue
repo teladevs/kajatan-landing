@@ -61,7 +61,7 @@
             />
           </svg>
           <svg
-            v-for="r in SLAB_RINGS"
+            v-for="r in slabRings"
             :key="'r' + r.z"
             class="vv-abs"
             aria-hidden="true"
@@ -947,6 +947,13 @@ const props = defineProps({
 });
 const emit = defineEmits(["step-change", "finished"]);
 
+// Layar kecil: kurangi lapisan 3D berukuran penuh agar memori GPU aman.
+const slabRings =
+  typeof window !== "undefined" &&
+  window.matchMedia?.("(max-width: 880px)").matches
+    ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
+    : SLAB_RINGS;
+
 // ── konstanta tampilan ─────────────────────────────────────────
 const VVIP_LOT =
   "M420,1561.4646 451,1655.2601 630.8401,1681.4646 788,1732.4646 873.9126,1735.2832 919,1683.4646 919,1633.7738 907.4219,1571.0263 889.1226,1554.4646 420,1548.4646Z";
@@ -1072,6 +1079,8 @@ let ro = null;
 let io = null;
 let lastSk = "";
 let lastTs = "";
+let lastFar = null;
+const segTf = [];
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const clamp01 = (v) => clamp(v, 0, 1);
@@ -1248,7 +1257,11 @@ function render() {
   scene.style.transform =
     `translate3d(${ox}px, ${oy}px, 0) scale(${s}) rotateX(${cam.rx}deg) ` +
     `rotateZ(${cam.rz}deg) translate3d(${-cam.x}px, ${-cam.y}px, 0)`;
-  stageEl.value.classList.toggle("is-far", s < 0.85);
+  const far = s < 0.85;
+  if (far !== lastFar) {
+    lastFar = far;
+    stageEl.value.classList.toggle("is-far", far);
+  }
 
   // proyeksi ortografis titik 3D → layar (sama persis dengan transform adegan)
   const cz = Math.cos(cam.rz * D2R);
@@ -1292,7 +1305,12 @@ function render() {
     sim.dropDone ? clamp01((sim.L - G.drop) / (G.end - G.drop)) : 0,
   ];
   for (let i = 0; i < segEls.length; i++) {
-    if (segEls[i]) segEls[i].style.transform = `scaleX(${done ? 1 : fr[i]})`;
+    if (!segEls[i]) continue;
+    const t = `scaleX(${done ? 1 : fr[i]})`;
+    if (segTf[i] !== t) {
+      segTf[i] = t;
+      segEls[i].style.transform = t;
+    }
   }
 }
 
@@ -1670,6 +1688,9 @@ defineExpose({ play, pause, restart, goToStep });
   user-select: none;
   -webkit-user-select: none;
   outline: none;
+  isolation: isolate;
+  contain: layout paint;
+  transform: translateZ(0);
 }
 .vvip.is-dark .vvip__stage {
   background: radial-gradient(
@@ -1695,7 +1716,7 @@ defineExpose({ play, pause, restart, goToStep });
   background: var(--card);
   color: #fff;
   box-shadow: 0 10px 30px rgba(8, 27, 46, 0.25);
-  margin-top: 20px;
+  transform: translateZ(0);
 }
 .vvip__rest {
   grid-area: rest;
@@ -1733,7 +1754,6 @@ defineExpose({ play, pause, restart, goToStep });
   height: 2714px;
   transform-origin: 0 0;
   transform-style: preserve-3d;
-  will-change: transform;
   font-family: Inter, system-ui, sans-serif;
 }
 .vv-abs {
@@ -1741,8 +1761,6 @@ defineExpose({ play, pause, restart, goToStep });
   left: 0;
   top: 0;
   overflow: visible;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 .vv-route {
   transform: translateZ(1.5px);
