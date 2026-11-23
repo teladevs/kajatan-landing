@@ -203,6 +203,25 @@
         </div>
       </section>
 
+      <!-- PANDUAN PARKIR -->
+      <section class="section section--wide">
+        <header class="section-head">
+          <p class="section-kicker">Panduan Kendaraan</p>
+          <h2 class="section-title">Parkir VVIP</h2>
+        </header>
+        <div class="sim-card">
+          <ClientOnly>
+            <VvipParkingSim
+              route-color="#1478c9"
+              height="720px"
+              title=""
+              subtitle=""
+              theme="light"
+            />
+          </ClientOnly>
+        </div>
+      </section>
+
       <!-- FOOTER -->
       <footer class="site-footer">
         <img :src="logoUpper" alt="Logo Kementerian Perhubungan" class="footer-logo" />
@@ -224,6 +243,7 @@ import pembekalanSesi1 from "./assets/pembekalan-sesi-1.png";
 import pembekalanSesi2 from "./assets/pembekalan-sesi-2.png";
 import pembacaLaporan from "./assets/pembaca laporan.png";
 import rekomendasiHotel from "./assets/Rekomendasi Hotel.png";
+import VvipParkingSim from "./vvip-parking/VvipParkingSim.vue";
 
 const speakers = [
   { name: "Inspektur Upacara", img: inspekturUpacara },
@@ -826,6 +846,18 @@ useSeoMeta({
   display: block;
   width: 100%;
   border-radius: 14px;
+}
+
+/* ============ PANDUAN PARKIR ============ */
+.section--wide {
+  max-width: 1280px;
+}
+.sim-card {
+  background: #e0ecf9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 58, 112, 0.12);
+  border: 1px solid rgba(20, 120, 201, 0.1);
 }
 
 /* ============ FOOTER ============ */
