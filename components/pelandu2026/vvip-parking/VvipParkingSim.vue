@@ -1106,6 +1106,8 @@ let lastTs = "";
 let lastFar = null;
 let lastPaint = 0;
 let lastSceneTf = "";
+let lastCamSig = "";
+let lastOff = null;
 const segTf = [];
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1312,7 +1314,12 @@ function render() {
       1,
     )}px, 0)`;
   };
-  for (const it of ovItems) place(it.el, it.x, it.y, it.z);
+  // Label peta hanya diproyeksikan ulang saat kamera berubah (di mobile kamera statis).
+  const camSig = `${cam.x},${cam.y},${s},${cam.rz},${cam.rx}`;
+  if (camSig !== lastCamSig) {
+    lastCamSig = camSig;
+    for (const it of ovItems) place(it.el, it.x, it.y, it.z);
+  }
   if (carTagEl.value) place(carTagEl.value, carPos.x, carPos.y, 30);
   const sk = clamp(s * 0.6, 0.3, 0.9).toFixed(3);
   const ts = s.toFixed(3);
@@ -1326,7 +1333,16 @@ function render() {
   }
   carEl.value.style.transform = `translate3d(${carPos.x}px, ${carPos.y}px, 0)`;
   carHeadEl.value.style.transform = `rotateZ(${carPos.h}deg)`;
-  progressEl.value.style.strokeDashoffset = `${G.total - sim.L}`;
+  const off = Math.round((G.total - sim.L) * 2) / 2;
+  if (off !== lastOff) {
+    lastOff = off;
+    progressEl.value.style.strokeDashoffset = `${off}`;
+  }
+}
+
+// Progress bar kartu: hanya diperbarui saat langkah/fase berubah,
+// supaya kartu di bawah peta tidak repaint tiap frame (penyebab kedip di mobile).
+function syncProgress() {
   const done = phase.value === "done";
   const fr = [
     clamp01(sim.L / G.a1),
@@ -1335,8 +1351,8 @@ function render() {
     sim.dropDone
       ? 1
       : phase.value === "dwell"
-      ? clamp01(sim.dwellT / DWELL_SECONDS)
-      : 0,
+        ? clamp01(sim.dwellT / DWELL_SECONDS)
+        : 0,
     sim.dropDone ? clamp01((sim.L - G.drop) / (G.end - G.drop)) : 0,
   ];
   for (let i = 0; i < segEls.length; i++) {
@@ -1466,6 +1482,7 @@ watch(follow, (v) => {
   kick();
 });
 watch(speedSel, kick);
+watch([stepIdx, phase], syncProgress);
 watch(stepIdx, (i) => {
   emit("step-change", i);
   liveText.value = `Langkah ${i + 1}: ${stepsList.value[i].title}. ${
@@ -1599,6 +1616,7 @@ onMounted(() => {
   }));
   ready = true;
   render();
+  syncProgress();
   ro = new ResizeObserver(() => {
     measure();
     kick();
@@ -1758,7 +1776,6 @@ defineExpose({ play, pause, restart, goToStep });
   background: var(--card);
   color: #fff;
   box-shadow: 0 10px 30px rgba(8, 27, 46, 0.25);
-  transform: translateZ(0);
 }
 .vvip__rest {
   grid-area: rest;
