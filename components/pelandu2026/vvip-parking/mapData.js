@@ -136,6 +136,26 @@ const toilet = (x, y, rot) => ({
 
 export const BOXES = [
   {
+    id: "sport",
+    x: 833,
+    y: 793.5,
+    w: 393,
+    h: 306,
+    d: 110,
+    c: ["#c9a3c0", "#a4859d", "#846b7e"],
+    win: true,
+  },
+  {
+    id: "klinik",
+    x: 782,
+    y: 1212.5,
+    w: 131,
+    h: 270,
+    d: 70,
+    c: ["#00a99d", "#008a80", "#006f67"],
+    win: true,
+  },
+  {
     id: "auditorium",
     x: 767,
     y: 1481.5,
@@ -187,10 +207,71 @@ export const BOXES = [
     z: 44,
     c: ["#f8f9fa", "#cbcccd", "#a3a4a5"],
   },
+  // Toilet
+  toilet(1049, 1581.5),
+  toilet(1049, 1597.5),
+  toilet(1049, 1613.5),
+  toilet(1049, 1629.5),
+  toilet(1067, 1699.7, -38.62),
+  toilet(1077, 1712.2, -38.62),
+  toilet(1087, 1724.7, -38.62),
+  toilet(1097, 1737.2, -38.62),
+  // Parkir Keluarga Wisudawan
+  car(1386, 695, "white"),
+  car(1386, 735, "red"),
+  car(1386, 815, "blue"),
+  car(1386, 895, "dark"),
+  car(1386, 935, "silver"),
+  car(1386, 1015, "white"),
+  car(1753, 685, "red"),
+  car(1753, 765, "blue"),
+  car(1753, 805, "dark"),
+  car(1753, 885, "silver"),
+  car(1753, 965, "white"),
+  car(1753, 1045, "red"),
+  car(1753, 1125, "blue"),
   // Parkir VVIP (mobil yang sudah parkir)
   car(807, 1845, "dark", true),
+  car(847, 1847, "silver", true),
+  car(1087, 1859, "white", true),
   // Parkir Pegawai
   car(292, 1857, "red", true),
+  car(317, 1863, "blue", true),
+  car(292, 1955, "dark", true),
+  car(317, 1955, "silver", true),
+  // Bus
+  {
+    x: 1377,
+    y: 1640,
+    w: 100,
+    h: 26,
+    d: 28,
+    c: ["#f1f3f5", "#c5c7c8", "#9fa0a1"],
+  },
+  {
+    x: 1377,
+    y: 1680,
+    w: 100,
+    h: 26,
+    d: 28,
+    c: ["#4dabf7", "#3f8cca", "#3270a3"],
+  },
+  {
+    x: 1307,
+    y: 1805,
+    w: 100,
+    h: 26,
+    d: 28,
+    c: ["#f1f3f5", "#c5c7c8", "#9fa0a1"],
+  },
+  {
+    x: 1327,
+    y: 1855,
+    w: 100,
+    h: 26,
+    d: 28,
+    c: ["#4dabf7", "#3f8cca", "#3270a3"],
+  },
 ];
 
 // Bentuk lengkung bertumpuk (Tenda Konsumsi & Gerbang Masuk)
@@ -221,8 +302,40 @@ export const EXTRUSIONS = [
   },
 ];
 
+export const TREES = [
+  [1472, 675],
+  [1702, 675],
+  [1472, 815],
+  [1702, 815],
+  [1472, 1055],
+  [1702, 1055],
+  [1472, 1195],
+  [1702, 1195],
+  [1587, 1265],
+  [1587, 585],
+  [467, 1405],
+  [597, 1335],
+  [547, 1515],
+  [687, 1435],
+  [967, 705],
+  [1117, 685],
+  [1267, 735],
+  [1447, 1955],
+  [1517, 1875],
+];
+
 // Label melayang. pri 1 = selalu tampil, pri 2 = disembunyikan saat peta jauh
 export const LABELS = [
+  {
+    kind: "park",
+    text: "Parkir Keluarga Wisudawan",
+    x: 1587,
+    y: 915,
+    z: 0,
+    stem: 80,
+    bg: "#fdcf6b",
+    pri: 2,
+  },
   {
     kind: "park",
     text: "Parkir Bus",
@@ -242,6 +355,26 @@ export const LABELS = [
     stem: 90,
     bg: "#a6e3d7",
     pri: 1,
+  },
+  {
+    kind: "pill",
+    text: "Sport Hall",
+    x: 1029.5,
+    y: 946,
+    z: 110,
+    stem: 40,
+    dot: "#c9a3c0",
+    pri: 2,
+  },
+  {
+    kind: "pill",
+    text: "Klinik",
+    x: 847.5,
+    y: 1347,
+    z: 70,
+    stem: 40,
+    dot: "#00a99d",
+    pri: 2,
   },
   {
     kind: "pill",
