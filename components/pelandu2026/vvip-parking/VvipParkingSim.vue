@@ -230,8 +230,8 @@
                 ry="201.4998"
                 fill="#b0d697"
               />
-              <path :d="FAMILY_LOT" fill="#fdcf6b" />
-              <path class="vv-hatch" :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
+              <path class="vv-family-lot" :d="FAMILY_LOT" fill="#fdcf6b" />
+              <path class="vv-hatch vv-family-lot" :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
               <!-- panah Pintu Masuk Timur -->
               <path
                 d="M977,1548.5 L995,1584.5 L1009,1587.4"
@@ -541,7 +541,7 @@
             <span class="vv-tree"><i></i><b></b></span>
           </div>
           <div
-            v-for="(l, i) in LABELS"
+            v-for="(l, i) in renderLabels"
             :key="'l' + i"
             class="vv-o"
             :class="{ 'vv-minor': l.pri === 2 }"
@@ -956,8 +956,8 @@ const slabRings = compact
   ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
   : SLAB_RINGS;
 
-// Mobile: reduce 3D boxes to essential buildings only
-const mobileBoxIds = ["sport", "klinik", "auditorium", "utama", "maritim", "canopy"];
+// Mobile: reduce 3D boxes to essential buildings only (no sport hall)
+const mobileBoxIds = ["klinik", "auditorium", "utama", "maritim", "canopy"];
 const renderBoxes = compact
   ? BOXES.filter((b) => !b.id || mobileBoxIds.includes(b.id))
   : BOXES;
@@ -965,6 +965,11 @@ const renderBoxes = compact
 // Mobile: reduce extrusions and trees
 const renderExtrusions = compact ? EXTRUSIONS.slice(0, 1) : EXTRUSIONS;
 const renderTrees = compact ? TREES.slice(0, 8) : TREES;
+
+// Mobile: hide Parkir Keluarga Wisudawan label
+const renderLabels = compact
+  ? LABELS.filter((l) => l.text !== "Parkir Keluarga Wisudawan")
+  : LABELS;
 
 // ── konstanta tampilan ─────────────────────────────────────────
 const VVIP_LOT =
@@ -1777,6 +1782,20 @@ defineExpose({ play, pause, restart, goToStep });
   transform-origin: 0 0;
   transform-style: preserve-3d;
   font-family: Inter, system-ui, sans-serif;
+}
+/* Mobile: flatten 3D context to reduce GPU texture memory.
+   No perspective in this scene, so translateZ only affects paint order (DOM order handles it). */
+@media (max-width: 880px) {
+  .vv-scene {
+    transform-style: flat;
+  }
+  .vv-mapctl,
+  .vv-hint {
+    display: none;
+  }
+  .vv-family-lot {
+    display: none;
+  }
 }
 .vv-abs {
   position: absolute;
