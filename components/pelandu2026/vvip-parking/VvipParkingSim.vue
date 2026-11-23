@@ -1728,9 +1728,11 @@ defineExpose({ play, pause, restart, goToStep });
   left: 0;
   top: 0;
   overflow: visible;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .vv-route {
-  transform: translateZ(0.4px);
+  transform: translateZ(1.5px);
 }
 .vv-route-flow {
   animation: vvFlow 1.1s linear infinite;
@@ -2575,6 +2577,25 @@ defineExpose({ play, pause, restart, goToStep });
   }
   .vv-person {
     animation-duration: 0.01s;
+  }
+}
+
+/* Mobile: backdrop-filter & keyframe box-shadow memicu repaint tiap frame di atas adegan 3D
+   (penyebab kedip). Matikan efek tersebut; penanda tetap terlihat lewat skala/opasitas. */
+@media (max-width: 880px) {
+  .vv-icon {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg);
+  }
+  .vv-route-flow,
+  .vv-car-glow,
+  .vv-marker.is-active,
+  .vv-decal.is-active {
+    animation: none;
+  }
+  .vv-scene {
+    will-change: auto;
   }
 }
 </style>
