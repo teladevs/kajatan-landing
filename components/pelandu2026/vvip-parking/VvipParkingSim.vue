@@ -134,9 +134,6 @@
                   d="M564,2069.4646l-72-199-43-58-142.774-2.8366c-6.39-.127-12.7147-1.2956-18.7136-3.5005-21.2115-7.7963-68.2342-30.7129-80.5124-83.6629,0,0-27-108,73-154l92-15,143,1h395l65-18-170-644,253-29"
                 />
                 <path
-                  d="M858.6641,886.3133l-53.8342,3.6218-230.8298,15.5294h-120s-49,16-56-72,0-183,0-183c0,0-2-28-53-28h-164"
-                />
-                <path
                   d="M859,905.4646s78.2853,58.1983-16.3574,129.5991c0,0-73.6426,9.4009-93.6426-51.5991,0,0-1-116,110-78Z"
                 />
                 <path
@@ -148,14 +145,6 @@
                 />
                 <path
                   d="M443.4479,1654.2273l184.5521,25.2372,43,19,153,39s57,8,70-16,43-93,9-160"
-                />
-                <rect
-                  x="1073"
-                  y="171.4646"
-                  width="493"
-                  height="998"
-                  rx="246.4998"
-                  ry="246.4998"
                 />
                 <line x1="-14" y1="1889.4646" x2="243" y2="1794.4646" />
               </g>
@@ -224,21 +213,6 @@
                 :stroke="routeColor"
                 stroke-width="7"
                 stroke-linejoin="round"
-              />
-              <rect
-                x="1120"
-                y="201.4646"
-                width="403"
-                height="937"
-                rx="201.4998"
-                ry="201.4998"
-                fill="#b0d697"
-              />
-              <path class="vv-family-lot" :d="FAMILY_LOT" fill="#fdcf6b" />
-              <path
-                class="vv-hatch vv-family-lot"
-                :d="FAMILY_LOT"
-                :fill="`url(#${ids.stallH})`"
               />
               <!-- panah Pintu Masuk Timur -->
               <path
@@ -537,17 +511,6 @@
 
         <!-- Lapisan label 2D: posisi diproyeksikan dari titik 3D setiap frame (selalu tajam & terbaca) -->
         <div ref="ovEl" class="vv-ov">
-          <div
-            v-for="(t, i) in renderTrees"
-            :key="'t' + i"
-            class="vv-o vv-o--tree"
-            :data-x="t[0]"
-            :data-y="t[1]"
-            data-z="0"
-            aria-hidden="true"
-          >
-            <span class="vv-tree"><i></i><b></b></span>
-          </div>
           <div
             v-for="(l, i) in renderLabels"
             :key="'l' + i"
@@ -925,7 +888,6 @@ import {
   POIS,
   BOXES,
   EXTRUSIONS,
-  TREES,
   LABELS,
   MARKERS,
   VVIP_LABEL,
@@ -970,9 +932,7 @@ const renderBoxes = compact
   ? BOXES.filter((b) => b.id && mobileBoxIds.includes(b.id))
   : BOXES;
 
-// Mobile: reduce extrusions and trees
 const renderExtrusions = compact ? EXTRUSIONS.slice(0, 1) : EXTRUSIONS;
-const renderTrees = compact ? TREES.slice(0, 8) : TREES;
 
 // Mobile: hide Parkir Keluarga Wisudawan label
 const renderLabels = compact
@@ -1351,8 +1311,8 @@ function syncProgress() {
     sim.dropDone
       ? 1
       : phase.value === "dwell"
-        ? clamp01(sim.dwellT / DWELL_SECONDS)
-        : 0,
+      ? clamp01(sim.dwellT / DWELL_SECONDS)
+      : 0,
     sim.dropDone ? clamp01((sim.L - G.drop) / (G.end - G.drop)) : 0,
   ];
   for (let i = 0; i < segEls.length; i++) {
