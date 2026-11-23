@@ -365,7 +365,7 @@
           </svg>
 
           <!-- lengkung bertumpuk: Tenda Konsumsi & Gerbang Masuk -->
-          <template v-for="(e, i) in EXTRUSIONS" :key="'e' + i">
+          <template v-for="(e, i) in renderExtrusions" :key="'e' + i">
             <svg
               v-for="z in e.layers"
               :key="'e' + i + '-' + z"
@@ -400,7 +400,7 @@
 
           <!-- bangunan, kendaraan parkir, bus -->
           <VvipBox
-            v-for="(b, i) in BOXES"
+            v-for="(b, i) in renderBoxes"
             :key="'b' + i"
             :x="b.x"
             :y="b.y"
@@ -530,7 +530,7 @@
         <!-- Lapisan label 2D: posisi diproyeksikan dari titik 3D setiap frame (selalu tajam & terbaca) -->
         <div ref="ovEl" class="vv-ov">
           <div
-            v-for="(t, i) in TREES"
+            v-for="(t, i) in renderTrees"
             :key="'t' + i"
             class="vv-o vv-o--tree"
             :data-x="t[0]"
@@ -956,6 +956,16 @@ const slabRings = compact
   ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
   : SLAB_RINGS;
 
+// Mobile: reduce 3D boxes to essential buildings only
+const mobileBoxIds = ["sport", "klinik", "auditorium", "utama", "maritim", "canopy"];
+const renderBoxes = compact
+  ? BOXES.filter((b) => !b.id || mobileBoxIds.includes(b.id))
+  : BOXES;
+
+// Mobile: reduce extrusions and trees
+const renderExtrusions = compact ? EXTRUSIONS.slice(0, 1) : EXTRUSIONS;
+const renderTrees = compact ? TREES.slice(0, 8) : TREES;
+
 // ── konstanta tampilan ─────────────────────────────────────────
 const VVIP_LOT =
   "M420,1561.4646 451,1655.2601 630.8401,1681.4646 788,1732.4646 873.9126,1735.2832 919,1683.4646 919,1633.7738 907.4219,1571.0263 889.1226,1554.4646 420,1548.4646Z";
@@ -1171,6 +1181,8 @@ function computeFit() {
 
 function preset() {
   if (poi) return poi;
+  // Mobile: lock camera to fixed overview angle (no rotation changes)
+  if (compact) return CAM_OVERVIEW;
   if (phase.value === "idle" || !follow.value) return CAM_OVERVIEW;
   if (phase.value === "done") return CAM_DONE;
   return CAM_STEPS[stepIdx.value];
@@ -1231,7 +1243,8 @@ function tick(dt) {
     tgt.rx = pr.rx;
     tgt.s = clampS(Math.min(fit * pr.k, 2.4));
   }
-  const tp = poi || (follow.value && phase.value !== "idle" ? carPos : OVC);
+  // Mobile: lock camera position to overview center (no panning)
+  const tp = compact ? OVC : (poi || (follow.value && phase.value !== "idle" ? carPos : OVC));
   tgt.x = tp.x;
   tgt.y = tp.y;
   const a = reduced ? 1 : 1 - Math.exp(-dt * 3);
