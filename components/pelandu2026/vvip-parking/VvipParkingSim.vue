@@ -169,7 +169,11 @@
             />
             <g :clip-path="`url(#${ids.clip})`">
               <path :d="VVIP_LOT" fill="#7cc8f1" />
-              <path class="vv-hatch" :d="VVIP_LOT" :fill="`url(#${ids.stallD})`" />
+              <path
+                class="vv-hatch"
+                :d="VVIP_LOT"
+                :fill="`url(#${ids.stallD})`"
+              />
               <path
                 d="M-5,1572.4646v311l248-94s-66.0857-75.8284-28.0428-156.9142l-219.9572-60.0858Z"
                 fill="#a6e3d7"
@@ -231,7 +235,11 @@
                 fill="#b0d697"
               />
               <path class="vv-family-lot" :d="FAMILY_LOT" fill="#fdcf6b" />
-              <path class="vv-hatch vv-family-lot" :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
+              <path
+                class="vv-hatch vv-family-lot"
+                :d="FAMILY_LOT"
+                :fill="`url(#${ids.stallH})`"
+              />
               <!-- panah Pintu Masuk Timur -->
               <path
                 d="M977,1548.5 L995,1584.5 L1009,1587.4"
@@ -628,7 +636,7 @@
         </div>
 
         <!-- kontrol peta -->
-        <div class="vv-ui vv-mapctl">
+        <div v-if="!compact" class="vv-ui vv-mapctl">
           <button
             type="button"
             class="vv-icon"
@@ -956,10 +964,10 @@ const slabRings = compact
   ? SLAB_RINGS.filter((_, i) => i % 2 === 0)
   : SLAB_RINGS;
 
-// Mobile: reduce 3D boxes to essential buildings only (no sport hall)
+// Mobile: reduce 3D boxes to essential buildings only (no sport hall, cars, buses)
 const mobileBoxIds = ["klinik", "auditorium", "utama", "maritim", "canopy"];
 const renderBoxes = compact
-  ? BOXES.filter((b) => !b.id || mobileBoxIds.includes(b.id))
+  ? BOXES.filter((b) => b.id && mobileBoxIds.includes(b.id))
   : BOXES;
 
 // Mobile: reduce extrusions and trees
@@ -984,7 +992,6 @@ const PERSON_HEAD = ["#f1c7a1", "#d9ae88", "#c49a76"];
 const SPEEDS = [0.5, 1, 2];
 const BUILDINGS = [
   ["Auditorium", "#3a4f9f"],
-  ["Sport Hall", "#c9a3c0"],
   ["Klinik", "#00a99d"],
   ["Tenda Konsumsi", "#f9b237"],
   ["Toilet", "#7fc147"],
@@ -1098,6 +1105,7 @@ let lastSk = "";
 let lastTs = "";
 let lastFar = null;
 let lastPaint = 0;
+let lastSceneTf = "";
 const segTf = [];
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1249,7 +1257,9 @@ function tick(dt) {
     tgt.s = clampS(Math.min(fit * pr.k, 2.4));
   }
   // Mobile: lock camera position to overview center (no panning)
-  const tp = compact ? OVC : (poi || (follow.value && phase.value !== "idle" ? carPos : OVC));
+  const tp = compact
+    ? OVC
+    : poi || (follow.value && phase.value !== "idle" ? carPos : OVC);
   tgt.x = tp.x;
   tgt.y = tp.y;
   const a = reduced ? 1 : 1 - Math.exp(-dt * 3);
@@ -1275,9 +1285,13 @@ function render() {
   const ox = W / 2;
   const oy = H * 0.54;
   const s = cam.s;
-  scene.style.transform =
+  const sceneTf =
     `translate3d(${ox}px, ${oy}px, 0) scale(${s}) rotateX(${cam.rx}deg) ` +
     `rotateZ(${cam.rz}deg) translate3d(${-cam.x}px, ${-cam.y}px, 0)`;
+  if (sceneTf !== lastSceneTf) {
+    lastSceneTf = sceneTf;
+    scene.style.transform = sceneTf;
+  }
   const far = s < 0.85;
   if (far !== lastFar) {
     lastFar = far;
@@ -1509,6 +1523,7 @@ function onMove(e) {
       /* abaikan */
     }
   }
+  if (compact) return;
   userCam = true;
   hideHint();
   cam.rz = tgt.rz = drag.rz + dx * 0.35;
@@ -1783,12 +1798,8 @@ defineExpose({ play, pause, restart, goToStep });
   transform-style: preserve-3d;
   font-family: Inter, system-ui, sans-serif;
 }
-/* Mobile: flatten 3D context to reduce GPU texture memory.
-   No perspective in this scene, so translateZ only affects paint order (DOM order handles it). */
+/* Mobile: sembunyikan area parkir keluarga & kontrol peta */
 @media (max-width: 880px) {
-  .vv-scene {
-    transform-style: flat;
-  }
   .vv-mapctl,
   .vv-hint {
     display: none;

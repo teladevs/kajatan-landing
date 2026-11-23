@@ -76,10 +76,4 @@ const faceTop = computed(() => ({
 .vb { position: absolute; transform-style: preserve-3d; }
 .vb-f { position: absolute; background-position: center; background-repeat: no-repeat; }
 .vb-top { transform-style: preserve-3d; }
-/* Mobile: hide side faces to reduce GPU layers (only show top face) */
-@media (max-width: 880px) {
-  .vb { transform-style: flat; }
-  .vb-f:not(.vb-top) { display: none; }
-  .vb-top { transform: none; }
-}
 </style>
