@@ -275,6 +275,22 @@
         </div>
       </div>
 
+      <!-- Navigasi langkah -->
+      <div class="vvip__nav" role="group" aria-label="Navigasi langkah simulasi">
+        <button type="button" class="vv-nav-btn" aria-label="Langkah sebelumnya" @click="prev">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+        </button>
+        <button type="button" class="vv-nav-btn vv-nav-btn--main" @click="toggle">
+          <svg v-if="playing" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
+          <svg v-else-if="phase === 'done'" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.35-5.65" /><path d="M4 4v5h5" /></svg>
+          <svg v-else viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" class="fill" /></svg>
+          <span>{{ playLabel }}</span>
+        </button>
+        <button type="button" class="vv-nav-btn" aria-label="Langkah berikutnya" @click="next">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+        </button>
+      </div>
+
       <!-- Daftar langkah, titik penting, keterangan -->
       <div class="vvip__rest">
         <section class="vv-block">
@@ -889,7 +905,7 @@ defineExpose({ play, pause, restart, goToStep })
 .vvip__layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: 'head' 'stage' 'card' 'rest';
+  grid-template-areas: 'head' 'stage' 'card' 'nav' 'rest';
 }
 .vvip__head { grid-area: head; padding: 18px 16px 12px; }
 .vvip__title {
@@ -923,6 +939,46 @@ defineExpose({ play, pause, restart, goToStep })
 .vvip__stage:focus-visible { box-shadow: inset 0 0 0 3px var(--route); }
 .vvip__stage.is-grabbing { cursor: grabbing; }
 
+/* navigasi langkah di bawah peta (hanya desktop) */
+.vvip__nav {
+  grid-area: nav;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 8px 0;
+}
+.vv-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 46px;
+  min-width: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--bg) 88%, #fff);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(8, 27, 46, 0.12);
+}
+.vv-nav-btn:hover { background: var(--bg); }
+.vv-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vv-nav-btn svg .fill { fill: currentColor; stroke: none; }
+.vv-nav-btn--main { min-width: 150px; background: var(--card); color: #fff; }
+.vv-nav-btn--main:hover { background: var(--card-2); }
+
 .vvip__card {
   grid-area: card;
   position: relative;
@@ -938,16 +994,19 @@ defineExpose({ play, pause, restart, goToStep })
 
 @container (min-width: 880px) {
   .vvip__layout {
-    grid-template-columns: minmax(0, 1fr) clamp(360px, 33cqw, 430px);
-    grid-template-rows: auto auto minmax(0, 1fr);
-    grid-template-areas: 'stage head' 'stage card' 'stage rest';
-    height: var(--vvip-h, 720px);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'head' 'stage' 'card' 'nav' 'rest';
   }
-  .vvip__stage { height: auto; }
-  .vvip__head { padding: 28px 24px 16px 8px; }
+  .vvip__stage { height: var(--vvip-h, 720px); }
+  .vvip__nav { display: flex; padding: 16px 24px 0; }
+  .vvip__head { padding: 28px 24px 16px; }
   .vvip__title { font-size: 40px; }
-  .vvip__card { margin: 0 20px 0 8px; }
-  .vvip__rest { overflow-y: auto; padding: 14px 20px 24px 8px; align-content: start; }
+  .vvip__card { margin: 16px 24px 0; }
+  .vvip__rest {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 14px 24px 24px;
+    align-items: start;
+  }
 }
 
 /* ── adegan 3D ───────────────────────────────────────── */
