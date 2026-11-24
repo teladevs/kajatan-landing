@@ -54,6 +54,15 @@
       <div class="welcome-inner">
         <img :src="logoUpper" class="logo-upper" alt="Logo Kementerian Perhubungan" />
 
+        <video
+          class="welcome-video"
+          :src="welcomeVideo"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+
         <div class="welcome-card">
           <span class="flag-bar"><i></i><i></i></span>
           <p class="eyebrow">Pelantikan Terpadu</p>
@@ -246,6 +255,7 @@
 </template>
 
 <script setup>
+import welcomeVideo from "./assets/welcome.mp4";
 import mainBg from "./assets/main-bg.png";
 import logoUpper from "./assets/logo-upper.png";
 import pageBg from "./assets/page-bg.jpg";
@@ -477,6 +487,16 @@ useSeoMeta({
   width: min(680px, 88%);
   height: auto;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25));
+}
+.welcome-video {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 60px rgba(0, 40, 90, 0.28);
+  background: #000;
 }
 .btn-audio {
   position: fixed;
