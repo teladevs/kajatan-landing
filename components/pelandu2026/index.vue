@@ -211,13 +211,24 @@
         </header>
         <div class="sim-card">
           <ClientOnly>
-            <VvipParkingSim
-              route-color="#1478c9"
-              height="720px"
-              title=""
-              subtitle=""
-              theme="light"
-            />
+            <template v-if="viewportReady">
+              <VvipParkingMobile
+                v-if="isMobile"
+                route-color="#1478c9"
+                height="720px"
+                title=""
+                subtitle=""
+                theme="light"
+              />
+              <VvipParkingDesktop
+                v-else
+                route-color="#1478c9"
+                height="720px"
+                title=""
+                subtitle=""
+                theme="light"
+              />
+            </template>
           </ClientOnly>
         </div>
       </section>
@@ -243,7 +254,8 @@ import pembekalanSesi1 from "./assets/pembekalan-sesi-1.png";
 import pembekalanSesi2 from "./assets/pembekalan-sesi-2.png";
 import pembacaLaporan from "./assets/pembaca laporan.png";
 import rekomendasiHotel from "./assets/Rekomendasi Hotel.png";
-import VvipParkingSim from "./vvip-parking/VvipParkingSim.vue";
+import VvipParkingMobile from "./vvip-parking-mobile/VvipParkingSim.vue";
+import VvipParkingDesktop from "./vvip-parking-sim/vvip-sim/src/components/vvip-parking/VvipParkingSim.vue";
 
 const speakers = [
   { name: "Inspektur Upacara", img: inspekturUpacara },
@@ -354,6 +366,15 @@ const rundownSections = [
 const soundPlay = ref(false);
 const audioElement = ref(null);
 
+// Pilih komponen peta sesuai lebar viewport: mobile < 768px, desktop ≥ 768px.
+const isMobile = ref(false);
+const viewportReady = ref(false);
+let viewportQuery = null;
+const syncViewport = () => {
+  isMobile.value = viewportQuery.matches;
+  viewportReady.value = true;
+};
+
 const toggleAudio = () => {
   if (!audioElement.value) return;
   if (soundPlay.value) {
@@ -388,9 +409,16 @@ onMounted(() => {
   window.addEventListener("click", startOnInteraction);
   window.addEventListener("touchstart", startOnInteraction);
   window.addEventListener("keydown", startOnInteraction);
+
+  viewportQuery = window.matchMedia("(max-width: 767.98px)");
+  syncViewport();
+  viewportQuery.addEventListener("change", syncViewport);
 });
 
-onBeforeUnmount(removeInteractionListeners);
+onBeforeUnmount(() => {
+  removeInteractionListeners();
+  viewportQuery?.removeEventListener("change", syncViewport);
+});
 
 useSeoMeta({
   title:
