@@ -27,9 +27,9 @@ const props = defineProps({
 
 const px = (n) => `${n}px`;
 const WIN_V =
-  "repeating-linear-gradient(180deg, rgba(255,255,255,0.22) 0px 14px, transparent 14px 32px)";
+  "repeating-linear-gradient(180deg, rgba(255,255,255,0.22) 0px 4.235px, transparent 4.235px 9.681px)";
 const WIN_H =
-  "repeating-linear-gradient(90deg, rgba(255,255,255,0.26) 0px 14px, transparent 14px 32px)";
+  "repeating-linear-gradient(90deg, rgba(255,255,255,0.26) 0px 4.235px, transparent 4.235px 9.681px)";
 
 const boxStyle = computed(() => ({
   left: px(props.centered ? props.x - props.w / 2 : props.x),
@@ -88,7 +88,7 @@ const faceTop = computed(() => ({
   width: px(props.w),
   height: px(props.h),
   background: props.c[0],
-  boxShadow: props.win ? "inset 0 0 0 10px rgba(255,255,255,0.22)" : undefined,
+  boxShadow: props.win ? "inset 0 0 0 3.025px rgba(255,255,255,0.22)" : undefined,
   transform: `translateZ(${props.z + props.d}px)`,
 }));
 </script>
