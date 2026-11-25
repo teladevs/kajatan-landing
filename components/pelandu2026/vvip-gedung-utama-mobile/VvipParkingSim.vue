@@ -83,7 +83,7 @@
             :width="PLANE.w"
             :height="PLANE.h"
             :viewBox="VIEWBOX"
-                      >
+          >
             <defs>
               <clipPath :id="ids.clip">
                 <polygon :points="TILE_POINTS" />
@@ -128,12 +128,6 @@
                   d="M671,2368.4646l-96.9637-246.2118c-3.3085-8.4009-4.5375-17.477-3.5823-26.4552l-.4539-47.333"
                 />
                 <path
-                  d="M564,2069.4646l-72-199-43-58-142.774-2.8366c-6.39-.127-12.7147-1.2956-18.7136-3.5005-21.2115-7.7963-68.2342-30.7129-80.5124-83.6629,0,0-27-108,73-154l92-15,143,1h395l65-18-170-644,253-29"
-                />
-                <path
-                  d="M858.6641,886.3133l-53.8342,3.6218-230.8298,15.5294h-120s-49,16-56-72,0-183,0-183c0,0-2-28-53-28h-164"
-                />
-                <path
                   d="M859,905.4646s78.2853,58.1983-16.3574,129.5991c0,0-73.6426,9.4009-93.6426-51.5991,0,0-1-116,110-78Z"
                 />
                 <path
@@ -145,14 +139,6 @@
                 />
                 <path
                   d="M443.4479,1654.2273l184.5521,25.2372,43,19,153,39s57,8,70-16,43-93,9-160"
-                />
-                <rect
-                  x="1073"
-                  y="171.4646"
-                  width="493"
-                  height="998"
-                  rx="246.4998"
-                  ry="246.4998"
                 />
                 <line x1="-14" y1="1889.4646" x2="243" y2="1794.4646" />
               </g>
@@ -215,17 +201,6 @@
                 stroke-width="7"
                 stroke-linejoin="round"
               />
-              <rect
-                x="1120"
-                y="201.4646"
-                width="403"
-                height="937"
-                rx="201.4998"
-                ry="201.4998"
-                fill="#b0d697"
-              />
-              <path :d="FAMILY_LOT" fill="#fdcf6b" />
-              <path :d="FAMILY_LOT" :fill="`url(#${ids.stallH})`" />
               <!-- panah Pintu Masuk Timur -->
               <path
                 d="M977,1548.5 L995,1584.5 L1009,1587.4"
@@ -1317,7 +1292,10 @@ function render() {
   };
   for (const it of ovItems) place(it.el, it.x, it.y, it.z);
   if (carTagEl.value) place(carTagEl.value, carPos.x, carPos.y, 30 * SCALE);
-  ovEl.value.style.setProperty("--sk", clamp(s * SCALE * 0.6, 0.3, 0.9).toFixed(3));
+  ovEl.value.style.setProperty(
+    "--sk",
+    clamp(s * SCALE * 0.6, 0.3, 0.9).toFixed(3),
+  );
   ovEl.value.style.setProperty("--ts", (s * SCALE).toFixed(3));
   carEl.value.style.transform = `translate3d(${carPos.x}px, ${carPos.y}px, 0)`;
   carHeadEl.value.style.transform = `rotateZ(${carPos.h}deg)`;
@@ -2070,8 +2048,11 @@ defineExpose({ play, pause, restart, goToStep });
   position: absolute;
   left: 50%;
   top: 50%;
-  translate: -80% 0% calc(40px * var(--sc, 1));
-  scale: var(--sc, 1); /* diangkat di atas atap Ruang Maritim (tinggi 104 vs 80) */
+  translate: -60% -30% calc(40px * var(--sc, 1));
+  scale: var(
+    --sc,
+    1
+  ); /* diangkat di atas atap Ruang Maritim (tinggi 104 vs 80) */
   display: flex;
   align-items: center;
   gap: 12px;

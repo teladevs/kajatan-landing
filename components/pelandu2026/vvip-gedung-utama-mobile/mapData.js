@@ -130,26 +130,6 @@ const toilet = (x, y, rot) => ({
 
 const RAW_BOXES = [
   {
-    id: "sport",
-    x: 833,
-    y: 793.5,
-    w: 393,
-    h: 306,
-    d: 110,
-    c: ["#c9a3c0", "#a4859d", "#846b7e"],
-    win: true,
-  },
-  {
-    id: "klinik",
-    x: 782,
-    y: 1212.5,
-    w: 131,
-    h: 270,
-    d: 70,
-    c: ["#00a99d", "#008a80", "#006f67"],
-    win: true,
-  },
-  {
     id: "auditorium",
     x: 767,
     y: 1481.5,
@@ -210,20 +190,6 @@ const RAW_BOXES = [
   toilet(1077, 1712.2, -38.62),
   toilet(1087, 1724.7, -38.62),
   toilet(1097, 1737.2, -38.62),
-  // Parkir Keluarga Wisudawan
-  car(1386, 695, "white"),
-  car(1386, 735, "red"),
-  car(1386, 815, "blue"),
-  car(1386, 895, "dark"),
-  car(1386, 935, "silver"),
-  car(1386, 1015, "white"),
-  car(1753, 685, "red"),
-  car(1753, 765, "blue"),
-  car(1753, 805, "dark"),
-  car(1753, 885, "silver"),
-  car(1753, 965, "white"),
-  car(1753, 1045, "red"),
-  car(1753, 1125, "blue"),
   // Parkir VVIP (mobil yang sudah parkir)
   car(807, 1845, "dark", true),
   car(847, 1847, "silver", true),
@@ -297,39 +263,16 @@ const RAW_EXTRUSIONS = [
 ];
 
 const RAW_TREES = [
-  [1472, 675],
-  [1702, 675],
-  [1472, 815],
-  [1702, 815],
-  [1472, 1055],
-  [1702, 1055],
-  [1472, 1195],
-  [1702, 1195],
-  [1587, 1265],
-  [1587, 585],
   [467, 1405],
   [597, 1335],
   [547, 1515],
   [687, 1435],
-  [967, 705],
-  [1117, 685],
-  [1267, 735],
   [1447, 1955],
   [1517, 1875],
 ];
 
 // Label melayang. pri 1 = selalu tampil, pri 2 = disembunyikan saat peta jauh
 const RAW_LABELS = [
-  {
-    kind: "park",
-    text: "Parkir Keluarga Wisudawan",
-    x: 1587,
-    y: 915,
-    z: 0,
-    stem: 80,
-    bg: "#fdcf6b",
-    pri: 2,
-  },
   {
     kind: "park",
     text: "Parkir Bus",
@@ -349,26 +292,6 @@ const RAW_LABELS = [
     stem: 90,
     bg: "#a6e3d7",
     pri: 1,
-  },
-  {
-    kind: "pill",
-    text: "Sport Hall",
-    x: 1029.5,
-    y: 946,
-    z: 110,
-    stem: 40,
-    dot: "#c9a3c0",
-    pri: 2,
-  },
-  {
-    kind: "pill",
-    text: "Klinik",
-    x: 847.5,
-    y: 1347,
-    z: 70,
-    stem: 40,
-    dot: "#00a99d",
-    pri: 2,
   },
   {
     kind: "pill",
@@ -460,7 +383,6 @@ const RAW_MARKERS = [
 ];
 const RAW_VVIP_LABEL = { step: 3, x: 947, y: 1895, stem: 50 };
 
-
 // ── Skala ke resolusi baru (710 x 1080) ───────────────────────
 // Posisi & ukuran 3D diskalakan; "stem" (tinggi tangkai label di layar) dan zoom k tidak.
 const f = (v) => +(v * SCALE).toFixed(3);
@@ -490,6 +412,15 @@ export const EXTRUSIONS = RAW_EXTRUSIONS.map((e) => ({
   height: f(e.height),
 }));
 export const TREES = RAW_TREES.map(([x, y]) => [f(x), f(y)]);
-export const LABELS = RAW_LABELS.map((l) => ({ ...l, x: f(l.x), y: f(l.y), z: f(l.z) }));
+export const LABELS = RAW_LABELS.map((l) => ({
+  ...l,
+  x: f(l.x),
+  y: f(l.y),
+  z: f(l.z),
+}));
 export const MARKERS = RAW_MARKERS.map((m) => ({ ...m, x: f(m.x), y: f(m.y) }));
-export const VVIP_LABEL = { ...RAW_VVIP_LABEL, x: f(RAW_VVIP_LABEL.x), y: f(RAW_VVIP_LABEL.y) };
+export const VVIP_LABEL = {
+  ...RAW_VVIP_LABEL,
+  x: f(RAW_VVIP_LABEL.x),
+  y: f(RAW_VVIP_LABEL.y),
+};
