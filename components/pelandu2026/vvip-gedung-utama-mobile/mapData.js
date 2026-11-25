@@ -1,14 +1,13 @@
 // Data peta diambil dari desain "Panduan Kendaraan VVIP" (VVIP.dc.html).
-// Koordinat "plane" = piksel pada bidang peta (koordinat desain 2380 x 2714 tetap dipakai).
-// Bidang yang dirender = jendela 710 x 1080 yang dimulai di (PLANE_X, PLANE_Y) pada plane.
-// Koordinat SVG = plane - (OX, OY)  →  viewBox "143 1195 710 1080".
+// Koordinat SVG = koordinat desain asli (rute, tile, ANCHORS); ke plane lewat (svg + OX/OY) * SCALE.
+// Koordinat "plane" = piksel bidang peta 710 x 1080; data bangunan/label/titik di bawah sudah diskalakan.
 
+export const SCALE = 710 / 2380; // desain 2380 px → lebar 710 px (skala seragam)
 export const PLANE = { w: 710, h: 1080 };
-export const PLANE_X = 410;
-export const PLANE_Y = 1450;
 export const OX = 267;
 export const OY = 255;
-export const VIEWBOX = `${PLANE_X - OX} ${PLANE_Y - OY} ${PLANE.w} ${PLANE.h}`;
+// viewBox SVG memuat seluruh desain; tinggi diperpanjang ke bawah agar sesuai 710 x 1080
+export const VIEWBOX = `-267 -255 2380 ${PLANE.h / SCALE}`;
 
 // Lempeng tanah kampus (koordinat SVG)
 export const TILE = [
@@ -69,9 +68,9 @@ export const CAM_STEPS = [
 export const CAM_OVERVIEW = { rz: -30, rx: 54, k: 1 };
 export const CAM_DONE = { rz: -30, rx: 54, k: 1.6 };
 // Kotak rute untuk tampilan menyeluruh (plane)
-export const OVERVIEW_BOX = { x0: 440, y0: 1760, x1: 1110, y1: 2310 };
+const RAW_OVERVIEW_BOX = { x0: 440, y0: 1760, x1: 1110, y1: 2310 };
 
-export const POIS = [
+const RAW_POIS = [
   {
     id: "drop",
     name: "Drop Off Gedung Utama",
@@ -129,7 +128,7 @@ const toilet = (x, y, rot) => ({
   rot,
 });
 
-export const BOXES = [
+const RAW_BOXES = [
   {
     id: "sport",
     x: 833,
@@ -270,7 +269,7 @@ export const BOXES = [
 ];
 
 // Bentuk lengkung bertumpuk (Tenda Konsumsi & Gerbang Masuk)
-export const EXTRUSIONS = [
+const RAW_EXTRUSIONS = [
   {
     left: 1152,
     top: 1475,
@@ -297,7 +296,7 @@ export const EXTRUSIONS = [
   },
 ];
 
-export const TREES = [
+const RAW_TREES = [
   [1472, 675],
   [1702, 675],
   [1472, 815],
@@ -320,7 +319,7 @@ export const TREES = [
 ];
 
 // Label melayang. pri 1 = selalu tampil, pri 2 = disembunyikan saat peta jauh
-export const LABELS = [
+const RAW_LABELS = [
   {
     kind: "park",
     text: "Parkir Keluarga Wisudawan",
@@ -454,9 +453,43 @@ export const LABELS = [
 ];
 
 // Penanda langkah di peta (langkah 4 = stiker di atap Auditorium, langkah 5 = label Parkir VVIP)
-export const MARKERS = [
+const RAW_MARKERS = [
   { step: 0, x: 798, y: 2235, stem: 30 },
   { step: 1, x: 492, y: 1895, stem: 30 },
   { step: 2, x: 667, y: 1835, stem: 30 },
 ];
-export const VVIP_LABEL = { step: 3, x: 947, y: 1895, stem: 50 };
+const RAW_VVIP_LABEL = { step: 3, x: 947, y: 1895, stem: 50 };
+
+
+// ── Skala ke resolusi baru (710 x 1080) ───────────────────────
+// Posisi & ukuran 3D diskalakan; "stem" (tinggi tangkai label di layar) dan zoom k tidak.
+const f = (v) => +(v * SCALE).toFixed(3);
+export const OVERVIEW_BOX = {
+  x0: f(RAW_OVERVIEW_BOX.x0),
+  y0: f(RAW_OVERVIEW_BOX.y0),
+  x1: f(RAW_OVERVIEW_BOX.x1),
+  y1: f(RAW_OVERVIEW_BOX.y1),
+};
+export const POIS = RAW_POIS.map((o) => ({ ...o, x: f(o.x), y: f(o.y) }));
+export const BOXES = RAW_BOXES.map((b) => ({
+  ...b,
+  x: f(b.x),
+  y: f(b.y),
+  w: f(b.w),
+  h: f(b.h),
+  d: f(b.d),
+  ...(b.z ? { z: f(b.z) } : {}),
+}));
+export const EXTRUSIONS = RAW_EXTRUSIONS.map((e) => ({
+  ...e,
+  left: f(e.left),
+  top: f(e.top),
+  w: f(e.w),
+  h: f(e.h),
+  layers: e.layers.map(f),
+  height: f(e.height),
+}));
+export const TREES = RAW_TREES.map(([x, y]) => [f(x), f(y)]);
+export const LABELS = RAW_LABELS.map((l) => ({ ...l, x: f(l.x), y: f(l.y), z: f(l.z) }));
+export const MARKERS = RAW_MARKERS.map((m) => ({ ...m, x: f(m.x), y: f(m.y) }));
+export const VVIP_LABEL = { ...RAW_VVIP_LABEL, x: f(RAW_VVIP_LABEL.x), y: f(RAW_VVIP_LABEL.y) };

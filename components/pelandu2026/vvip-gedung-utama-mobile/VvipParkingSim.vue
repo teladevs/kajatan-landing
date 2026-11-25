@@ -39,7 +39,7 @@
         @click.capture="onClickCapture"
         @keydown="onKey"
       >
-        <div ref="sceneEl" class="vv-scene">
+        <div ref="sceneEl" class="vv-scene" :style="{ '--sc': SCALE }">
           <!-- bayangan & dinding lempeng -->
           <svg
             class="vv-abs"
@@ -47,7 +47,7 @@
             :width="PLANE.w"
             :height="PLANE.h"
             :viewBox="VIEWBOX"
-            :style="{ left: PLANE_X + 'px', top: PLANE_Y + 'px', transform: 'translateZ(-90px)' }"
+            :style="{ transform: 'translateZ(-90px)' }"
           >
             <polygon
               :points="TILE_POINTS"
@@ -65,7 +65,7 @@
             :width="PLANE.w"
             :height="PLANE.h"
             :viewBox="VIEWBOX"
-            :style="{ left: PLANE_X + 'px', top: PLANE_Y + 'px', transform: `translateZ(${r.z}px)` }"
+            :style="{ transform: `translateZ(${r.z}px)` }"
           >
             <polygon
               :points="TILE_POINTS"
@@ -83,8 +83,7 @@
             :width="PLANE.w"
             :height="PLANE.h"
             :viewBox="VIEWBOX"
-            :style="{ left: PLANE_X + 'px', top: PLANE_Y + 'px' }"
-          >
+                      >
             <defs>
               <clipPath :id="ids.clip">
                 <polygon :points="TILE_POINTS" />
@@ -944,8 +943,7 @@ import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
 import VvipBox from "./VvipBox.vue";
 import {
   PLANE,
-  PLANE_X,
-  PLANE_Y,
+  SCALE,
   OX,
   OY,
   VIEWBOX,
@@ -1016,10 +1014,14 @@ const BUILDINGS = [
 const VMAX = 120; // unit peta per detik pada kecepatan 1×
 const D2R = Math.PI / 180;
 // kotak lapisan rute (koordinat SVG 150..800 × 1500..2080)
-const ROUTE_BOX = { x: 150, y: 1500, w: 650, h: 580 };
-ROUTE_BOX.viewBox = `${ROUTE_BOX.x} ${ROUTE_BOX.y} ${ROUTE_BOX.w} ${ROUTE_BOX.h}`;
-ROUTE_BOX.left = ROUTE_BOX.x + OX;
-ROUTE_BOX.top = ROUTE_BOX.y + OY;
+const ROUTE_SVG = { x: 150, y: 1500, w: 650, h: 580 };
+const ROUTE_BOX = {
+  viewBox: `${ROUTE_SVG.x} ${ROUTE_SVG.y} ${ROUTE_SVG.w} ${ROUTE_SVG.h}`,
+  left: (ROUTE_SVG.x + OX) * SCALE,
+  top: (ROUTE_SVG.y + OY) * SCALE,
+  w: ROUTE_SVG.w * SCALE,
+  h: ROUTE_SVG.h * SCALE,
+};
 const OVC = {
   x: (OVERVIEW_BOX.x0 + OVERVIEW_BOX.x1) / 2,
   y: (OVERVIEW_BOX.y0 + OVERVIEW_BOX.y1) / 2,
@@ -1120,7 +1122,11 @@ let io = null;
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const clamp01 = (v) => clamp(v, 0, 1);
 const clampS = (s) =>
-  clamp(s, Math.max(0.18, fit * 0.55), Math.min(3.2, Math.max(fit * 3.4, 1.4)));
+  clamp(
+    s,
+    Math.max(0.18 / SCALE, fit * 0.55),
+    Math.min(3.2 / SCALE, Math.max(fit * 3.4, 1.4 / SCALE)),
+  );
 const angDiff = (a, b) => ((((b - a) % 360) + 540) % 360) - 180;
 
 function buildGeometry() {
@@ -1131,14 +1137,15 @@ function buildGeometry() {
   const ys = new Float32Array(n);
   for (let i = 0; i < n; i++) {
     const p = path.getPointAtLength(Math.min(i, total));
-    xs[i] = p.x + OX;
-    ys[i] = p.y + OY;
+    xs[i] = (p.x + OX) * SCALE;
+    ys[i] = (p.y + OY) * SCALE;
   }
   const nearest = ([sx, sy]) => {
     let best = 0;
     let bd = Infinity;
     for (let i = 0; i < n; i++) {
-      const d = (xs[i] - (sx + OX)) ** 2 + (ys[i] - (sy + OY)) ** 2;
+      const d =
+        (xs[i] - (sx + OX) * SCALE) ** 2 + (ys[i] - (sy + OY) * SCALE) ** 2;
       if (d < bd) {
         bd = d;
         best = i;
@@ -1261,7 +1268,7 @@ function tick(dt) {
   if (!userCam) {
     tgt.rz = pr.rz;
     tgt.rx = pr.rx;
-    tgt.s = clampS(Math.min(fit * pr.k, 2.4));
+    tgt.s = clampS(Math.min(fit * pr.k, 2.4 / SCALE));
   }
   const tp = poi || (follow.value && phase.value !== "idle" ? carPos : OVC);
   tgt.x = tp.x;
@@ -1292,7 +1299,7 @@ function render() {
   scene.style.transform =
     `translate3d(${ox}px, ${oy}px, 0) scale(${s}) rotateX(${cam.rx}deg) ` +
     `rotateZ(${cam.rz}deg) translate3d(${-cam.x}px, ${-cam.y}px, 0)`;
-  stageEl.value.classList.toggle("is-far", s < 0.85);
+  stageEl.value.classList.toggle("is-far", s * SCALE < 0.85);
 
   // proyeksi ortografis titik 3D → layar (sama persis dengan transform adegan)
   const cz = Math.cos(cam.rz * D2R);
@@ -1309,9 +1316,9 @@ function render() {
     )}px, 0)`;
   };
   for (const it of ovItems) place(it.el, it.x, it.y, it.z);
-  if (carTagEl.value) place(carTagEl.value, carPos.x, carPos.y, 30);
-  ovEl.value.style.setProperty("--sk", clamp(s * 0.6, 0.3, 0.9).toFixed(3));
-  ovEl.value.style.setProperty("--ts", s.toFixed(3));
+  if (carTagEl.value) place(carTagEl.value, carPos.x, carPos.y, 30 * SCALE);
+  ovEl.value.style.setProperty("--sk", clamp(s * SCALE * 0.6, 0.3, 0.9).toFixed(3));
+  ovEl.value.style.setProperty("--ts", (s * SCALE).toFixed(3));
   carEl.value.style.transform = `translate3d(${carPos.x}px, ${carPos.y}px, 0)`;
   carHeadEl.value.style.transform = `rotateZ(${carPos.h}deg)`;
   progressEl.value.style.strokeDashoffset = `${G.total - sim.L}`;
@@ -2063,7 +2070,8 @@ defineExpose({ play, pause, restart, goToStep });
   position: absolute;
   left: 50%;
   top: 50%;
-  translate: -80% 0% 40px; /* diangkat di atas atap Ruang Maritim (tinggi 104 vs 80) */
+  translate: -80% 0% calc(40px * var(--sc, 1));
+  scale: var(--sc, 1); /* diangkat di atas atap Ruang Maritim (tinggi 104 vs 80) */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2130,6 +2138,7 @@ defineExpose({ play, pause, restart, goToStep });
   width: 0;
   height: 0;
   transform-style: preserve-3d;
+  scale: var(--sc, 1);
 }
 .vv-car-glow {
   position: absolute;
@@ -2143,6 +2152,7 @@ defineExpose({ play, pause, restart, goToStep });
     color-mix(in srgb, var(--route) 55%, transparent) 0 30%,
     transparent 70%
   );
+  scale: var(--sc, 1);
   transform: translateZ(1px);
   animation: vvGlow 1.6s ease-in-out infinite;
 }
@@ -2195,6 +2205,7 @@ defineExpose({ play, pause, restart, goToStep });
 
 /* tamu turun: kotak 3D kecil berjalan ke pintu lobby */
 .vv-people {
+  scale: var(--sc, 1);
   position: absolute;
   width: 0;
   height: 0;

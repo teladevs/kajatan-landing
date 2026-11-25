@@ -25,9 +25,10 @@ const props = defineProps({
   centered: { type: Boolean, default: false }, // x,y = titik tengah
 })
 
+import { SCALE } from './mapData.js'
 const px = (n) => `${n}px`
-const WIN_V = 'repeating-linear-gradient(180deg, rgba(255,255,255,0.22) 0px 14px, transparent 14px 32px)'
-const WIN_H = 'repeating-linear-gradient(90deg, rgba(255,255,255,0.26) 0px 14px, transparent 14px 32px)'
+const WIN_V = `repeating-linear-gradient(180deg, rgba(255,255,255,0.22) 0px ${14 * SCALE}px, transparent ${14 * SCALE}px ${32 * SCALE}px)`
+const WIN_H = `repeating-linear-gradient(90deg, rgba(255,255,255,0.26) 0px ${14 * SCALE}px, transparent ${14 * SCALE}px ${32 * SCALE}px)`
 
 const boxStyle = computed(() => ({
   left: px(props.centered ? props.x - props.w / 2 : props.x),
@@ -67,7 +68,7 @@ const faceN = computed(() => ({
 const faceTop = computed(() => ({
   left: 0, top: 0, width: px(props.w), height: px(props.h),
   background: props.c[0],
-  boxShadow: props.win ? 'inset 0 0 0 10px rgba(255,255,255,0.22)' : undefined,
+  boxShadow: props.win ? `inset 0 0 0 ${10 * SCALE}px rgba(255,255,255,0.22)` : undefined,
   transform: `translateZ(${props.z + props.d}px)`,
 }))
 </script>
