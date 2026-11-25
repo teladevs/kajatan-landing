@@ -46,13 +46,14 @@
     </button>
 
     <!-- ============ WELCOME ============ -->
-    <section
-      class="welcome"
-      :style="{ backgroundImage: `url(${mainBg})` }"
-    >
+    <section class="welcome" :style="{ backgroundImage: `url(${mainBg})` }">
       <div class="welcome-overlay"></div>
       <div class="welcome-inner">
-        <img :src="logoUpper" class="logo-upper" alt="Logo Kementerian Perhubungan" />
+        <img
+          :src="logoUpper"
+          class="logo-upper"
+          alt="Logo Kementerian Perhubungan"
+        />
 
         <video
           class="welcome-video"
@@ -74,8 +75,17 @@
           <div class="event-meta">
             <div class="meta-item">
               <span class="meta-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                  />
                 </svg>
               </span>
               <span class="meta-text">
@@ -85,9 +95,22 @@
             </div>
             <div class="meta-item">
               <span class="meta-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                  />
                 </svg>
               </span>
               <span class="meta-text">
@@ -100,8 +123,17 @@
 
           <a href="#rundown" class="btn-scroll">
             Lihat Rundown
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
             </svg>
           </a>
         </div>
@@ -138,8 +170,17 @@
                   <div>
                     <h4>{{ group.title }}</h4>
                     <p class="group-date">
-                      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke-width="1.8"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                        />
                       </svg>
                       {{ group.date }}
                     </p>
@@ -153,7 +194,9 @@
                       <span class="dot"></span>
                       <p class="activity">{{ item.title }}</p>
                       <ul v-if="item.details" class="details">
-                        <li v-for="(d, di) in item.details" :key="di">{{ d }}</li>
+                        <li v-for="(d, di) in item.details" :key="di">
+                          {{ d }}
+                        </li>
                       </ul>
                     </div>
                   </li>
@@ -172,11 +215,7 @@
         </header>
 
         <div class="speaker-grid">
-          <figure
-            v-for="(sp, si) in speakers"
-            :key="si"
-            class="speaker-card"
-          >
+          <figure v-for="(sp, si) in speakers" :key="si" class="speaker-card">
             <img :src="sp.img" :alt="sp.name" loading="lazy" />
           </figure>
         </div>
@@ -244,7 +283,11 @@
 
       <!-- FOOTER -->
       <footer class="site-footer">
-        <img :src="logoUpper" alt="Logo Kementerian Perhubungan" class="footer-logo" />
+        <img
+          :src="logoUpper"
+          alt="Logo Kementerian Perhubungan"
+          class="footer-logo"
+        />
         <p>
           Pelantikan Terpadu Calon ASN Lulusan Program Pola Pembibitan
           Kementerian Perhubungan Ke-5 Tahun 2026
@@ -264,8 +307,8 @@ import pembekalanSesi1 from "./assets/pembekalan-sesi-1.png";
 import pembekalanSesi2 from "./assets/pembekalan-sesi-2.png";
 import pembacaLaporan from "./assets/pembaca laporan.png";
 import rekomendasiHotel from "./assets/Rekomendasi Hotel.png";
-import VvipParkingMobile from "./vvip-parking-mobile/VvipParkingSim.vue";
-import VvipParkingDesktop from "./vvip-parking-sim/vvip-sim/src/components/vvip-parking/VvipParkingSim.vue";
+import VvipParkingMobile from "./vvip-gedung-utama-mobile/VvipParkingSim.vue";
+import VvipParkingDesktop from "./vvip-gedung-utama/VvipParkingSim.vue";
 
 const speakers = [
   { name: "Inspektur Upacara", img: inspekturUpacara },
@@ -431,8 +474,7 @@ onBeforeUnmount(() => {
 });
 
 useSeoMeta({
-  title:
-    "Pelantikan Terpadu Calon ASN Kementerian Perhubungan Ke-5 Tahun 2026",
+  title: "Pelantikan Terpadu Calon ASN Kementerian Perhubungan Ke-5 Tahun 2026",
   description:
     "Pelantikan Terpadu Calon ASN Lulusan Program Pola Pembibitan Kementerian Perhubungan Ke-5 Tahun 2026 - Auditorium STIP Jakarta.",
   ogImage: mainBg,
