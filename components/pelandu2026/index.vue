@@ -298,7 +298,7 @@
 </template>
 
 <script setup>
-import welcomeVideo from "./assets/welcome.mp4";
+import welcomeVideo from "./assets/video-v2.mp4";
 import mainBg from "./assets/main-bg.png";
 import logoUpper from "./assets/logo-upper.png";
 import pageBg from "./assets/page-bg.jpg";
