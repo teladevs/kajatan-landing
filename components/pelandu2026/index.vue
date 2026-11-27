@@ -371,7 +371,7 @@ const rundownSections = [
           },
           {
             time: "08.38 - 09.23 WIB",
-            title: "Sambutan oleh Menteri Perhubungan",
+            title: "Sambutan & Pemberian Motivasi",
           },
           { time: "09.23 - 09.26 WIB", title: "Mars Perhubungan" },
           { time: "09.26 - 09.30 WIB", title: "Pembacaan Doa" },
@@ -390,25 +390,28 @@ const rundownSections = [
         title: "B. Acara Pembekalan",
         date: "1 Desember 2026",
         items: [
-          { time: "09.55 - 09.57 WIB", title: "Pembukaan MC" },
+          { time: "09.35 - 09.57 WIB", title: "Pembukaan MC" },
           {
-            time: "09.57 - 10.00 WIB",
+            time: "09.37 - 09.40 WIB",
             title: "Pemutaran Video Perjalanan Pola Pembibitan",
           },
           {
-            time: "10.00 - 10.30 WIB",
+            time: "09.40 - 10.10 WIB",
             title:
-              'Pembekalan Sesi 1 oleh Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi "Mewujudkan New Era ASN Digital Kementerian Perhubungan yang Profesional, Tangguh dan Melayani"',
+              'Pembekalan Sesi 1 oleh Menteri Pendayagunaan Aparatur Negara dan Reformasi Birokrasi "Membangun Generasi ASN Unggul, Adaptif, dan Berintegritas untuk Mewujudkan Birokrasi yang Agile dan Berdampak"',
             details: ["Dilanjutkan pemberian Plakat kepada Menpan RB"],
           },
           {
-            time: "10.30 - 11.00 WIB",
+            time: "10.10 - 10.40 WIB",
             title:
-              'Pembekalan Sesi 2 oleh Kepala Badan Kepegawaian Negara "Adaptasi birokrasi ASN dalam menghadapi kehadiran dan tantangan generasi muda Kementerian Perhubungan melalui manajemen talenta dan penguatan karakter"',
+              'Pembekalan Sesi 2 oleh Kepala Badan Kepegawaian Negara "Generasi Baru Asn : Meneguhkan Integritas, Mengembangkan Talenta, Dan Membangun Rekam Jejak Kinerja Sejak Hari Pertama Pengabdian"',
             details: ["Dilanjutkan pemberian Plakat kepada Kepala BKN"],
           },
-          { time: "11.00 - 11.15 WIB", title: "Games Interactive & Doorprize" },
-          { time: "11.15 - 11.30 WIB", title: "Perform Brass Band PTDI-STTD" },
+          { time: "10.40 - 10.55 WIB", title: "Games Interactive & Doorprize" },
+          {
+            time: "10.55 - 11.10 WIB",
+            title: "Perform Brass Band STIP Jakarta",
+          },
           { time: "11.30 WIB", title: "Penutupan" },
         ],
       },
