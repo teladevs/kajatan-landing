@@ -283,11 +283,6 @@
 
       <!-- FOOTER -->
       <footer class="site-footer">
-        <img
-          :src="logoUpper"
-          alt="Logo Kementerian Perhubungan"
-          class="footer-logo"
-        />
         <p>
           Pelantikan Terpadu Calon ASN Lulusan Program Pola Pembibitan
           Kementerian Perhubungan Ke-5 Tahun 2026
@@ -300,7 +295,7 @@
 <script setup>
 import welcomeVideo from "./assets/video-v2.mp4";
 import mainBg from "./assets/main-bg.png";
-import logoUpper from "./assets/logo-upper.png";
+import logoUpper from "./assets/logo-formation.webp";
 import pageBg from "./assets/page-bg.jpg";
 import inspekturUpacara from "./assets/inspektur-upacara.png";
 import pembekalanSesi1 from "./assets/pembekalan-sesi-1.png";
@@ -531,7 +526,7 @@ useSeoMeta({
   text-align: center;
 }
 .logo-upper {
-  width: min(680px, 88%);
+  width: min(680px, 50%);
   height: auto;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25));
 }
