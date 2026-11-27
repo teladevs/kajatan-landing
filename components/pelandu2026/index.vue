@@ -251,36 +251,6 @@
         </div>
       </section>
 
-      <!-- PANDUAN PARKIR -->
-      <section class="section section--wide">
-        <header class="section-head">
-          <p class="section-kicker">Panduan Kendaraan</p>
-          <h2 class="section-title">Parkir VVIP</h2>
-        </header>
-        <div class="sim-card">
-          <ClientOnly>
-            <template v-if="viewportReady">
-              <PesertaParkingMobile
-                v-if="isMobile"
-                route-color="#1478c9"
-                height="720px"
-                title=""
-                subtitle=""
-                theme="light"
-              />
-              <PesertaParkingDesktop
-                v-else
-                route-color="#1478c9"
-                height="720px"
-                title=""
-                subtitle=""
-                theme="light"
-              />
-            </template>
-          </ClientOnly>
-        </div>
-      </section>
-
       <!-- PARKIR PESERTA -->
       <section class="section section--wide">
         <header class="section-head">
