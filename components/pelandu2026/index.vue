@@ -307,8 +307,8 @@ import pembekalanSesi1 from "./assets/pembekalan-sesi-1.png";
 import pembekalanSesi2 from "./assets/pembekalan-sesi-2.png";
 import pembacaLaporan from "./assets/pembaca laporan.png";
 import rekomendasiHotel from "./assets/Rekomendasi Hotel.png";
-import VvipParkingMobile from "./vvip-gedung-utama-mobile/VvipParkingSim.vue";
-import VvipParkingDesktop from "./vvip-gedung-utama/VvipParkingSim.vue";
+import VvipParkingMobile from "./vvip/vvip-gedung-utama-mobile/VvipParkingSim.vue";
+import VvipParkingDesktop from "./vvip/vvip-gedung-utama/VvipParkingSim.vue";
 
 const speakers = [
   { name: "Inspektur Upacara", img: inspekturUpacara },
