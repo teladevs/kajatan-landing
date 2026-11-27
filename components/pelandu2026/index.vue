@@ -260,7 +260,7 @@
         <div class="sim-card">
           <ClientOnly>
             <template v-if="viewportReady">
-              <VvipParkingMobile
+              <PesertaParkingMobile
                 v-if="isMobile"
                 route-color="#1478c9"
                 height="720px"
@@ -268,9 +268,39 @@
                 subtitle=""
                 theme="light"
               />
-              <VvipParkingDesktop
+              <PesertaParkingDesktop
                 v-else
                 route-color="#1478c9"
+                height="720px"
+                title=""
+                subtitle=""
+                theme="light"
+              />
+            </template>
+          </ClientOnly>
+        </div>
+      </section>
+
+      <!-- PARKIR PESERTA -->
+      <section class="section section--wide">
+        <header class="section-head">
+          <p class="section-kicker">Panduan Kendaraan</p>
+          <h2 class="section-title">Parkir Peserta</h2>
+        </header>
+        <div class="sim-card">
+          <ClientOnly>
+            <template v-if="viewportReady">
+              <PesertaParkingMobile
+                v-if="isMobile"
+                route-color="#7048e8"
+                height="720px"
+                title=""
+                subtitle=""
+                theme="light"
+              />
+              <PesertaParkingDesktop
+                v-else
+                route-color="#7048e8"
                 height="720px"
                 title=""
                 subtitle=""
@@ -309,6 +339,8 @@ import pembacaLaporan from "./assets/pembaca laporan.png";
 import rekomendasiHotel from "./assets/Rekomendasi Hotel.png";
 import VvipParkingMobile from "./vvip/vvip-gedung-utama-mobile/VvipParkingSim.vue";
 import VvipParkingDesktop from "./vvip/vvip-gedung-utama/VvipParkingSim.vue";
+import PesertaParkingMobile from "./vvip/peserta-gedung-auditorium-mobile/PesertaParkingSim.vue";
+import PesertaParkingDesktop from "./vvip/peserta-gedung-auditorium/PesertaParkingSim.vue";
 
 const speakers = [
   { name: "Inspektur Upacara", img: inspekturUpacara },
