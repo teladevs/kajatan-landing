@@ -114,7 +114,7 @@ const detailContact = ref({});
 
 const loadData = async () => {
   let eventDetail = await useCustomFetch(
-    `api/event/domain/${"landing.kajatan.com"}`,
+    `api/event/domain/${"pelandu2026kemenhub.telanusa.com"}`,
     "get",
     {},
     true,
