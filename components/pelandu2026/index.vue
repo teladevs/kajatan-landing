@@ -320,7 +320,7 @@ const rundownSections = [
     groups: [
       {
         title: "Gladi Pelantikan",
-        date: "28 - 29 November 2026",
+        date: "29 - 30 November 2026",
         items: [
           { time: "08.00 - 12.00 WIB", title: "Gladi Pelantikan" },
           { time: "12.00 - 13.00 WIB", title: "Ishoma" },
